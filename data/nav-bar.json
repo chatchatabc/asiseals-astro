@@ -1,0 +1,88 @@
+{
+  "links": [
+    {
+      "name": "Products",
+      "href": "/products",
+      "categories": [
+        { "name": "Pump Seals", "href": "/pump-seals" },
+        { "name": "Cartridge Seals", "href": "/cartridge-seals" },
+        {
+          "name": "Customized Seals",
+          "href": "/customized-seals"
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "href": "/services",
+      "categories": [
+        {
+          "name": "Engineering Design Services",
+          "href": "/engineering-design-services"
+        },
+        {
+          "name": "Inventory Management Services",
+          "href": "/inventory-management-services"
+        },
+        { "name": "After Sales Services", "href": "/after-sales-services" }
+      ]
+    },
+    {
+      "name": "Industries",
+      "href": "/industries",
+      "categories": [
+        { "name": "Automotive", "href": "/automotive" },
+        { "name": "Agriculture", "href": "/agriculture" },
+        { "name": "Food and Beverage", "href": "/food-and-beverage" },
+        { "name": "Pulp and Paper", "href": "/pulp-and-paper" },
+        { "name": "Mining", "href": "/mining" },
+        { "name": "Chemical", "href": "/chemical" },
+        { "name": "Power Generation", "href": "/power-generation" },
+        { "name": "Waste Water", "href": "/waste-water" },
+        {
+          "name": "Pharmaceuticals Industry",
+          "href": "/pharmaceuticals-industry"
+        }
+      ]
+    },
+    {
+      "name": "Resources",
+      "href": "/resources",
+      "categories": [
+        { "name": "Brochures", "href": "/brochures" },
+        { "name": "Videos", "href": "/videos" },
+        { "name": "Download", "href": "/download" },
+        { "name": "Case Studies", "href": "/case-studies" },
+        { "name": "Seal Material Code", "href": "/seal-material-code" },
+        { "name": "FAQ", "href": "/faq" },
+        { "name": "Cross-Reference Chart", "href": "/cross-reference-chart" }
+      ]
+    },
+    {
+      "name": "About",
+      "href": "/about",
+      "categories": [
+        { "name": "Culture", "href": "/culture" },
+        { "name": "Company History", "href": "/company-history" },
+        { "name": "Factory Tour", "href": "/factory-tour" }
+      ]
+    },
+    {
+      "name": "News",
+      "href": "/news",
+      "categories": [
+        { "name": "Company News", "href": "/company-news" },
+        { "name": "Blog", "href": "/blog" }
+      ]
+    },
+    {
+      "name": "Contact",
+      "href": "/contact",
+      "categories": [
+        { "name": "Contact Sales", "href": "/contact-sales" },
+        { "name": "Get a Quote", "href": "/get-a-quote" },
+        { "name": "Contact Us", "href": "/contact-us" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+---
+import navBarJson from "@data/nav-bar.json";
+import { Icon } from "astro-icon";
+
+const { links } = navBarJson;
+---
+
+<header class="z-10 sticky top-0 bg-gray-50 font-abel">
+  <section
+    class="container flex items-center justify-between mx-auto space-x-8 px-4 lg:px-8 lg:justify-center"
+  >
+    <nav class="flex items-center justify-center space-x-8">
+      <a href="/">Logo</a>
+
+      <!-- Desktop Nav Menu -->
+      <ul class="hidden items-center lg:flex">
+        {
+          links.map((link) => {
+            return (
+              <li class="relative group">
+                <a
+                  class="flex items-center border-b-4 border-gray-50 py-8 px-2 relative z-[2] bg-gray-50 transition lg:text-xl xl:text-2xl group-hover:text-[#F52B3F] group-hover:border-[#F52B3F]"
+                  href={link.href}
+                >
+                  <span>{link.name}</span>
+                  <span class="transition group-hover:rotate-180">
+                    <Icon class="w-6 h-6" name="mdi:chevron-down" />
+                  </span>
+                </a>
+                <ul class="divide-y-2 border-b-2 shadow-lg bg-gray-50 absolute bottom-0 duration-500 opacity-0 translate-y-[105%] group-hover:translate-y-full  group-hover:z-[1] group-hover:opacity-100">
+                  {link.categories.map((category) => {
+                    return (
+                      <li>
+                        <a
+                          class="py-2 px-4 whitespace-nowrap block transition hover:text-[#F52B3F]"
+                          href={`${link.href}${category.href}`}
+                        >
+                          {category.name}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Btn -->
+    <button class="lg:hidden">Menu</button>
+
+    <!-- Mobile Nav Menu -->
+    <nav class="hidden lg:hidden"></nav>
+
+    <!-- Desktop Search -->
+    <div class="hidden lg:block">
+      <button>Search</button>
+    </div>
+  </section>
+</header>

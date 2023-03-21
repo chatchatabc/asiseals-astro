@@ -1,9 +1,11 @@
 ---
 import navBarJson from "@data/nav-bar.json";
-import { Icon } from "astro-icon";
 import NavDropMobile from "./NavDropMobile.astro";
+import { Icon } from "astro-icon";
 
 const { links } = navBarJson;
+
+const { pathname } = Astro.url;
 ---
 
 <header class="z-10 sticky top-0 bg-gray-50 font-abel">
@@ -21,7 +23,11 @@ const { links } = navBarJson;
             return (
               <li class="relative group">
                 <a
-                  class="flex items-center border-b-4 border-gray-50 py-8 px-2 relative z-[2] bg-gray-50 transition lg:text-xl xl:text-2xl group-hover:text-[#F52B3F] group-hover:border-[#F52B3F]"
+                  class={`flex items-center border-b-4 border-gray-50 py-8 px-2 relative ${
+                    pathname.includes(link.href)
+                      ? "text-[#F52B3F] border-[#F52B3F]"
+                      : ""
+                  } z-[2] bg-gray-50 transition lg:text-xl xl:text-2xl group-hover:text-[#F52B3F] group-hover:border-[#F52B3F]`}
                   href={link.href}
                 >
                   <span>{link.name}</span>

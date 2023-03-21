@@ -1,0 +1,119 @@
+---
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon";
+
+const products = await getCollection(
+  "products",
+  (product) => product.data.isFeatured
+);
+---
+
+<hero-section
+  is="section"
+  class="relative font-abel block h-[70vh] max-h-[600px] group"
+>
+  <!-- Background -->
+  <div id="hero-bg" class="absolute h-full w-full bottom-24 bg-blue-100"></div>
+  <!-- Content -->
+  <section
+    class="relative container flex items-center h-full mx-auto px-4 lg:px-8"
+  >
+    <button
+      id="prev-btn"
+      class="absolute top-1/3 left-8 p-1 rounded-full opacity-0 transition bg-black bg-opacity-20 group-hover:opacity-100"
+    >
+      <Icon class="h-8 w-8" name="mdi:chevron-left" />
+    </button>
+    <ul class="px-32">
+      {
+        products.map(async (product) => {
+          const { slug } = product;
+          const { name } = product.data;
+          const { Content } = await product.render();
+          return (
+            <li>
+              <figure>
+                <figcaption class="items duration-500 opacity-0 translate-x-1/2 w-1/2 absolute top-1/2 -translate-y-full">
+                  <header>
+                    <h1 class="text-4xl py-2">{name}</h1>
+                  </header>
+                  <Content />
+                  <a
+                    href={`/products/${slug}`}
+                    class="inline-block bg-[#F52B3F] text-white mt-8 px-8 py-2"
+                  >
+                    View More
+                  </a>
+                </figcaption>
+              </figure>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <button
+      id="next-btn"
+      class="absolute top-1/3 right-8 p-1 rounded-full opacity-0 transition bg-black bg-opacity-20 group-hover:opacity-100"
+    >
+      <Icon class="h-8 w-8" name="mdi:chevron-right" />
+    </button>
+  </section>
+</hero-section>
+
+<script>
+  class HeroSection extends HTMLElement {
+    constructor() {
+      super();
+      const items = this.querySelectorAll(".items")!;
+      const prevBtn = this.querySelector("#prev-btn")!;
+      const nextBtn = this.querySelector("#next-btn")!;
+      let index = 0;
+
+      const timer = setInterval(() => {
+        index++;
+        if (index > items.length - 1) {
+          index = 0;
+        }
+        updateSlide();
+      }, 3000);
+
+      const updateSlide = () => {
+        items.forEach((item) => {
+          item.classList.add("opacity-0");
+          item.classList.add("translate-x-1/2");
+        });
+        items[index].classList.remove("opacity-0");
+        items[index].classList.remove("translate-x-1/2");
+
+        clearInterval(timer);
+      };
+
+      prevBtn.addEventListener("click", () => {
+        index--;
+        if (index < 0) {
+          index = items.length - 1;
+        }
+        updateSlide();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        index++;
+        if (index > items.length - 1) {
+          index = 0;
+        }
+        updateSlide();
+      });
+
+      updateSlide();
+    }
+  }
+
+  customElements.define("hero-section", HeroSection);
+</script>
+
+<style is:global>
+  #hero-bg {
+    -webkit-clip-path: ellipse(49% 16% at 50% 50%);
+    clip-path: ellipse(100% 50% at 75% 50%);
+  }
+</style>

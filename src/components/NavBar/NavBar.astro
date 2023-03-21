@@ -1,13 +1,14 @@
 ---
 import navBarJson from "@data/nav-bar.json";
 import { Icon } from "astro-icon";
+import NavDropMobile from "./NavDropMobile.astro";
 
 const { links } = navBarJson;
 ---
 
 <header class="z-10 sticky top-0 bg-gray-50 font-abel">
   <section
-    class="container flex items-center justify-between mx-auto space-x-8 px-4 lg:px-8 lg:justify-center"
+    class="container flex items-center justify-between mx-auto z-[1] relative px-4 lg:px-8 lg:justify-center"
   >
     <nav class="flex items-center justify-center space-x-8">
       <a href="/">Logo</a>
@@ -27,7 +28,7 @@ const { links } = navBarJson;
                     <Icon class="w-6 h-6" name="mdi:chevron-down" />
                   </span>
                 </a>
-                <ul class="divide-y-2 border-b-2 shadow-lg bg-gray-50 absolute bottom-0 duration-500 opacity-0 translate-y-[105%] group-hover:translate-y-full  group-hover:z-[1] group-hover:opacity-100">
+                <ul class="divide-y-2 border-b-2 shadow-lg bg-gray-50 absolute bottom-0 duration-500 opacity-0 translate-y-[105%] pointer-events-none group-hover:pointer-events-auto group-hover:translate-y-full group-hover:z-[1] group-hover:opacity-100">
                   {link.categories.map((category) => {
                     return (
                       <li>
@@ -48,15 +49,43 @@ const { links } = navBarJson;
       </ul>
     </nav>
 
-    <!-- Mobile Menu Btn -->
-    <button class="lg:hidden">Menu</button>
-
-    <!-- Mobile Nav Menu -->
-    <nav class="hidden lg:hidden"></nav>
-
     <!-- Desktop Search -->
-    <div class="hidden lg:block">
+    <div class="hidden ml-8 lg:block">
       <button>Search</button>
     </div>
+
+    <!-- Mobile Menu Btn -->
+    <button id="nav-menu-btn" class="lg:hidden">Menu</button>
   </section>
+
+  <!-- Mobile Nav Menu -->
+  <div
+    id="nav-menu"
+    class="transition pb-8 -translate-y-full pointer-events-none opacity-0 bg-white overflow-auto fixed w-full h-full left-0 top-6 px-4 lg:hidden"
+  >
+    <section class="flex py-4 border-b-2">
+      <button class="pr-4"><Icon name="mdi:magnify" class="w-6 h-6" /></button>
+      <input class="flex-1" placeholder="Search..." />
+    </section>
+    <nav>
+      <ul class="divide-y-2">
+        {
+          links.map((link) => {
+            return <NavDropMobile link={link} />;
+          })
+        }
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<script>
+  const navMenuBtn = document.querySelector("#nav-menu-btn")!;
+  const navMenu = document.querySelector("#nav-menu")!;
+
+  navMenuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("-translate-y-full");
+    navMenu.classList.toggle("opacity-0");
+    navMenu.classList.toggle("pointer-events-none");
+  });
+</script>

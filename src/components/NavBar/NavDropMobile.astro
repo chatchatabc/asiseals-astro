@@ -1,0 +1,66 @@
+---
+import { Icon } from "astro-icon";
+
+type Link = {
+  name: string;
+  href: string;
+};
+
+type Props = {
+  link: {
+    name: string;
+    href: string;
+    categories: Link[];
+  };
+};
+
+const { link } = Astro.props as Props;
+---
+
+<nav-drop-mobile is="nav-drop-mobile" class="flex flex-wrap justify-between">
+  <a class="py-4 flex-1" href={link.href}>
+    {link.name}
+  </a>
+  <button id="btn" class="px-2">
+    <Icon id="chevron" class="transition h-4 w-4" name="mdi:chevron-down" />
+  </button>
+  <ul class="hidden w-full divide-y-2 border-t-2">
+    {
+      link.categories.map((category) => {
+        return (
+          <li>
+            <a class="block pl-4 py-4" href={category.href}>
+              {category.name}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav-drop-mobile>
+
+<script>
+  class NavDropMobile extends HTMLElement {
+    constructor() {
+      super();
+      let open = false;
+
+      const btn = this.querySelector("#btn")!;
+      const ul = this.querySelector("ul")!;
+      const chevron = this.querySelector("#chevron")!;
+
+      btn.addEventListener("click", () => {
+        open = !open;
+        if (open) {
+          ul.classList.remove("hidden");
+          chevron.classList.add("rotate-180");
+        } else {
+          ul.classList.add("hidden");
+          chevron.classList.remove("rotate-180");
+        }
+      });
+    }
+  }
+
+  customElements.define("nav-drop-mobile", NavDropMobile);
+</script>

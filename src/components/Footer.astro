@@ -1,0 +1,72 @@
+---
+import footerLinksJson from "@data/footer-links.json";
+import contactsJson from "@data/contacts.json";
+
+const { links, title, message, socialLinks } = footerLinksJson;
+---
+
+<footer class="font-abel bg-blue-900 text-opacity-75 text-white font-bold">
+  <section class="container mx-auto px-4 py-16 flex w-full">
+    <section class="w-1/4 px-4 space-y-6">
+      <header>
+        <h1 class="text-white text-xl">{title}</h1>
+      </header>
+      <p class="text-lg">{message}</p>
+
+      <nav>
+        <ul>
+          {
+            contactsJson.contents.map((link) => {
+              return (
+                <li>
+                  <a href={link.href}>{link.name}</a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </nav>
+
+      <!-- Social Media -->
+      <nav>
+        <ul>
+          {
+            socialLinks.map((link) => {
+              return (
+                <li>
+                  <a href={link.href}>{link.name}</a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </nav>
+    </section>
+    <section class="w-3/4 flex justify-between">
+      {
+        links.map((link) => {
+          return (
+            <section class="w-1/4 px-4">
+              <header>
+                <h1 class="text-white font-bold text-xl">{link.name}</h1>
+              </header>
+              <nav>
+                <ul>
+                  {link.links.map((link) => {
+                    return (
+                      <li>
+                        <a class="hover:text-white" href={link.href}>
+                          {link.name}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+            </section>
+          );
+        })
+      }
+    </section>
+  </section>
+</footer>

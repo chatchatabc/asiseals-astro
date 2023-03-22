@@ -1,0 +1,61 @@
+{
+  "title": "Advantage Seal",
+  "message": "Contact Advantage Seal for your fluid sealing requirements.",
+  "socialLinks": [{ "name": "Facebook", "href": "/" }],
+  "links": [
+    {
+      "name": "Products",
+      "links": [
+        { "name": "Pump Seals", "href": "/pump-seals" },
+        { "name": "Cartridge Seals", "href": "/cartridge-seals" },
+        {
+          "name": "Customized Seals",
+          "href": "/customized-seals"
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "links": [
+        {
+          "name": "Engineering Design Services",
+          "href": "/engineering-design-services"
+        },
+        {
+          "name": "Inventory Management Services",
+          "href": "/inventory-management-services"
+        },
+        { "name": "After Sales Services", "href": "/after-sales-services" }
+      ]
+    },
+    {
+      "name": "Industries",
+      "links": [
+        { "name": "Automotive", "href": "/automotive" },
+        { "name": "Agriculture", "href": "/agriculture" },
+        { "name": "Food and Beverage", "href": "/food-and-beverage" },
+        { "name": "Pulp and Paper", "href": "/pulp-and-paper" },
+        { "name": "Mining", "href": "/mining" },
+        { "name": "Chemical", "href": "/chemical" },
+        { "name": "Power Generation", "href": "/power-generation" },
+        { "name": "Waste Water", "href": "/waste-water" },
+        {
+          "name": "Pharmaceuticals Industry",
+          "href": "/pharmaceuticals-industry"
+        }
+      ]
+    },
+    {
+      "name": "About",
+      "links": [
+        { "name": "Culture", "href": "/culture" },
+        { "name": "Company History", "href": "/company-history" },
+        { "name": "Factory Tour", "href": "/factory-tour" },
+        { "name": "Resources", "href": "/resources" },
+        { "name": "Company News", "href": "/company-news" },
+        { "name": "Blog", "href": "/blog" },
+        { "name": "Contact Us", "href": "/contact-us" }
+      ]
+    }
+  ]
+}

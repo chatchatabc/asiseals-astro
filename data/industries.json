@@ -1,0 +1,49 @@
+{
+  "contents": [
+    {
+      "name": "Automotive",
+      "image": "/images/automotive.webp",
+      "href": "/automotive"
+    },
+    {
+      "name": "Agriculture",
+      "image": "/images/agriculture.webp",
+      "href": "/agriculture"
+    },
+    {
+      "name": "Food and Beverage",
+      "image": "/images/food.webp",
+      "href": "/food-and-beverage"
+    },
+    {
+      "name": "Pulp and Paper",
+      "image": "/images/paper.webp",
+      "href": "/pulp-and-paper"
+    },
+    {
+      "name": "Mining",
+      "image": "/images/minining.webp",
+      "href": "/mining"
+    },
+    {
+      "name": "Chemical",
+      "image": "/images/chemical.webp",
+      "href": "/chemical"
+    },
+    {
+      "name": "Power Generation",
+      "image": "/images/power.webp",
+      "href": "/power-generation"
+    },
+    {
+      "name": "Waste Water",
+      "image": "/images/water.webp",
+      "href": "/waste-water"
+    },
+    {
+      "name": "Pharmaceuticals Industry",
+      "image": "",
+      "href": "/pharmaceuticals-industry"
+    }
+  ]
+}

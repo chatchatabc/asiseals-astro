@@ -1,13 +1,17 @@
 ---
+import industriesJson from "@data/industries.json";
 import HeroSection from "@components/landing-page/HeroSection.astro";
 import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon";
+import { Img } from "astro-imagetools/components";
 ---
 
 <Layout>
+  <!-- Hero Section -->
   <HeroSection />
 
   <!-- Advantage Seal -->
-  <section class="font-abel container mx-auto pb-24 px-4 lg:px-8">
+  <section class="font-abel container mx-auto px-4 lg:px-8">
     <!-- Section Header -->
     <header class="pb-24 md:pb-40 lg:pb-56">
       <h1 class="text-center text-[#E14753] text-3xl md:text-4xl lg:text-5xl">
@@ -50,4 +54,66 @@ import Layout from "@layouts/Layout.astro";
       </figure>
     </section>
   </section>
+
+  <!-- Industry Section -->
+  <section class="mt-24 font-abel text-white bg-[#4176A4] py-16">
+    <!-- Container -->
+    <section class="">
+      <!-- Header -->
+      <header
+        class="flex justify-between items-center container mx-auto px-4 lg:px-8"
+      >
+        <h1 class="text-5xl">Industry</h1>
+        <div class="flex items-center divide-x">
+          <button class="px-2">
+            <Icon
+              name="mdi:chevron-left"
+              class="h-8 w-8 transition hover:text-[#E14753]"
+            />
+          </button>
+          <button class="px-2">
+            <Icon
+              name="mdi:chevron-right"
+              class="h-8 w-8 transition hover:text-[#E14753]"
+            />
+          </button>
+        </div>
+      </header>
+
+      <!-- Carousel -->
+      <section class="container mx-auto px-4 flex overflow-x-hidden pb-24 mt-6">
+        {
+          industriesJson.contents.map((item) => {
+            return (
+              <figure class="w-1/4 flex-shrink-0 p-4 relative group">
+                <div class="bg-white">
+                  <div class="duration-500 group-hover:opacity-0">
+                    <Img src={item.image} alt={item.name} />
+                  </div>
+                </div>
+                <figcaption class="duration-500 absolute w-full h-fit left-0 bottom-0 translate-y-full group-hover:bottom-1/2 group-hover:translate-y-1/2">
+                  <p class="text-center duration-500 text-xl tracking-widest px-8 group-hover:tracking-[0.5rem]">
+                    <span class="transition group-hover:text-[#E14753]">
+                      {item.name}
+                    </span>
+                  </p>
+                </figcaption>
+              </figure>
+            );
+          })
+        }
+      </section>
+
+      <!-- Action button -->
+      <a
+        href="/industries"
+        class="block w-fit py-4 px-6 mx-auto text-xl bg-[#E14753]"
+      >
+        View More Industries &gt;
+      </a>
+    </section>
+  </section>
+
+  <!-- Company History -->
+  <section class="py-48"></section>
 </Layout>

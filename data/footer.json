@@ -6,6 +6,7 @@
     {
       "name": "USA Headquarters",
       "address": "694 Veterans Parkway, Unit A, Bolingbrook, IL 60440-3562",
+      "background": "#7A9FBF",
       "contacts": [
         {
           "type": "telephone",
@@ -20,6 +21,7 @@
     {
       "name": "China Headquarters",
       "address": "655 Qiming Road, Yinzhou District, Ningbo, Zhejiang China 315104",
+      "background": "#A0BBD2",
       "contacts": [
         {
           "type": "telephone",
@@ -34,6 +36,7 @@
     {
       "name": "Philippines Office",
       "address": "2nd Floor, Unit H, Alpha Building, Lanang Business Park, Km. 7 Lanang, Davao City, Philippines 8000",
+      "background": "#C6D6E4",
       "contacts": [
         {
           "type": "telephone",

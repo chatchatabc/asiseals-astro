@@ -5,7 +5,7 @@ import contactsJson from "@data/contacts.json";
 const { links, title, message, socialLinks, headquarters } = footerJson;
 ---
 
-<footer class="font-abel bg-blue-900 text-opacity-75 text-white font-bold">
+<footer class="font-abel bg-[#4176A4] text-opacity-75 text-white font-bold">
   <section class="container mx-auto px-4 py-16 flex flex-wrap">
     <!-- Company Info -->
     <section class="p-4 space-y-6 w-full md:w-1/2 lg:w-1/4">
@@ -81,7 +81,7 @@ const { links, title, message, socialLinks, headquarters } = footerJson;
         return (
           <section
             class={`bg-white px-8 py-4`}
-            style={`opacity:${(index + 4) * 15}%`}
+            style={`background:${headquarter.background}`}
           >
             <header>
               <h2 class="text-lg">{headquarter.name}</h2>

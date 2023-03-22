@@ -1,18 +1,20 @@
 ---
-import footerLinksJson from "@data/footer-links.json";
+import footerJson from "@data/footer.json";
 import contactsJson from "@data/contacts.json";
 
-const { links, title, message, socialLinks } = footerLinksJson;
+const { links, title, message, socialLinks, headquarters } = footerJson;
 ---
 
 <footer class="font-abel bg-blue-900 text-opacity-75 text-white font-bold">
-  <section class="container mx-auto px-4 py-16 flex w-full">
-    <section class="w-1/4 px-4 space-y-6">
+  <section class="container mx-auto px-4 py-16 flex flex-wrap">
+    <!-- Company Info -->
+    <section class="p-4 space-y-6 w-full md:w-1/2 lg:w-1/4">
       <header>
         <h1 class="text-white text-xl">{title}</h1>
       </header>
       <p class="text-lg">{message}</p>
 
+      <!-- Contact Information -->
       <nav>
         <ul>
           {
@@ -42,15 +44,17 @@ const { links, title, message, socialLinks } = footerLinksJson;
         </ul>
       </nav>
     </section>
-    <section class="w-3/4 flex justify-between">
+
+    <!-- Site map -->
+    <section class="flex flex-wrap justify-between w-full md:w-1/2 lg:w-3/4">
       {
         links.map((link) => {
           return (
-            <section class="w-1/4 px-4">
+            <section class="p-4 w-full md:w-1/2 lg:w-1/4">
               <header>
                 <h1 class="text-white font-bold text-xl">{link.name}</h1>
               </header>
-              <nav>
+              <nav class="mt-2">
                 <ul>
                   {link.links.map((link) => {
                     return (
@@ -68,5 +72,40 @@ const { links, title, message, socialLinks } = footerLinksJson;
         })
       }
     </section>
+  </section>
+
+  <!-- Headquarters -->
+  <section class="text-black md:hidden">
+    {
+      headquarters.map((headquarter, index) => {
+        return (
+          <section
+            class={`bg-white px-8 py-4`}
+            style={`opacity:${(index + 4) * 15}%`}
+          >
+            <header>
+              <h2 class="text-lg">{headquarter.name}</h2>
+            </header>
+            <p class="mt-6">{headquarter.address}</p>
+            <ul class="mt-2">
+              {headquarter.contacts.map((contact) => {
+                return (
+                  <li>
+                    <p>{contact.name}</p>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        );
+      })
+    }
+  </section>
+
+  <!-- Copyright -->
+  <section class="font-medium py-8 text-white">
+    <p class="text-center px-4">
+      Copyright© 2022 Advantage Seal Co., Ltd. All Rights Reserved.｜ Sitemap
+    </p>
   </section>
 </footer>

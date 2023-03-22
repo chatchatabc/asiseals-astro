@@ -2,6 +2,50 @@
   "title": "Advantage Seal",
   "message": "Contact Advantage Seal for your fluid sealing requirements.",
   "socialLinks": [{ "name": "Facebook", "href": "/" }],
+  "headquarters": [
+    {
+      "name": "USA Headquarters",
+      "address": "694 Veterans Parkway, Unit A, Bolingbrook, IL 60440-3562",
+      "contacts": [
+        {
+          "type": "telephone",
+          "name": "+1 (630) 226-0200"
+        },
+        {
+          "type": "fax",
+          "name": "+1 (630) 226-0202"
+        }
+      ]
+    },
+    {
+      "name": "China Headquarters",
+      "address": "655 Qiming Road, Yinzhou District, Ningbo, Zhejiang China 315104",
+      "contacts": [
+        {
+          "type": "telephone",
+          "name": "+86 (574) 8750 0883"
+        },
+        {
+          "type": "fax",
+          "name": "+86 (574) 8750-2803"
+        }
+      ]
+    },
+    {
+      "name": "Philippines Office",
+      "address": "2nd Floor, Unit H, Alpha Building, Lanang Business Park, Km. 7 Lanang, Davao City, Philippines 8000",
+      "contacts": [
+        {
+          "type": "telephone",
+          "name": "+63 (82) 285 3540"
+        },
+        {
+          "type": "fax",
+          "name": "+63 (82) 285-7498"
+        }
+      ]
+    }
+  ],
   "links": [
     {
       "name": "Products",

@@ -2,47 +2,47 @@
   "contents": [
     {
       "name": "Automotive",
-      "image": "/images/automotive.webp",
+      "image": "/images/industries/automotive.webp",
       "href": "/automotive"
     },
     {
       "name": "Agriculture",
-      "image": "/images/agriculture.webp",
+      "image": "/images/industries/agriculture.webp",
       "href": "/agriculture"
     },
     {
       "name": "Food and Beverage",
-      "image": "/images/food.webp",
+      "image": "/images/industries/food.webp",
       "href": "/food-and-beverage"
     },
     {
       "name": "Pulp and Paper",
-      "image": "/images/paper.webp",
+      "image": "/images/industries/paper.webp",
       "href": "/pulp-and-paper"
     },
     {
       "name": "Mining",
-      "image": "/images/minining.webp",
+      "image": "/images/industries/mining.webp",
       "href": "/mining"
     },
     {
       "name": "Chemical",
-      "image": "/images/chemical.webp",
+      "image": "/images/industries/chemicals.webp",
       "href": "/chemical"
     },
     {
       "name": "Power Generation",
-      "image": "/images/power.webp",
+      "image": "/images/industries/power.webp",
       "href": "/power-generation"
     },
     {
       "name": "Waste Water",
-      "image": "/images/water.webp",
+      "image": "/images/industries/water.webp",
       "href": "/waste-water"
     },
     {
       "name": "Pharmaceuticals Industry",
-      "image": "",
+      "image": "/images/industries/pharmaceuticals.webp",
       "href": "/pharmaceuticals-industry"
     }
   ]

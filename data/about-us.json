@@ -1,0 +1,54 @@
+{
+  "name": "Advantage Seal Inc.",
+  "summary": "Advantage Seal is a leading international manufacturer of both customized and standard mechanical shaft seals. Since 2002, we have worked closely with our customers to provide solutions to help them operate more reliably, efficiently and economically. Our goal is to consistently exceed our customer’s expectations in delivery, quality and service.",
+  "features": [
+    {
+      "name": "Design",
+      "icon": "",
+      "summary": "Advantage Seal employs design engineers throughout the globe using the latest design software and equipment. Our more than 25 years of mechanical seal experience allows us to incorporate innovative ways to analyze and solve the most demanding seal application problems, and prolong seal life."
+    },
+    {
+      "name": "Manufacturing",
+      "icon": "",
+      "summary": "Advantage Seal ISO 9001:2008 modern facilities operate lean and efficient with non-compromising focus on quality. We take advantage of a low-cost manufacturing environment, while producing the highest quality product into the market."
+    },
+    {
+      "name": "Service",
+      "icon": "",
+      "summary": "Advantage Seal’s lean operation allows us to provide fast and responsive customer service. We view our relationship with our customers as a partnership, which benefits both companies’ interest. We can provide a quote based on prints, cad files, PS numbers, and/or samples. We exist to serve your needs."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "FDA Rubber Supplier",
+      "imageUrl": "/images/about-us/fda-rubber-supplier.webp"
+    },
+    { "name": "ISO 9001", "imageUrl": "/images/about-us/iso-9001.webp" },
+    { "name": "ISO 45001", "imageUrl": "/images/about-us/iso-45001.webp" },
+    {
+      "name": "Utility Model Patent Certificate",
+      "imageUrl": "/images/about-us/utility-model-patent-certificate.webp"
+    },
+    { "name": "RoHS", "imageUrl": "/images/about-us/rohs.webp" },
+    {
+      "name": "Utility Model Patent Certificate",
+      "imageUrl": "/images/about-us/utility-model-patent-certificate.webp"
+    },
+    {
+      "name": "WRAS A Donglian Ceramic Supplier",
+      "imageUrl": "/images/about-us/wras-a-donglian-ceramic-supplier.webp"
+    },
+    {
+      "name": "WRAS NBR 1805500 Maifeng Rubber Supplier",
+      "imageUrl": "/images/about-us/wras-nbr-1805500-maifeng-rubber-supplier.webp"
+    },
+    {
+      "name": "WRAS AG21P-T MC1320-T Morgan Carbon Supplier",
+      "imageUrl": "/images/about-us/wras-ag21p-mc1320-t-morgan-carbon-supplier.webp"
+    },
+    {
+      "name": "NSF Product and Service Listing",
+      "imageUrl": "/images/about-us/nsf-product-and-service-listing.webp"
+    }
+  ]
+}

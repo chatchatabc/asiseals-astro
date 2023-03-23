@@ -1,7 +1,51 @@
 ---
+import ProductSearch from "@components/widgets/ProductSearch.astro";
 import LayoutCategory from "@layouts/LayoutCategory.astro";
+import productsCategoriesJson from "@data/product-categories.json";
+import { Img } from "astro-imagetools/components";
 ---
 
 <LayoutCategory pageTitle="Products" image="./images/products/banner.png">
-  <section>Test</section>
+  <!-- Search section -->
+  <section class="py-8 container mx-auto px-4 lg:px-8">
+    <ProductSearch />
+  </section>
+
+  <!-- Content Section -->
+  <section class="container mx-auto px-4 lg:px-8">
+    {
+      productsCategoriesJson.contents.map((category) => {
+        return (
+          <section class="py-16 border-t-2 border-dashed">
+            <header>
+              <h1 class="text-5xl">{category.name}</h1>
+            </header>
+
+            <ul class="flex space-x-4 mt-8">
+              {category.categories.map((category) => {
+                return (
+                  <li class="flex-1 max-w-[50%] md:max-w-[33%] lg:max-w-[20%]">
+                    <figure class="relative group">
+                      <div class="border">
+                        <Img src={category.imageUrl} alt={category.name} />
+                      </div>
+                      <figcaption>
+                        <h2 class="text-lg text-center transition text-[#3B71A1] group-hover:text-[#E14753]">
+                          {category.name}
+                        </h2>
+                        <a
+                          href={`/products/${category.href}`}
+                          class="absolute top-0 left-0 w-full h-full"
+                        />
+                      </figcaption>
+                    </figure>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        );
+      })
+    }
+  </section>
 </LayoutCategory>

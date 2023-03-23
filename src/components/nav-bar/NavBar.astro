@@ -23,11 +23,11 @@ const { pathname } = Astro.url;
             return (
               <li class="relative group">
                 <a
-                  class={`flex items-center border-b-4 border-gray-50 py-8 px-2 relative ${
+                  class={`flex items-center border-b-4 py-8 px-2 relative bg-gray-50 transition ${
                     pathname.includes(link.href)
                       ? "text-[#F52B3F] border-[#F52B3F]"
-                      : ""
-                  } z-[2] bg-gray-50 transition lg:text-xl xl:text-2xl group-hover:text-[#F52B3F] group-hover:border-[#F52B3F]`}
+                      : "border-gray-50"
+                  } z-[2] lg:text-xl xl:text-2xl group-hover:text-[#F52B3F] group-hover:border-[#F52B3F]`}
                   href={link.href}
                 >
                   <span>{link.name}</span>

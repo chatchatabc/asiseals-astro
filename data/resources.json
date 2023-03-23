@@ -1,0 +1,44 @@
+{
+  "contents": [
+    {
+      "name": "Brochures",
+      "imageUrl": "/images/resources/brochures.webp",
+      "href": "/brochures"
+    },
+    {
+      "name": "Videos",
+      "imageUrl": "/images/resources/videos.webp",
+      "href": "/brochures"
+    },
+    {
+      "name": "Download",
+      "imageUrl": "/images/resources/download.webp",
+      "href": "/brochures"
+    },
+    {
+      "name": "Case Studies",
+      "imageUrl": "/images/resources/case-studies.webp",
+      "href": "/brochures"
+    },
+    {
+      "name": "Seal Material Code",
+      "imageUrl": "/images/resources/seal-material-code.webp",
+      "href": "/brochures"
+    },
+    {
+      "name": "FAQ",
+      "imageUrl": "/images/resources/faq.webp",
+      "href": "/brochures"
+    },
+    {
+      "name": "Cross-Reference Chart",
+      "imageUrl": "/images/resources/cross-reference.webp",
+      "href": "/brochures"
+    },
+    {
+      "name": "More Help",
+      "imageUrl": "/images/resources/help.webp",
+      "href": "/brochures"
+    }
+  ]
+}

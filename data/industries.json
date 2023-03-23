@@ -1,48 +1,49 @@
 {
+  "summary": "Advantage Seals has extensive experience in the food and beverage industries. We understand the industry's diverse sealing requirements and are committed to assisting our clients in remaining economically competitive while maintaining product integrity.",
   "contents": [
     {
       "name": "Automotive",
-      "image": "/images/industries/automotive.webp",
+      "image": "/images/industries/automotive.png",
       "href": "/automotive"
     },
     {
       "name": "Agriculture",
-      "image": "/images/industries/agriculture.webp",
+      "image": "/images/industries/agriculture.png",
       "href": "/agriculture"
     },
     {
       "name": "Food and Beverage",
-      "image": "/images/industries/food.webp",
+      "image": "/images/industries/food.png",
       "href": "/food-and-beverage"
     },
     {
       "name": "Pulp and Paper",
-      "image": "/images/industries/paper.webp",
+      "image": "/images/industries/paper.png",
       "href": "/pulp-and-paper"
     },
     {
       "name": "Mining",
-      "image": "/images/industries/mining.webp",
+      "image": "/images/industries/mining.png",
       "href": "/mining"
     },
     {
       "name": "Chemical",
-      "image": "/images/industries/chemicals.webp",
+      "image": "/images/industries/chemicals.png",
       "href": "/chemical"
     },
     {
       "name": "Power Generation",
-      "image": "/images/industries/power.webp",
+      "image": "/images/industries/power.png",
       "href": "/power-generation"
     },
     {
       "name": "Waste Water",
-      "image": "/images/industries/water.webp",
+      "image": "/images/industries/water.png",
       "href": "/waste-water"
     },
     {
       "name": "Pharmaceuticals Industry",
-      "image": "/images/industries/pharmaceuticals.webp",
+      "image": "/images/industries/pharmaceuticals.png",
       "href": "/pharmaceuticals-industry"
     }
   ]

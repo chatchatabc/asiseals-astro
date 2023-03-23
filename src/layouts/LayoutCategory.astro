@@ -1,6 +1,7 @@
 ---
 import BreadCrumbs from "@components/widgets/BreadCrumbs.astro";
 import Layout from "./Layout.astro";
+import { Img } from "astro-imagetools/components";
 
 type Props = {
   title?: string;
@@ -12,8 +13,8 @@ const { title, pageTitle, image } = Astro.props as Props;
 ---
 
 <Layout title={pageTitle}>
-  <header class="relative" title={pageTitle}>
-    <img class="h-full w-full object-contain" src={image} alt={pageTitle} />
+  <header class="relative max-w-[1920px] mx-auto" title={pageTitle}>
+    <Img src={image} alt={pageTitle} />
     <h1 class="absolute top-1/2 w-full -translate-y-1/2 text-center">
       {title}
     </h1>

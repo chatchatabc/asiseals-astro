@@ -1,0 +1,36 @@
+---
+import LayoutCategory from "@layouts/LayoutCategory.astro";
+import servicesJson from "@data/services.json";
+import { Picture } from "astro-imagetools/components";
+---
+
+<LayoutCategory
+  pageTitle="Services"
+  title="Services"
+  image="/images/services/banner.webp"
+>
+  <!-- container -->
+  <section class="mx-auto py-16 space-y-16 container px-4 lg:px-8">
+    {
+      servicesJson.contents.map((service) => {
+        return (
+          <section>
+            <figure class="flex">
+              <div class="w-1/3 px-16 py-8 shadow-xl">
+                <Picture src={service.imageUrl} alt={service.name} />
+              </div>
+
+              <figcaption class="px-16 w-2/3 flex flex-col justify-center">
+                <header>
+                  <h1 class="text-4xl">{service.name}</h1>
+                </header>
+                <div class="h-1 w-1/4 bg-[#E14753] my-8" />
+                <p class="text-lg">{service.summary}</p>
+              </figcaption>
+            </figure>
+          </section>
+        );
+      })
+    }
+  </section>
+</LayoutCategory>

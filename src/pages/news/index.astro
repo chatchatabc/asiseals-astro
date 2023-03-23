@@ -1,0 +1,33 @@
+---
+import LayoutCategory from "@layouts/LayoutCategory.astro";
+import newsJson from "@data/news.json";
+import { Img } from "astro-imagetools/components";
+import type { image } from "astro:content";
+---
+
+<LayoutCategory image="/images/news/banner.webp" pageTitle="News" title="News">
+  <!-- Container -->
+  <section class="font-abel mx-auto container mb-16 px-4 lg:px-8">
+    <ul class="flex flex-wrap">
+      {
+        newsJson.contents.map((news) => {
+          return (
+            <li class="p-8 w-full md:w-1/2 lg:w-1/3">
+              <figure>
+                <div>
+                  <Img src={news.imageUrl} alt={news.name} />
+                </div>
+                <figcaption>
+                  <header>
+                    <h1 class="text-3xl font-bold">{news.name}</h1>
+                  </header>
+                  <p class="text-lg">{news.summary}</p>
+                </figcaption>
+              </figure>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+</LayoutCategory>

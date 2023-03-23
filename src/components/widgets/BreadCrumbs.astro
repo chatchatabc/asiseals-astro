@@ -1,0 +1,46 @@
+---
+const { pathname } = Astro.url;
+let connectedPaths = "";
+const paths = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  ...pathname
+    .split("/")
+    .filter(Boolean)
+    .map((path) => {
+      connectedPaths += `/${path}`;
+      return {
+        name: path,
+        href: connectedPaths,
+      };
+    }),
+];
+---
+
+<section class="font-abel text-lg border-b">
+  <ul class="flex flex-wrap py-2 container mx-auto px-4 lg:px-8">
+    {
+      paths.map((path, index) => {
+        return (
+          <li class="flex items-center">
+            <div class="px-2">
+              {index !== paths.length - 1 ? (
+                <a
+                  class={`inline-block capitalize underline text-blue-900 hover:opacity-75`}
+                  href={path.href}
+                >
+                  {path.name}
+                </a>
+              ) : (
+                <span class="capitalize">{path.name}</span>
+              )}
+            </div>
+            {index !== paths.length - 1 && <span>/</span>}
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>

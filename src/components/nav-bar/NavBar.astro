@@ -2,6 +2,7 @@
 import navBarJson from "@data/nav-bar.json";
 import NavDropMobile from "./NavDropMobile.astro";
 import { Icon } from "astro-icon";
+import { Picture } from "astro-imagetools/components";
 
 const { links } = navBarJson;
 
@@ -14,7 +15,9 @@ const { pathname } = Astro.url;
     class="container flex items-center justify-between mx-auto z-[1] relative px-4 lg:px-8 lg:justify-center"
   >
     <nav class="flex items-center justify-center space-x-8">
-      <a href="/">Logo</a>
+      <a class="inline-block h-12 lg:h-[unset]" href="/">
+        <Picture src="/images/logo/logo.png" alt="Asiseals Logo" />
+      </a>
 
       <!-- Desktop Nav Menu -->
       <ul class="hidden items-center lg:flex">
@@ -86,7 +89,7 @@ const { pathname } = Astro.url;
   <!-- Mobile Nav Menu -->
   <div
     id="nav-menu"
-    class="transition pb-8 -translate-y-full pointer-events-none opacity-0 bg-white overflow-auto fixed w-full h-full left-0 top-6 px-4 lg:hidden"
+    class="transition pb-8 -translate-y-full pointer-events-none opacity-0 bg-white overflow-auto fixed w-full h-full left-0 px-4 lg:hidden"
   >
     <section class="flex py-4 border-b-2">
       <button class="pr-4"><Icon name="mdi:magnify" class="w-6 h-6" /></button>

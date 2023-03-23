@@ -1,0 +1,89 @@
+---
+import LayoutCategory from "@layouts/LayoutCategory.astro";
+import aboutUsJson from "@data/about-us.json";
+import { Icon } from "astro-icon";
+---
+
+<LayoutCategory
+  pageTitle="About Us"
+  title="About Us"
+  image="/images/about-us/banner.webp"
+>
+  <!-- Introduction -->
+  <section class="font-abel container mx-auto mt-16 px-4 lg:px-8">
+    <figure class="flex flex-wrap items-center">
+      <div class="mx-auto h-80 md:w-2/3 lg:h-96 lg:w-1/2">
+        <iframe
+          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100063769460731%2Fvideos%2F250321243349104%2F&show_text=0&width=560"
+          class="w-full h-full"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        ></iframe>
+      </div>
+      <figcaption class="px-8 w-full lg:w-1/2">
+        <header>
+          <h1 class="text-5xl">{aboutUsJson.name}</h1>
+        </header>
+        <p class="mt-4 text-lg">
+          {aboutUsJson.summary}
+        </p>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- features -->
+  <section class="font-abel container mx-auto my-16 lg:px-4">
+    <ul class="flex flex-wrap">
+      {
+        aboutUsJson.features.map((feature) => {
+          return (
+            <li class="p-4 w-full lg:w-1/3 ">
+              <figure>
+                <figcaption>
+                  <header>
+                    <h1 class="text-3xl font-bold">{feature.name}</h1>
+                  </header>
+                  <p class="mt-4 text-xl">{feature.summary}</p>
+                </figcaption>
+              </figure>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+
+  <!-- Certificates Section -->
+  <section
+    class="font-abel bg-[url('/images/about-us/certificate-bg.webp')] bg-fixed py-12"
+  >
+    <!-- Carousel Container -->
+    <section class="container text-white mx-auto px-4 lg:px-8">
+      <header>
+        <h1 class="text-4xl text-center">Our Certificate</h1>
+      </header>
+
+      <!-- Carousel Container -->
+      <section class="flex items-center">
+        <button><Icon class="h-8 w-8" name="mdi:chevron-left" /></button>
+        <ul class="flex-1 py-4 flex font-xl overflow-hidden">
+          {
+            aboutUsJson.certificates.map((certificate) => {
+              return (
+                <li class="w-1/5 flex-shrink-0 p-2">
+                  <figure>
+                    <img src={certificate.imageUrl} alt={certificate.name} />
+                    <figcaption>
+                      <h2 class="text-center">{certificate.name}</h2>
+                    </figcaption>
+                  </figure>
+                </li>
+              );
+            })
+          }
+        </ul>
+        <button><Icon class="h-8 w-8" name="mdi:chevron-right" /></button>
+      </section>
+    </section>
+  </section>
+</LayoutCategory>

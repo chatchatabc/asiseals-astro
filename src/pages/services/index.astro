@@ -15,12 +15,12 @@ import { Picture } from "astro-imagetools/components";
       servicesJson.contents.map((service) => {
         return (
           <section>
-            <figure class="flex">
-              <div class="w-1/3 px-16 py-8 shadow-xl">
+            <figure class="flex flex-wrap">
+              <div class="px-16 py-8 shadow-xl w-3/4 mx-auto md:w-1/2 lg:w-1/3">
                 <Picture src={service.imageUrl} alt={service.name} />
               </div>
 
-              <figcaption class="px-16 w-2/3 flex flex-col justify-center">
+              <figcaption class="flex flex-col mt-8 justify-center w-full lg:px-16 lg:mt-0 lg:w-2/3">
                 <header>
                   <h1 class="text-4xl">{service.name}</h1>
                 </header>

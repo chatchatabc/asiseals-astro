@@ -1,7 +1,25 @@
 {
   "contents": [
-    { "type": "email", "name": "river@asiseal.com", "href": "/" },
-    { "type": "phone", "name": "+86-18858080728", "href": "/" },
-    { "type": "wechat", "name": "riverliu01", "href": "/" }
+    {
+      "type": "email",
+      "name": "river@asiseal.com",
+      "href": "/",
+      "message": "Send Email",
+      "icon": "ic:round-mail-outline"
+    },
+    {
+      "type": "phone",
+      "name": "+86-18858080728",
+      "href": "/",
+      "message": "Call Us",
+      "icon": "ic:baseline-local-phone"
+    },
+    {
+      "type": "wechat",
+      "name": "riverliu01",
+      "href": "/",
+      "message": "WeChat",
+      "icon": "ic:baseline-wechat"
+    }
   ]
 }

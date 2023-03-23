@@ -77,7 +77,7 @@
     },
     {
       "name": "Contact",
-      "href": "/contact",
+      "href": "/contact-us",
       "categories": [
         { "name": "Contact Sales", "href": "/contact-sales" },
         { "name": "Get a Quote", "href": "/get-a-quote" },

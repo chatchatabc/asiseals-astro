@@ -2,7 +2,7 @@
   "contents": [
     {
       "name": "Type 202",
-      "summary": "Advantage Seal Type 202 Replaces: John crane type 1,21,2100, sealol type 43CE Short, Pac-Seal type 51, 21, US Seal type D, Burgmann type M3, M2, M377",
+      "summary": "",
       "imageUrl": "/images/products/type-202.webp",
       "slug": "type-202",
       "category": "pump-seals",
@@ -11,7 +11,7 @@
     },
     {
       "name": "Type 201",
-      "summary": "Advantage Seal Type 201 Replaces: John crane type 1, 21, 2100, sealol type 43CE Long, Pac-Seal type 51, US Seal type E",
+      "summary": "",
       "imageUrl": "/images/products/type-201.webp",
       "slug": "type-201",
       "category": "pump-seals",
@@ -20,7 +20,7 @@
     },
     {
       "name": "Type 91",
-      "summary": "Advantage Seal Type 91 Replaces: John crane Type 109,9,909, AESSEAL M01U, VULCAN 1609",
+      "summary": "",
       "imageUrl": "/images/products/type-91.webp",
       "slug": "type-91",
       "category": "pump-seals",
@@ -209,7 +209,7 @@
     },
     {
       "name": "Type AA03",
-      "summary": "Single Cartridge O-Ring Seal Advantage Seal Type AA03 Replaces: AESSEAL CSS CSSN",
+      "summary": "",
       "imageUrl": "",
       "slug": "type-aa03",
       "category": "cartridge-seals",
@@ -218,7 +218,7 @@
     },
     {
       "name": "Type AA04",
-      "summary": "Dual Cartridge O-Ring Seal Advantage Seal Type AA04 Replaces: AESSEAL CDP CDPN",
+      "summary": "",
       "imageUrl": "",
       "slug": "type-aa04",
       "category": "",
@@ -227,7 +227,7 @@
     },
     {
       "name": "Type AA09",
-      "summary": "Double Monolithic Stationary Flow / Convection Advantage Seal Type AA09 Replaces: AESSEAL DMSF/DMSC",
+      "summary": "",
       "imageUrl": "",
       "slug": "type-aa09",
       "category": "cartridge-seals",
@@ -299,7 +299,7 @@
     },
     {
       "name": "ASI-I-U28 & ASI-I-L28",
-      "summary": "Parameters:Temperature: t = -30 °C(-22°F) ... 180 °C (+356°F)Pressure: p1 = 12 bar (174 PSI)Sliding velocity: vg = 10 m/s (33 ft/s)",
+      "summary": "",
       "imageUrl": "",
       "slug": "asi-i-u28-asi-i-l28",
       "category": "customized-seals",

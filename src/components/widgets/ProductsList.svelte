@@ -25,9 +25,7 @@
           .toLowerCase()
           .includes(filterValue.toLowerCase());
       } else if (filterType === "industry") {
-        return product.subCategory
-          .toLowerCase()
-          .includes(filterValue.toLowerCase());
+        return product.industry.includes(filterValue.toLowerCase());
       }
     });
 </script>

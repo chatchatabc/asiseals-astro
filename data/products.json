@@ -3,7 +3,7 @@
     {
       "name": "Type 202",
       "summary": "Advantage Seal Type 202 Replaces: John crane type 1,21,2100, sealol type 43CE Short, Pac-Seal type 51, 21, US Seal type D, Burgmann type M3, M2, M377",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-202.webp",
       "slug": "type-202",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -12,7 +12,7 @@
     {
       "name": "Type 201",
       "summary": "Advantage Seal Type 201 Replaces: John crane type 1, 21, 2100, sealol type 43CE Long, Pac-Seal type 51, US Seal type E",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-201.webp",
       "slug": "type-201",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -21,7 +21,7 @@
     {
       "name": "Type 91",
       "summary": "Advantage Seal Type 91 Replaces: John crane Type 109,9,909, AESSEAL M01U, VULCAN 1609",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-91.webp",
       "slug": "type-91",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -30,7 +30,7 @@
     {
       "name": "Type 81",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-81.webp",
       "slug": "type-81",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -39,7 +39,7 @@
     {
       "name": "Type 61",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-61.webp",
       "slug": "type-61",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -48,7 +48,7 @@
     {
       "name": "Type 21",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-21.webp",
       "slug": "type-21",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -57,7 +57,7 @@
     {
       "name": "Type 16",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-16.webp",
       "slug": "type-16",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -66,7 +66,7 @@
     {
       "name": "Type 37F",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-37f.webp",
       "slug": "type-37f",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -75,7 +75,7 @@
     {
       "name": "Type 81B",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-81b.webp",
       "slug": "type-81b",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -84,7 +84,7 @@
     {
       "name": "Type 91B",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-91b.webp",
       "slug": "type-91b",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -93,7 +93,7 @@
     {
       "name": "Type 202E",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-202e.webp",
       "slug": "type-202e",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -102,7 +102,7 @@
     {
       "name": "Type 37",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-37.webp",
       "slug": "type-37",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -111,7 +111,7 @@
     {
       "name": "Type 846B",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-846b.webp",
       "slug": "type-846b",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -120,7 +120,7 @@
     {
       "name": "Type 846",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-846.webp",
       "slug": "type-846",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -129,7 +129,7 @@
     {
       "name": "Type 816",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-816.webp",
       "slug": "type-816",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -138,7 +138,7 @@
     {
       "name": "Type 16C",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-16c.webp",
       "slug": "type-16c",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -147,7 +147,7 @@
     {
       "name": "Type 852",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-852.webp",
       "slug": "type-852",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -156,7 +156,7 @@
     {
       "name": "Type 850B",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-850b.webp",
       "slug": "type-850b",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -165,7 +165,7 @@
     {
       "name": "Type 850",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-850.webp",
       "slug": "type-850",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
@@ -174,7 +174,7 @@
     {
       "name": "Type 202V",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-202v.webp",
       "slug": "type-202v",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -183,7 +183,7 @@
     {
       "name": "Type 201E",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-201e.webp",
       "slug": "type-201e",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -192,7 +192,7 @@
     {
       "name": "Type 16WM",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-16wm.webp",
       "slug": "type-16wm",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
@@ -201,7 +201,7 @@
     {
       "name": "Type 16EB",
       "summary": "",
-      "imageUrl": "",
+      "imageUrl": "/images/products/type-16eb.webp",
       "slug": "type-16eb",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",

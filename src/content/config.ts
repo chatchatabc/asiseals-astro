@@ -9,4 +9,5 @@ const productSchema = defineCollection({
 
 export const collections = {
   products: productSchema,
+  industries: productSchema,
 };

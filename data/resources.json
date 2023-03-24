@@ -3,42 +3,50 @@
     {
       "name": "Brochures",
       "imageUrl": "/images/resources/brochures.webp",
-      "href": "/brochures"
+      "href": "",
+      "slug": "brochures"
     },
     {
       "name": "Videos",
       "imageUrl": "/images/resources/videos.webp",
-      "href": "/brochures"
+      "href": "",
+      "slug": "videos"
     },
     {
       "name": "Download",
       "imageUrl": "/images/resources/download.webp",
-      "href": "/brochures"
+      "href": "",
+      "slug": "download"
     },
     {
       "name": "Case Studies",
       "imageUrl": "/images/resources/case-studies.webp",
-      "href": "/brochures"
+      "href": "",
+      "slug": "case-studies"
     },
     {
       "name": "Seal Material Code",
       "imageUrl": "/images/resources/seal-material-code.webp",
-      "href": "/brochures"
+      "href": "",
+      "slug": "seal-material-code"
     },
     {
       "name": "FAQ",
       "imageUrl": "/images/resources/faq.webp",
-      "href": "/brochures"
+      "href": "",
+      "slug": "faq"
     },
     {
       "name": "Cross-Reference Chart",
       "imageUrl": "/images/resources/cross-reference.webp",
-      "href": "/brochures"
+      "href": "",
+      "slug": "cross-reference-chart"
     },
     {
       "name": "More Help",
       "imageUrl": "/images/resources/help.webp",
-      "href": "/brochures"
+      "href": "/contact-us",
+      "slug": null
     }
   ]
 }

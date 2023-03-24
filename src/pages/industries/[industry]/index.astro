@@ -25,7 +25,6 @@ const { industry } = Astro.props as Props;
 
 const industryFile = await getEntryBySlug("industries", industry.slug);
 
-console.log(industryFile);
 const { Content } = (await industryFile?.render()) ?? {};
 ---
 

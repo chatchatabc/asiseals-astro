@@ -1,8 +1,9 @@
 ---
 import footerJson from "@data/footer.json";
+import headquartersJson from "@data/headquarters.json";
 import contactsJson from "@data/contacts.json";
 
-const { links, title, message, socialLinks, headquarters } = footerJson;
+const { links, title, message, socialLinks } = footerJson;
 ---
 
 <footer class="font-abel bg-[#4176A4] text-opacity-75 text-white font-bold">
@@ -77,7 +78,7 @@ const { links, title, message, socialLinks, headquarters } = footerJson;
   <!-- Headquarters -->
   <section class="text-black md:hidden">
     {
-      headquarters.map((headquarter, index) => {
+      headquartersJson.contents.map((headquarter) => {
         return (
           <section
             class={`bg-white px-8 py-4`}

@@ -1,6 +1,7 @@
 ---
 import LayoutCategory from "@layouts/LayoutCategory.astro";
 import contactsJson from "@data/contacts.json";
+import headquartersJson from "@data/headquarters.json";
 import { Icon } from "astro-icon";
 ---
 
@@ -11,6 +12,7 @@ import { Icon } from "astro-icon";
 >
   <!-- Container -->
   <section class="font-abel mx-auto container px-4 lg:px-8">
+    <!-- Contact Information -->
     <figure class="flex flex-wrap mb-12 mt-8 lg:mt-16">
       <div class="w-full lg:w-1/3">
         <img
@@ -54,7 +56,10 @@ import { Icon } from "astro-icon";
         </ul>
       </figcaption>
     </figure>
+  </section>
 
+  <!-- Map of main headquarter -->
+  <section class="mx-auto container px-4 lg:px-8">
     <iframe
       class="w-full mb-16"
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d789.3081727230084!2d-88.10655281083582!3d41.676679233751436!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e597921299699%3A0x3c2b7466e2661bd5!2sPolymer%20Industries!5e0!3m2!1sen!2sph!4v1679562520006!5m2!1sen!2sph"
@@ -63,5 +68,43 @@ import { Icon } from "astro-icon";
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <!-- Headquarters information -->
+  <section class="font-abel bg-[#3B71A1] py-16 text-white">
+    <!-- Container -->
+    <section class="container mx-auto px-4 lg:px-8">
+      <!-- Header -->
+      <header>
+        <h1 class="text-center text-5xl font-medium">Contact Information</h1>
+      </header>
+
+      <!-- Content -->
+      <section class="flex flex-wrap mt-8">
+        {
+          headquartersJson.contents.map((headquarter) => {
+            return (
+              <div class="p-2 flex w-full lg:w-1/3 ">
+                <article class="flex flex-col w-full bg-[#7199BC] p-8 border-l-4 border-[#E14753]">
+                  <header>
+                    <h2 class="text-3xl font-bold">{headquarter.name}</h2>
+                  </header>
+                  <p class="text-lg mb-auto mt-8">{headquarter.address}</p>
+                  <ul class="mt-8">
+                    {headquarter.contacts.map((contact) => {
+                      return (
+                        <li class="flex">
+                          <span>{contact.name}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </article>
+              </div>
+            );
+          })
+        }
+      </section>
+    </section>
   </section>
 </LayoutCategory>

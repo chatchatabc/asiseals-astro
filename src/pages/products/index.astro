@@ -22,19 +22,22 @@ import { Img } from "astro-imagetools/components";
             </header>
 
             <ul class="flex space-x-4 mt-8">
-              {category.categories.map((category) => {
+              {category.categories.map((subCategory) => {
                 return (
                   <li class="flex-1 max-w-[50%] md:max-w-[33%] lg:max-w-[20%]">
                     <figure class="relative group">
                       <div class="border">
-                        <Img src={category.imageUrl} alt={category.name} />
+                        <Img
+                          src={subCategory.imageUrl}
+                          alt={subCategory.name}
+                        />
                       </div>
                       <figcaption>
                         <h2 class="text-lg text-center transition text-[#3B71A1] group-hover:text-[#E14753]">
-                          {category.name}
+                          {subCategory.name}
                         </h2>
                         <a
-                          href={`/products/${category.href}`}
+                          href={`/products/${category.slug}/${subCategory.slug}`}
                           class="absolute top-0 left-0 w-full h-full"
                         />
                       </figcaption>

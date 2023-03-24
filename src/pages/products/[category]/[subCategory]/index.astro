@@ -1,0 +1,28 @@
+---
+import productCategoriesJson from "@data/product-categories.json";
+import Layout from "@layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  type StaticPaths = {
+    params: Record<string, string>;
+    props: Record<string, any>;
+  };
+  const subCategories: StaticPaths[] = [];
+
+  productCategoriesJson.contents.forEach((category) => {
+    console.log(category.slug);
+    category.categories.forEach((subCategory) => {
+      subCategories.push({
+        params: { category: category.slug, subCategory: subCategory.slug },
+        props: {},
+      });
+    });
+  });
+
+  console.log(subCategories);
+
+  return subCategories;
+}
+---
+
+<Layout>Test SubCategory</Layout>

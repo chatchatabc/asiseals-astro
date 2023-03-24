@@ -1,0 +1,15 @@
+---
+import productCategoriesJson from "@data/product-categories.json";
+import Layout from "@layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return productCategoriesJson.contents.map((category) => {
+    return {
+      params: { category: category.slug },
+      props: {},
+    };
+  });
+}
+---
+
+<Layout>Test</Layout>

@@ -1,0 +1,472 @@
+{
+  "contents": [
+    {
+      "name": "Type 202",
+      "summary": "Advantage Seal Type 202 Replaces: John crane type 1,21,2100, sealol type 43CE Short, Pac-Seal type 51, 21, US Seal type D, Burgmann type M3, M2, M377",
+      "imageUrl": "",
+      "slug": "type-202",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 201",
+      "summary": "Advantage Seal Type 201 Replaces: John crane type 1, 21, 2100, sealol type 43CE Long, Pac-Seal type 51, US Seal type E",
+      "imageUrl": "",
+      "slug": "type-201",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 91",
+      "summary": "Advantage Seal Type 91 Replaces: John crane Type 109,9,909, AESSEAL M01U, VULCAN 1609",
+      "imageUrl": "",
+      "slug": "type-91",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 81",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-81",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 61",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-61",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 21",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-21",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 16",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-16",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 37F",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-37f",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 81B",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-81b",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 91B",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-91b",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 202E",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-202e",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 37",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-37",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 846B",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-846b",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 846",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-846",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 816",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-816",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 16C",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-16c",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 852",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-852",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 850B",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-850b",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 850",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-850",
+      "category": "pump-seals",
+      "subCategory": "pusher-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 202V",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-202v",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 201E",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-201e",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 16WM",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-16wm",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type 16EB",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-16eb",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type AA03",
+      "summary": "Single Cartridge O-Ring Seal Advantage Seal Type AA03 Replaces: AESSEAL CSS CSSN",
+      "imageUrl": "",
+      "slug": "type-aa03",
+      "category": "cartridge-seals",
+      "subCategory": "",
+      "industry": ""
+    },
+    {
+      "name": "Type AA04",
+      "summary": "Dual Cartridge O-Ring Seal Advantage Seal Type AA04 Replaces: AESSEAL CDP CDPN",
+      "imageUrl": "",
+      "slug": "type-aa04",
+      "category": "",
+      "subCategory": "cartridge-seals",
+      "industry": ""
+    },
+    {
+      "name": "Type AA09",
+      "summary": "Double Monolithic Stationary Flow / Convection Advantage Seal Type AA09 Replaces: AESSEAL DMSF/DMSC",
+      "imageUrl": "",
+      "slug": "type-aa09",
+      "category": "cartridge-seals",
+      "subCategory": "",
+      "industry": ""
+    },
+    {
+      "name": "ASI-A-U20 & ASI-A-L20",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-a-u20-asi-a-l20",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-B-U28 & ASI-B-L28",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-b-u28-asi-b-l28",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-C-U22 & ASI-C-L22",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-c-u22-asi-c-l22",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-D15-Double Seal",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-d15-double-seal",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-E-U22 & ASI-E-L22",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-e-u22-asi-e-l22",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-F-U22 & ASI-F-L22",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-f-u22-asi-f-l22",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-G-U20 & ASI-G-L20",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-g-u20-asi-g-l20",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-I-U28 & ASI-I-L28",
+      "summary": "Parameters:Temperature: t = -30 °C(-22°F) ... 180 °C (+356°F)Pressure: p1 = 12 bar (174 PSI)Sliding velocity: vg = 10 m/s (33 ft/s)",
+      "imageUrl": "",
+      "slug": "asi-i-u28-asi-i-l28",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-J-U25 & ASI-J-L25",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-j-u25-asi-j-l25",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-K-U35 & ASI-K-L35",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-k-u35-asi-k-l35",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-K-U35 & ASI-L-L35",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-k-u35-asi-l-l35",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-M-U35 & ASI-M-L35",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-m-u35-asi-m-l35",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-O-U45 & ASI-O-L45",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-o-u45-asi-o-l45",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-P-U60 & ASI-P-L60",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-p-u60-asi-p-l60",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-Q-U60 & ASI-Q-L60",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-q-u60-asi-q-l60",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-A-U20 & ASI-A-L20",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-a-u20-asi-a-l20",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-R-U60 & ASI-R-L60",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-r-u60-asi-r-l60",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "AS1-S-U90 & ASI-S-L80",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "as1-s-u90-asi-s-l80",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-S-U90 & ASI-U-L90",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-s-u90-asi-u-l90",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-S-U90 & ASI-T-L120",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-s-u90-asi-t-l120",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "ASI-Z-U25 & ASI-Z-L24",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "asi-z-u25-asi-z-l24",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "Xylem flygt Pumps",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "xylem-flygt-pumps",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "Xylem flygt Pumps 1",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "xylem-flygt-pumps-1",
+      "category": "customized-seals",
+      "subCategory": "flygt",
+      "industry": ""
+    },
+    {
+      "name": "Type 511-12",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-511-12",
+      "category": "customized-seals",
+      "subCategory": "groundfos",
+      "industry": ""
+    },
+    {
+      "name": "Type 511-16",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-511-16",
+      "category": "customized-seals",
+      "subCategory": "groundfos",
+      "industry": ""
+    },
+    {
+      "name": "Type 511-22",
+      "summary": "",
+      "imageUrl": "",
+      "slug": "type-511-22",
+      "category": "customized-seals",
+      "subCategory": "groundfos",
+      "industry": ""
+    }
+  ]
+}

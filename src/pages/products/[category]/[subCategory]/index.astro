@@ -1,6 +1,10 @@
 ---
 import productCategoriesJson from "@data/product-categories.json";
-import Layout from "@layouts/Layout.astro";
+import LayoutCategory from "@layouts/LayoutCategory.astro";
+import { getEntryBySlug } from "astro:content";
+import ProductSearch from "@components/widgets/ProductSearch.astro";
+import type { InferGetStaticPropsType } from "astro";
+import ProductsList from "@components/widgets/ProductsList.svelte";
 
 export async function getStaticPaths() {
   type StaticPaths = {
@@ -14,15 +18,46 @@ export async function getStaticPaths() {
     category.categories.forEach((subCategory) => {
       subCategories.push({
         params: { category: category.slug, subCategory: subCategory.slug },
-        props: {},
+        props: { subCategory },
       });
     });
   });
 
-  console.log(subCategories);
-
   return subCategories;
 }
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { subCategory } = Astro.props as Props;
+
+const mdFile = await getEntryBySlug("products", subCategory.slug);
+
+const { Content } = (await mdFile?.render()) ?? {};
 ---
 
-<Layout>Test SubCategory</Layout>
+<LayoutCategory
+  pageTitle={subCategory.name}
+  title={subCategory.name}
+  image={"/images/products/banner-inner.webp"}
+>
+  <!-- Container -->
+  <section class="container mx-auto font-abel px-4 lg:px-8">
+    <section class="py-8 border-b-2 border-dashed">
+      <ProductSearch />
+    </section>
+
+    <!-- Sub-category Description -->
+    <section class="py-8 text-xl">
+      {Content && <Content />}
+    </section>
+
+    <!-- Sub-category items -->
+    <section class="mb-16">
+      <ProductsList
+        filterType="sub-category"
+        filterValue={subCategory.slug}
+        client:idle
+      />
+    </section>
+  </section>
+</LayoutCategory>

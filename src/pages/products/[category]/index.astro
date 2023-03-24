@@ -1,15 +1,43 @@
 ---
+import ProductSearch from "@components/widgets/ProductSearch.astro";
+import ProductsList from "@components/widgets/ProductsList.svelte";
 import productCategoriesJson from "@data/product-categories.json";
 import Layout from "@layouts/Layout.astro";
+import LayoutCategory from "@layouts/LayoutCategory.astro";
+import type { InferGetStaticPropsType } from "astro";
 
 export async function getStaticPaths() {
   return productCategoriesJson.contents.map((category) => {
     return {
       params: { category: category.slug },
-      props: {},
+      props: { category },
     };
   });
 }
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { category } = Astro.props as Props;
 ---
 
-<Layout>Test</Layout>
+<LayoutCategory
+  image="/images/products/banner-inner.webp"
+  pageTitle={category.name}
+  title={category.name}
+>
+  <!-- Container -->
+  <section class="container mx-auto font-abel px-4 lg:px-8">
+    <section class="py-8 border-b-2 border-dashed">
+      <ProductSearch />
+    </section>
+
+    <!-- Sub-category items -->
+    <section class="mb-16">
+      <ProductsList
+        filterType="category"
+        filterValue={category.slug}
+        client:idle
+      />
+    </section>
+  </section>
+</LayoutCategory>

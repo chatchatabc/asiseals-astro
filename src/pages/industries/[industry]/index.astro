@@ -1,0 +1,57 @@
+---
+import ProductSearch from "@components/widgets/ProductSearch.astro";
+import industriesJson from "@data/industries.json";
+import LayoutCategory from "@layouts/LayoutCategory.astro";
+import ProductsList from "@components/widgets/ProductsList.svelte";
+import type { InferGetStaticPropsType } from "astro";
+import { getEntryBySlug } from "astro:content";
+
+export async function getStaticPaths() {
+  return industriesJson.contents.map((industry) => {
+    return {
+      params: {
+        industry: industry.slug,
+      },
+      props: {
+        industry,
+      },
+    };
+  });
+}
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { industry } = Astro.props as Props;
+
+const industryFile = await getEntryBySlug("industries", industry.slug);
+
+console.log(industryFile);
+const { Content } = (await industryFile?.render()) ?? {};
+---
+
+<LayoutCategory
+  image="/images/industries/banner.webp"
+  title={industry.name}
+  pageTitle={industry.name}
+>
+  <!-- Container -->
+  <section class="container mx-auto font-abel px-4 lg:px-8">
+    <section class="py-8 border-b-2 border-dashed">
+      <ProductSearch />
+    </section>
+
+    <!-- Sub-category Description -->
+    <section class="py-8 text-xl">
+      {Content && <Content />}
+    </section>
+
+    <!-- Sub-category items -->
+    <section class="mb-8">
+      <ProductsList
+        filterType="industry"
+        filterValue={industry.slug}
+        client:idle
+      />
+    </section>
+  </section>
+</LayoutCategory>

@@ -8,6 +8,6 @@ const productSchema = defineCollection({
 });
 
 export const collections = {
-  products: productSchema,
+  "product-categories": productSchema,
   industries: productSchema,
 };

@@ -2,8 +2,8 @@
 import { getCollection } from "astro:content";
 import { Icon } from "astro-icon";
 
-const products = await getCollection(
-  "products",
+const productCategories = await getCollection(
+  "product-categories",
   (product) => product.data.isFeatured
 );
 ---
@@ -27,7 +27,7 @@ const products = await getCollection(
     </button>
     <ul class="md:px-32">
       {
-        products.map(async (product) => {
+        productCategories.map(async (product) => {
           const { slug } = product;
           const { name } = product.data;
           const { Content } = await product.render();

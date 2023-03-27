@@ -29,7 +29,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { subCategory } = Astro.props as Props;
 
-const mdFile = await getEntryBySlug("products", subCategory.slug);
+const mdFile = await getEntryBySlug("product-categories", subCategory.slug);
 
 const { Content } = (await mdFile?.render()) ?? {};
 ---

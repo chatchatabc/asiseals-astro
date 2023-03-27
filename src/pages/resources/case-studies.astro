@@ -1,5 +1,19 @@
 ---
 import LayoutCategory from "@layouts/LayoutCategory.astro";
+import { Icon } from "astro-icon";
+
+const quoteList = [
+  "The two sealing surfaces are stuck in the startup process, which leads to failure or difficulty in startup.",
+  "After running, the motor current exceeds the rated allowable current value, leading to an increase in the motor current loss and a waste of electrical energy.",
+  "Due to the particularity of the medium, the silicon carbide moving ring is prone to heat and cracking, which leads to seal failure or leakage.",
+  "The mechanical seal has a short service life and can only be used for about 12 months, greatly increasing the maintenance cost.",
+];
+
+const objectives = [
+  "Upgrade the end face material and replace it with special formula silicon carbide material, because this material has very good self-lubrication and greatly reduces the starting resistance, so as to solve the problem of the motor being sucked during starting.",
+  "Re-adjust the specific pressure of the end face of seals to further control the amount of wear of materials in the process of operation, so as to extend the service life of mechanical seals.",
+  "The surface roughness of the two sealing faces is treated with mist surface. On the premise of ensuring the flatness, the roughness is changed and the smoothness is not changed. At the same time, the current is reduced from the original 5A to the current 3.7a, which can well control the current loss of the motor and save the electric energy.",
+];
 ---
 
 <LayoutCategory
@@ -7,5 +21,80 @@ import LayoutCategory from "@layouts/LayoutCategory.astro";
   title="Case Studies"
   pageTitle="Case Studies"
 >
-  TEst
+  <!-- Introduction -->
+  <section class="max-w-7xl mx-auto px-4 pt-4 lg:pt-16 lg:px-8">
+    <p class="text-lg">
+      Advantage Seal(Ningbo) co., ltd has been committed to the "create value
+      for customers" business philosophy, adhering to the "product is designed"
+      policy, solve production problems and difficulties for customers, provide
+      better service for customers, so as to maximize the interests of
+      customers.
+    </p>
+  </section>
+
+  <!-- Quote -->
+  <section class="max-w-7xl pt-8 mx-auto px-4 lg:px-8">
+    <div>
+      <Icon class="w-20 h-20 text-primary" name="bi:quote" />
+    </div>
+    <blockquote class="text-lg px-4 lg:px-24">
+      <p>
+        In April 2012, pump company in the United States reported that there
+        were the following problems in the use of ordinary reactive sintered
+        silicon carbide materials (all of which are this material) in the
+        lab-level deionized water for our type 21 5/8 'mechanical seal:
+      </p>
+      <ul class="pt-4">
+        {
+          quoteList.map((quote, index) => {
+            return (
+              <li>
+                <p>
+                  {index + 1}. {quote}
+                </p>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </blockquote>
+    <div class="flex justify-end">
+      <Icon class="w-20 h-20 text-primary rotate-180" name="bi:quote" />
+    </div>
+  </section>
+
+  <section class="max-w-7xl pt-8 mx-auto px-4 lg:px-8">
+    <article
+      class="py-8 bg-background1 rounded-xl overflow-hidden px-4 lg:px-24"
+    >
+      <header>
+        <h1 class="font-bold text-3xl">
+          Our company readjusted the design scheme according to the customer
+          feedback, and made the following adjustments:
+        </h1>
+      </header>
+      <ul class="text-lg py-4">
+        {
+          objectives.map((objective, index) => {
+            return (
+              <li>
+                <p>
+                  {index + 1}. {objective}
+                </p>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </article>
+  </section>
+
+  <section class="max-w-7xl pt-8 mx-auto px-4 pb-4 lg:px-8 lg:pb-16">
+    <p class="text-lg">
+      The service life of the mechanical seal is greatly extended after the end
+      surface suction problem is improved. Now this mechanical seal has been
+      used in the customer's water pump for more than 3 years without any
+      problems.
+    </p>
+  </section>
 </LayoutCategory>

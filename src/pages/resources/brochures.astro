@@ -9,40 +9,42 @@ import brochuresJson from "@data/brochures.json";
   pageTitle="Brochures"
 >
   <section class="max-w-7xl mx-auto py-16 px-4 lg:px-8">
-    <table class="rounded-md shadow-xl overflow-hidden w-full">
-      <thead>
-        <tr class="flex bg-gray-50 text-left text-xl">
-          <th class="flex-1 p-2">Name</th>
-          <th class="w-1/5 p-2">Size</th>
-          <th class="w-1/5 p-2">Download</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          brochuresJson.contents.map((entry) => {
-            return (
-              <tr class="flex border-t items-center text-lg">
-                <td class="flex-1 p-2">
-                  <a class="inline-block" href={entry.href} target="_blank">
-                    {entry.name}
-                  </a>
-                </td>
-                <td class="w-1/5 p-2">{entry.size}</td>
-                <td class="w-1/5 p-2">
-                  <a
-                    class="inline-block bg-primary text-onPrimary px-4 py-1 rounded-full"
-                    href={entry.href}
-                    download={entry.name}
-                    target="_blank"
-                  >
-                    Download
-                  </a>
-                </td>
-              </tr>
-            );
-          })
-        }
-      </tbody>
-    </table>
+    <div class="overflow-x-auto">
+      <table class="rounded-md shadow-xl overflow-hidden w-full min-w-[600px]">
+        <thead>
+          <tr class="flex bg-gray-50 text-left text-xl">
+            <th class="flex-1 p-2">Name</th>
+            <th class="w-1/5 p-2">Size</th>
+            <th class="w-1/5 p-2">Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            brochuresJson.contents.map((entry) => {
+              return (
+                <tr class="flex border-t items-center text-lg">
+                  <td class="flex-1 p-2">
+                    <a class="inline-block" href={entry.href} target="_blank">
+                      {entry.name}
+                    </a>
+                  </td>
+                  <td class="w-1/5 p-2">{entry.size}</td>
+                  <td class="w-1/5 p-2">
+                    <a
+                      class="inline-block bg-primary text-onPrimary px-4 py-1 rounded-full"
+                      href={entry.href}
+                      download={entry.name}
+                      target="_blank"
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+              );
+            })
+          }
+        </tbody>
+      </table>
+    </div>
   </section>
 </LayoutCategory>

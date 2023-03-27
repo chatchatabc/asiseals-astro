@@ -1,5 +1,6 @@
 ---
 import LayoutCategory from "@layouts/LayoutCategory.astro";
+import ContactUsForm from "@components/widgets/ContactUsForm.astro";
 import contactsJson from "@data/contacts.json";
 import headquartersJson from "@data/headquarters.json";
 import { Icon } from "astro-icon";
@@ -117,38 +118,8 @@ import { Icon } from "astro-icon";
       </p>
     </header>
 
-    <form class="mt-4 space-y-4">
-      <input
-        class="text-2xl w-full border-2 px-2 py-1"
-        name="name"
-        required
-        placeholder="*Name"
-      />
-      <input
-        class="text-2xl w-full border-2 px-2 py-1"
-        name="company"
-        placeholder="Company Name"
-      />
-      <input
-        class="text-2xl w-full border-2 px-2 py-1"
-        name="email"
-        type="email"
-        required
-        placeholder="*Email"
-      />
-      <input
-        class="text-2xl w-full border-2 px-2 py-1"
-        name="tel"
-        placeholder="*Tel/WhatsApp"
-      />
-      <textarea
-        class="text-2xl w-full border-2 px-2 py-1"
-        name="message"
-        placeholder="*Message"></textarea>
-
-      <button type="submit" class="px-16 text-white text-xl py-4 bg-[#E14753]"
-        >Submit</button
-      >
-    </form>
+    <section class="mt-4">
+      <ContactUsForm />
+    </section>
   </section>
 </LayoutCategory>

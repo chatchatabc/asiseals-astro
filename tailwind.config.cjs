@@ -6,6 +6,13 @@ module.exports = {
       fontFamily: {
         abel: ["Abel", "sans-serif"],
       },
+      colors: {
+        primary: "#E14753",
+        onPrimary: "#FFFFFF",
+        accent: "#DCECF9",
+        background: "#3B71A1",
+        background1: "#DAECFA",
+      },
     },
   },
   plugins: [],

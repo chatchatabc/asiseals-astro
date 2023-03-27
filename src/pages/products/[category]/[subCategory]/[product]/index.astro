@@ -1,0 +1,170 @@
+---
+import ContactUsForm from "@components/widgets/ContactUsForm.astro";
+import ProductSearch from "@components/widgets/ProductSearch.astro";
+import RelatedProducts from "@components/widgets/RelatedProducts.astro";
+import productsJson from "@data/products.json";
+import LayoutCategory from "@layouts/LayoutCategory.astro";
+import { Img } from "astro-imagetools/components";
+import { getCollection } from "astro:content";
+import { utilSlugToTitle } from "src/helpers/commonUtils";
+
+export function getStaticPaths() {
+  return productsJson.contents.map((product) => {
+    return {
+      params: {
+        category: product.category ?? "test",
+        subCategory: product.subCategory ?? "test",
+        product: product.slug ?? "test",
+      },
+      props: {
+        product,
+      },
+    };
+  });
+}
+
+type Props = {
+  product: (typeof productsJson.contents)[0];
+};
+const { product } = Astro.props as Props;
+
+const informationCollection = await getCollection(
+  "product-information",
+  (entry) => entry.id.includes(product.slug)
+);
+
+informationCollection.sort((a, b) => a.data.order - b.data.order);
+
+const productSpecs = informationCollection.filter((entry) => {
+  return !entry.id.includes("details");
+});
+
+const fileDetails =
+  informationCollection.find((entry) => entry.id.includes("details")) ?? null;
+const details = fileDetails ? await fileDetails.render() : null;
+---
+
+<LayoutCategory
+  title={product.name}
+  pageTitle={product.name}
+  image="/images/products/banner-inner.webp"
+>
+  <!-- Product Summary -->
+  <section class="container mx-auto pt-16 px-4 lg:px-8">
+    <figure class="flex">
+      <!-- Product Image -->
+      <div class="w-1/2 flex">
+        <!-- Image Gallery Selection -->
+        <ul class="w-1/5">
+          <li>
+            <div class="w-1/2 mx-auto">
+              <Img src={product.imageUrl} alt={product.name} />
+            </div>
+          </li>
+        </ul>
+
+        <!-- Carousel -->
+        <div class="w-4/5">
+          <Img src={product.imageUrl} alt={product.name} />
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <figcaption class="w-1/2 p-8 flex flex-col">
+        <!-- Product Title -->
+        <header>
+          <h1 class="text-4xl">{product.name}</h1>
+        </header>
+
+        <!-- ShareThis section -->
+        <section class="my-4">
+          <header>
+            <h2 class="text-xl">Share to:</h2>
+          </header>
+          <ul class="flex space-x-4">
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>LinkedIn</li>
+            <li>WhatsApp</li>
+          </ul>
+        </section>
+
+        <!-- Product Category Section -->
+        <section class="text-2xl mb-4">
+          {utilSlugToTitle(product.category)}
+          {utilSlugToTitle(product.subCategory)}
+        </section>
+
+        <!-- Product Content section -->
+        <section class="mb-4">
+          {details ? <details.Content /> : null}
+        </section>
+
+        <!-- Product Inquiry -->
+        <button
+          class="px-8 py-2 bg-primary text-onPrimary block w-fit rounded-full"
+        >
+          Inquire
+        </button>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- Product Description Section -->
+  <section class="container pt-8 mx-auto px-4 lg:px-8">
+    <header></header>
+    <section class="border-x border-b text-lg">
+      {
+        productSpecs.map(async (entry) => {
+          const { data, render } = entry;
+          const { name } = data;
+          const { Content } = await render();
+          return (
+            <article>
+              <header class="border-y bg-gray-200 p-2">
+                <h2 class="font-bold">{name}</h2>
+              </header>
+              <section class="p-2">
+                <Content />
+              </section>
+            </article>
+          );
+        })
+      }
+    </section>
+  </section>
+
+  <!-- Products Search section -->
+  <section class="container mx-auto pt-8 px-4 lg:px-8">
+    <header class="bg-gray-200 border-l-4 border-background p-2">
+      <h1 class="text-2xl font-bold">Product Search</h1>
+    </header>
+    <section class="p-4">
+      <ProductSearch hideTitle={true} />
+    </section>
+  </section>
+
+  <!-- Related Products Section -->
+  <section class="container mx-auto pt-8 px-4 lg:px-8">
+    <header class="bg-gray-200 border-l-4 border-background p-2">
+      <h1 class="text-2xl font-bold">Related Products</h1>
+    </header>
+    <section class="p-4">
+      <RelatedProducts
+        data={productsJson.contents.filter(
+          (entry) => entry.subCategory === product.subCategory
+        )}
+      />
+    </section>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="container mx-auto pt-8 pb-16 px-4 lg:px-8">
+    <header class="bg-gray-200 border-l-4 border-background p-2">
+      <h1 class="text-2xl font-bold">Contact Us Now</h1>
+    </header>
+    <section class="p-4">
+      <ContactUsForm />
+    </section>
+  </section>
+</LayoutCategory>

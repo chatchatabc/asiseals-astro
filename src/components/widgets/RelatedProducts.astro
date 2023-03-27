@@ -1,0 +1,34 @@
+---
+import { Img } from "astro-imagetools/components";
+
+type Props = {
+  data: Record<string, any>[];
+};
+
+const { data } = Astro.props as Props;
+---
+
+<div>
+  <ul class="flex overflow-hidden">
+    {
+      data.map((entry) => {
+        return (
+          <li class="w-1/4 flex-shrink-0 p-2">
+            <figure class="relative">
+              <div>
+                <Img src={entry.imageUrl} alt={entry.name} />
+              </div>
+              <figcaption>
+                <p class="text-center text-lg">{entry.name}</p>
+                <a
+                  class="absolute top-0 left-0 w-full h-full"
+                  href={`/products/${entry.category}/${entry.subCategory}/${entry.slug}`}
+                />
+              </figcaption>
+            </figure>
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>

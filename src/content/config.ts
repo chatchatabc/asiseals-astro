@@ -26,4 +26,5 @@ export const collections = {
   industries: productSchema,
   resources: imageSchema,
   "product-information": orderSchema,
+  faqs: orderSchema,
 };

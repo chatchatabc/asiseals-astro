@@ -1,0 +1,22 @@
+{
+  "contents": [
+    {
+      "sealAssembly": "01",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "01",
+      "seatAssembly": "01"
+    },
+    {
+      "sealAssembly": "02",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "02",
+      "seatAssembly": "02"
+    }
+  ]
+}

@@ -7,15 +7,23 @@ const productSchema = defineCollection({
   }),
 });
 
-const productInformationSchema = defineCollection({
+const orderSchema = defineCollection({
   schema: z.object({
     name: z.string(),
     order: z.number(),
   }),
 });
 
+const imageSchema = defineCollection({
+  schema: z.object({
+    name: z.string(),
+    imageUrl: z.string(),
+  }),
+});
+
 export const collections = {
   "product-categories": productSchema,
   industries: productSchema,
-  "product-information": productInformationSchema,
+  resources: imageSchema,
+  "product-information": orderSchema,
 };

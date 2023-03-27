@@ -8,7 +8,7 @@ type Props = {
 const { hideTitle = false } = Astro.props as Props;
 ---
 
-<section class="flex justify-between flex-wrap items-center font-abel">
+<section class="flex justify-between flex-wrap items-center">
   {!hideTitle && <p class="w-full text-4xl lg:w-1/4">Product Search:</p>}
   <div
     class={`flex border-2 w-full border-background ${!hideTitle && "lg:w-3/4"}`}

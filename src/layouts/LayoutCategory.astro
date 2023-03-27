@@ -14,7 +14,9 @@ const { title, pageTitle, image } = Astro.props as Props;
 
 <Layout title={pageTitle}>
   <header class="relative font-abel max-w-[1920px] mx-auto" title={pageTitle}>
-    <Img src={image} alt={pageTitle} />
+    <div class="hidden h-56 lg:block">
+      <Img src={image} alt={pageTitle} />
+    </div>
     <h1
       class="absolute text-5xl text-white top-1/2 w-full -translate-y-1/2 text-center"
     >

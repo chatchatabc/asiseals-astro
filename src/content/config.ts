@@ -1,9 +1,10 @@
 import { defineCollection, z } from "astro:content";
 
-const productSchema = defineCollection({
+const featuredSchema = defineCollection({
   schema: z.object({
     name: z.string(),
     isFeatured: z.boolean(),
+    imageUrl: z.string(),
   }),
 });
 
@@ -22,8 +23,8 @@ const imageSchema = defineCollection({
 });
 
 export const collections = {
-  "product-categories": productSchema,
-  industries: productSchema,
+  "product-categories": featuredSchema,
+  industries: orderSchema,
   resources: imageSchema,
   "product-information": orderSchema,
   faqs: orderSchema,

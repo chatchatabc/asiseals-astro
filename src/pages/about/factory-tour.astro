@@ -1,0 +1,12 @@
+---
+import LayoutCategory from "@layouts/LayoutCategory.astro";
+import FactoryTour from "@components/about-us/FactoryTour.svelte";
+---
+
+<LayoutCategory
+  image="/images/about-us/banner.webp"
+  title="Factory Tour"
+  pageTitle="Factory Tour"
+>
+  <FactoryTour client:load />
+</LayoutCategory>

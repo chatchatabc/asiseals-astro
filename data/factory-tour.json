@@ -1,0 +1,49 @@
+{
+  "contents": [
+    {
+      "name": "Test Center",
+      "imageUrl": "/images/about-us/factory/test-center.webp",
+      "type": "test-center"
+    },
+    {
+      "name": "Test Center",
+      "imageUrl": "/images/about-us/factory/test-center1.webp",
+      "type": "test-center"
+    },
+    {
+      "name": "Test Center",
+      "imageUrl": "/images/about-us/factory/test-center2.webp",
+      "type": "test-center"
+    },
+    {
+      "name": "Test Center",
+      "imageUrl": "/images/about-us/factory/test-center3.webp",
+      "type": "test-center"
+    },
+    {
+      "name": "Vulcanization Equipment",
+      "imageUrl": "/images/about-us/factory/vulcanization-equipment.webp",
+      "type": "production-equipment"
+    },
+    {
+      "name": "Vulcanization Equipment",
+      "imageUrl": "/images/about-us/factory/vulcanization-equipment1.webp",
+      "type": "production-equipment"
+    },
+    {
+      "name": "Storehouse",
+      "imageUrl": "/images/about-us/factory/storehouse.webp",
+      "type": "production-equipment"
+    },
+    {
+      "name": "Polishing Workshop",
+      "imageUrl": "/images/about-us/factory/polishing-workshop.webp",
+      "type": "production-equipment"
+    },
+    {
+      "name": "Assembly Workshop",
+      "imageUrl": "/images/about-us/factory/assembly-workshop.webp",
+      "type": "production-equipment"
+    }
+  ]
+}

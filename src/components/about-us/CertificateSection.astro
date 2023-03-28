@@ -1,0 +1,67 @@
+---
+import aboutUsJson from "@data/about-us.json";
+import { Icon } from "astro-icon";
+---
+
+<certificate-section class="flex items-center">
+  <button id="prev-btn">
+    <Icon class="h-8 w-8" name="mdi:chevron-left" />
+  </button>
+
+  <ul id="carousel" class="snap-x flex-1 py-4 flex font-xl overflow-hidden">
+    {
+      aboutUsJson.certificates.map((certificate) => {
+        return (
+          <li class="w-1/5 snap-start flex-shrink-0 p-2">
+            <figure>
+              <img src={certificate.imageUrl} alt={certificate.name} />
+              <figcaption>
+                <h2 class="text-center">{certificate.name}</h2>
+              </figcaption>
+            </figure>
+          </li>
+        );
+      })
+    }
+  </ul>
+
+  <button id="next-btn">
+    <Icon class="h-8 w-8" name="mdi:chevron-right" />
+  </button>
+</certificate-section>
+
+<script>
+  class CertificateSection extends HTMLElement {
+    constructor() {
+      super();
+
+      const carousel = this.querySelector("#carousel");
+      const prevBtn = this.querySelector("#prev-btn");
+      const nextBtn = this.querySelector("#next-btn");
+
+      function nextSlide(move: boolean = true) {
+        if (move) {
+          carousel?.scrollBy({
+            left: 300,
+            behavior: "smooth",
+          });
+        } else {
+          carousel?.scrollBy({
+            left: -300,
+            behavior: "smooth",
+          });
+        }
+      }
+
+      prevBtn?.addEventListener("click", () => {
+        nextSlide(false);
+      });
+
+      nextBtn?.addEventListener("click", () => {
+        nextSlide();
+      });
+    }
+  }
+
+  customElements.define("certificate-section", CertificateSection);
+</script>

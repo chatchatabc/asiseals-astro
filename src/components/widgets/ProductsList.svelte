@@ -63,7 +63,7 @@
   });
 </script>
 
-<ul class="grid grid-cols-4">
+<ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
   {#each filteredProducts as product}
     <li class="p-2">
       <figure class="group bg-gray-200">

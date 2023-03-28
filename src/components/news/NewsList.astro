@@ -1,0 +1,42 @@
+---
+import { Img } from "astro-imagetools/components";
+import { getCollection } from "astro:content";
+
+const newsCollection = await getCollection("news");
+
+type Props = {
+  type?: string;
+};
+
+const { type } = Astro.props as Props;
+---
+
+<ul class="flex flex-wrap">
+  {
+    newsCollection
+      .filter((news) => {
+        if (type) {
+          return news.data.type === type;
+        }
+        return true;
+      })
+      .map((news) => {
+        const { name, summary, imageUrl } = news.data;
+        return (
+          <li class="p-8 w-full md:w-1/2 lg:w-1/3">
+            <figure>
+              <div>
+                <Img src={imageUrl} alt={name} />
+              </div>
+              <figcaption>
+                <header>
+                  <h1 class="text-3xl font-bold">{name}</h1>
+                </header>
+                <p class="text-lg">{summary}</p>
+              </figcaption>
+            </figure>
+          </li>
+        );
+      })
+  }
+</ul>

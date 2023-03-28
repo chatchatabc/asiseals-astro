@@ -1,11 +1,11 @@
 ---
+import NewsList from "@components/news/NewsList.astro";
 import LayoutCategory from "@layouts/LayoutCategory.astro";
 ---
 
-<LayoutCategory
-  image="/images/news/banner.webp"
-  pageTitle="Company News"
-  title="Company News"
->
-  Company News
+<LayoutCategory image="/images/news/banner.webp" pageTitle="News" title="News">
+  <!-- Container -->
+  <section class="mx-auto max-w-7xl mb-16 px-4 lg:px-8">
+    <NewsList type="company-news" />
+  </section>
 </LayoutCategory>

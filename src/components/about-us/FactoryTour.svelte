@@ -23,24 +23,24 @@
 </script>
 
 <section class="max-w-7xl mx-auto px-4 lg:px-8">
-  <header class="flex space-x-8 justify-center py-8">
+  <header class="flex justify-center py-8 space-x-2 md:space-x-8">
     <button
       on:click={() => handleSelect("test-center")}
-      class={`px-8 py-2 text-lg ${
+      class={`py-2 text-lg ${
         selected !== "test-center"
           ? "bg-primary text-onPrimary"
           : "bg-white border border-primary text-primary"
-      }`}
+      } px-4 lg:px-8`}
     >
       Test Center &gt;
     </button>
     <button
       on:click={() => handleSelect("production-equipment")}
-      class={`px-8 py-2 text-lg ${
+      class={`py-2 text-lg ${
         selected !== "production-equipment"
           ? "bg-primary text-onPrimary"
           : "bg-white border border-primary text-primary"
-      }`}
+      } px-4 lg:px-8`}
     >
       Production Equipments &gt;
     </button>

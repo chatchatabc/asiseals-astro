@@ -25,7 +25,7 @@
       "slug": "type-91",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
-      "industry": ["pharmaceuticals", "pulp-and-paper"]
+      "industry": ["pharmaceuticals-industry", "pulp-and-paper"]
     },
     {
       "name": "Type 81",
@@ -34,7 +34,7 @@
       "slug": "type-81",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
-      "industry": ["pharmaceuticals", "chemical", "pulp-and-paper"]
+      "industry": ["pharmaceuticals-industry", "chemical", "pulp-and-paper"]
     },
     {
       "name": "Type 61",
@@ -61,7 +61,7 @@
       "slug": "type-16",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
-      "industry": ["waste-water", "agriculture", "foods-and-beverages"]
+      "industry": ["waste-water", "agriculture", "food-and-beverage"]
     },
     {
       "name": "Type 37F",
@@ -70,7 +70,7 @@
       "slug": "type-37f",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
-      "industry": ["chemical", "foods-and-beverages"]
+      "industry": ["chemical", "food-and-beverage"]
     },
     {
       "name": "Type 81B",
@@ -101,7 +101,7 @@
         "power-generation",
         "mining",
         "pulp-and-paper",
-        "foods-and-beverages"
+        "food-and-beverage"
       ]
     },
     {
@@ -147,7 +147,7 @@
       "slug": "type-16c",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
-      "industry": ["power-generation", "agriculture", "foods-and-beverages"]
+      "industry": ["power-generation", "agriculture", "food-and-beverage"]
     },
     {
       "name": "Type 852",
@@ -157,10 +157,10 @@
       "category": "pump-seals",
       "subCategory": "pusher-seals",
       "industry": [
-        "pharmaceuticals",
+        "pharmaceuticals-industry",
         "power-generation",
         "agriculture",
-        "foods-and-beverages",
+        "food-and-beverage",
         "pulp-and-paper"
       ]
     },
@@ -202,7 +202,7 @@
         "power-generation",
         "mining",
         "pulp-and-paper",
-        "foods-and-beverages"
+        "food-and-beverage"
       ]
     },
     {
@@ -212,7 +212,7 @@
       "slug": "type-16wm",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
-      "industry": ["power-generation", "mining", "foods-and-beverages"]
+      "industry": ["power-generation", "mining", "food-and-beverage"]
     },
     {
       "name": "Type 16EB",
@@ -221,7 +221,7 @@
       "slug": "type-16eb",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
-      "industry": ["waste-water", "agriculture", "foods-and-beverages"]
+      "industry": ["waste-water", "agriculture", "food-and-beverage"]
     },
     {
       "name": "Type AA03",

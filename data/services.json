@@ -1,17 +1,20 @@
 {
   "contents": [
     {
+      "slug": "engineering-design-services",
       "name": "Engineering Design Services",
       "imageUrl": "/images/services/engineering-design.png",
       "summary": "We offer innovative, high-value, comprehensive mechanical seal designs. Advantage Seal’s expertise and strong history of client collaboration are ideal for mechanical seal design solutions. Customers provide information such as rotational speed, pressure, medium, working conditions, and installation cavity size. Our engineers then develop customized, high-reliability solutions for demanding applications."
     },
     {
+      "slug": "inventory-management-services",
       "name": "Inventory Management Services",
       "imageUrl": "/images/services/inventory-management.png",
       "summary": "Managing your mechanical seals is a breeze with our innovative Inventory Management Service. We use the Kanban system to ensure accurate seal forecasting and inventory. We offer custom inventory planning for better, shorter lead time, in order to minimize shutdown operations."
     },
     {
-      "name": "After Sales Service",
+      "slug": "after-sales-services",
+      "name": "After Sales Services",
       "imageUrl": "/images/services/after-sales.png",
       "summary": "We offer failure analysis service to all our customers. We determine the cause of seal failure, or determine why your pumps fail, then offer solutions. We offer upgrades and replacement seals that are designed to perform better and last longer."
     }

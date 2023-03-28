@@ -18,13 +18,16 @@
       "categories": [
         {
           "name": "Engineering Design Services",
-          "href": "/engineering-design-services"
+          "href": "#engineering-design-services"
         },
         {
           "name": "Inventory Management Services",
-          "href": "/inventory-management-services"
+          "href": "#inventory-management-services"
         },
-        { "name": "After Sales Services", "href": "/after-sales-services" }
+        {
+          "name": "After Sales Services",
+          "href": "#after-sales-services"
+        }
       ]
     },
     {

@@ -63,11 +63,12 @@ const { pathname } = Astro.url;
     <div class="hidden relative z-[2] ml-8 items-center py-1 px-2 lg:flex">
       <form
         action="/products/search"
-        id="search-input"
+        id="form"
         class="origin-left scale-x-0 flex items-center transition absolute w-56 right-0 py-1 px-2 rounded-full bg-gray-200"
       >
         <input
           name="key"
+          id="search-input"
           class="flex-1 bg-gray-200 focus:outline-none"
           placeholder="Search..."
         />
@@ -114,8 +115,9 @@ const { pathname } = Astro.url;
   const navMenu = document.querySelector("#nav-menu")!;
   const openSearchBtn = document.querySelector("#open-search-btn")!;
   const closeSearchBtn = document.querySelector("#close-search-btn")!;
-  const searchInput = document.querySelector("#search-input")!;
-  const searchBtn = document.querySelector("#search-btn")!;
+  const searchInput =
+    document.querySelector<HTMLInputElement>("#search-input")!;
+  const form = document.querySelector<HTMLFormElement>("#form")!;
 
   navMenuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("-translate-y-full");
@@ -124,13 +126,14 @@ const { pathname } = Astro.url;
   });
 
   openSearchBtn.addEventListener("click", () => {
-    searchInput.classList.remove("scale-x-0");
+    form.classList.remove("scale-x-0");
     closeSearchBtn.classList.remove("hidden");
     openSearchBtn.classList.add("hidden");
+    searchInput.focus();
   });
 
   closeSearchBtn.addEventListener("click", () => {
-    searchInput.classList.add("scale-x-0");
+    form.classList.add("scale-x-0");
     closeSearchBtn.classList.add("hidden");
     openSearchBtn.classList.remove("hidden");
   });

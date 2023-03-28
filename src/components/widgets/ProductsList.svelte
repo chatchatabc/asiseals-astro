@@ -1,9 +1,48 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import productsJson from "@data/products.json";
+  import { utilSlugToText } from "src/helpers/commonUtils";
 
-  export let filterValue: string, filterType: string;
+  export let filterValue: string | null, filterType: string | null;
+
+  let searchValue = "";
 
   $: filteredProducts = productsJson.contents
+    .filter((product) => {
+      if (searchValue === "") {
+        return true;
+      } else if (searchValue) {
+        return (
+          product.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+          product.summary.toLowerCase().includes(searchValue.toLowerCase()) ||
+          utilSlugToText(product.category).includes(
+            searchValue.toLowerCase()
+          ) ||
+          utilSlugToText(product.subCategory).includes(
+            searchValue.toLowerCase()
+          ) ||
+          product.industry
+            .map((entry) => utilSlugToText(entry))
+            .includes(searchValue.toLowerCase())
+        );
+      }
+
+      if (filterValue && filterType) {
+        if (filterType === "all") {
+          return true;
+        } else if (filterType === "category") {
+          return product.category
+            .toLowerCase()
+            .includes(filterValue.toLowerCase());
+        } else if (filterType === "sub-category") {
+          return product.subCategory
+            .toLowerCase()
+            .includes(filterValue.toLowerCase());
+        } else if (filterType === "industry") {
+          return product.industry.includes(filterValue.toLowerCase());
+        }
+      }
+    })
     .sort((a, b) => {
       if (a.name < b.name) {
         return -1;
@@ -12,22 +51,16 @@
       } else {
         return 0;
       }
-    })
-    .filter((product) => {
-      if (filterType === "all") {
-        return true;
-      } else if (filterType === "category") {
-        return product.category
-          .toLowerCase()
-          .includes(filterValue.toLowerCase());
-      } else if (filterType === "sub-category") {
-        return product.subCategory
-          .toLowerCase()
-          .includes(filterValue.toLowerCase());
-      } else if (filterType === "industry") {
-        return product.industry.includes(filterValue.toLowerCase());
-      }
     });
+
+  onMount(() => {
+    // Get search params from url
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchParam = urlParams.get("key");
+    if (searchParam) {
+      searchValue = searchParam;
+    }
+  });
 </script>
 
 <ul class="grid grid-cols-4">

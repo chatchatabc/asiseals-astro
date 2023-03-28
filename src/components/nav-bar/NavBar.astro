@@ -61,18 +61,20 @@ const { pathname } = Astro.url;
 
     <!-- Desktop Search -->
     <div class="hidden relative z-[2] ml-8 items-center py-1 px-2 lg:flex">
-      <div
+      <form
+        action="/products/search"
         id="search-input"
         class="origin-left scale-x-0 flex items-center transition absolute w-56 right-0 py-1 px-2 rounded-full bg-gray-200"
       >
         <input
+          name="key"
           class="flex-1 bg-gray-200 focus:outline-none"
           placeholder="Search..."
         />
         <button class="relative mr-6" id="search-btn">
           <Icon class="w-6 h-6 text-[#F52B3F]" name="mdi:magnify" />
         </button>
-      </div>
+      </form>
 
       <button class="relative" id="open-search-btn">
         <Icon class="w-6 h-6 text-[#F52B3F]" name="mdi:magnify" />

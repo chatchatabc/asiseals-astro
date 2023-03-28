@@ -8,17 +8,38 @@ type Props = {
 const { hideTitle = false } = Astro.props as Props;
 ---
 
-<section class="flex justify-between flex-wrap items-center">
+<product-search class="flex justify-between flex-wrap items-center">
   {!hideTitle && <p class="w-full text-4xl lg:w-1/4">Product Search:</p>}
-  <div
+  <form
+    action="/products/search"
     class={`flex border-2 w-full border-background ${!hideTitle && "lg:w-3/4"}`}
   >
     <input
+      id="input"
+      name="key"
       class="flex-1 p-2 text-lg"
       placeholder="Enter product name or model"
     />
-    <button class="px-3 block bg-background">
+    <button type="submit" class="px-3 block bg-background">
       <Icon class="h-6 w-6 text-white" name="mdi:magnify" />
     </button>
-  </div>
-</section>
+  </form>
+</product-search>
+
+<script>
+  class ProductSearch extends HTMLElement {
+    constructor() {
+      super();
+
+      const input = this.querySelector<HTMLInputElement>("#input")!;
+
+      const params = new URLSearchParams(window.location.search);
+
+      if (params.has("key")) {
+        input.value = params.get("key") ?? "";
+      }
+    }
+  }
+
+  customElements.define("product-search", ProductSearch);
+</script>

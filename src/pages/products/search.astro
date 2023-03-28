@@ -1,0 +1,20 @@
+---
+import ProductSearch from "@components/widgets/ProductSearch.astro";
+import ProductsList from "@components/widgets/ProductsList.svelte";
+import LayoutCategory from "@layouts/LayoutCategory.astro";
+---
+
+<LayoutCategory
+  image="/images/products/banner-inner.webp"
+  pageTitle="Search"
+  title="Search"
+>
+  <section class="mx-auto max-w-7xl px-4 lg:px-8">
+    <section class="py-8 border-b border-dashed">
+      <ProductSearch />
+    </section>
+    <section class="py-8">
+      <ProductsList filterType={null} filterValue={null} client:load />
+    </section>
+  </section>
+</LayoutCategory>

@@ -37,10 +37,12 @@ const productCategories = await getCollection(
           const { Content } = await product.render();
           return (
             <li>
-              <figure class="items px-8 duration-500 opacity-0 translate-x-1/2 absolute left-0 top-0 right-0 h-full w-full flex flex-col justify-center">
-                <figcaption class="-translate-y-1/3 md:w-2/3">
+              <figure class="items px-8 duration-500 opacity-0 pointer-events-none translate-x-1/2 absolute left-0 top-0 right-0 h-full w-full flex flex-col justify-center">
+                <figcaption class="-translate-y-1/4 md:w-2/3">
                   <header>
-                    <h1 class="py-2 text-2xl lg:text-4xl">{name}</h1>
+                    <h1 class="-mb-4 py-2 text-2xl lg:mb-0 lg:text-4xl">
+                      {name}
+                    </h1>
                   </header>
                   <section class="text-sm markdown lg:text-base">
                     <Content />
@@ -52,7 +54,7 @@ const productCategories = await getCollection(
                     View More
                   </a>
                 </figcaption>
-                <div class="h-2/3 absolute right-0 bottom-0 lg:-translate-y-1/3 z-[-1]">
+                <div class="absolute right-0 bottom-1/2 z-[-1] h-1/3 translate-y-full md:translate-y-1/2 md:h-1/2">
                   <Picture src={imageUrl} alt={name} />
                 </div>
               </figure>
@@ -90,9 +92,11 @@ const productCategories = await getCollection(
       const updateSlide = () => {
         items.forEach((item) => {
           item.classList.add("opacity-0");
+          item.classList.add("pointer-events-none");
           item.classList.add("translate-x-1/2");
         });
         items[index].classList.remove("opacity-0");
+        items[index].classList.remove("pointer-events-none");
         items[index].classList.remove("translate-x-1/2");
 
         clearInterval(timer);

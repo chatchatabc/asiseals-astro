@@ -15,6 +15,15 @@ const orderSchema = defineCollection({
   }),
 });
 
+const newsSchema = defineCollection({
+  schema: z.object({
+    name: z.string(),
+    type: z.string(),
+    summary: z.string(),
+    imageUrl: z.string(),
+  }),
+});
+
 const imageSchema = defineCollection({
   schema: z.object({
     name: z.string(),
@@ -28,4 +37,5 @@ export const collections = {
   resources: imageSchema,
   "product-information": orderSchema,
   faqs: orderSchema,
+  news: newsSchema,
 };

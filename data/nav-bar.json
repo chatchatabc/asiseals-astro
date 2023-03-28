@@ -65,7 +65,7 @@
       "name": "About",
       "href": "/about",
       "categories": [
-        { "name": "Culture", "href": "/culture" },
+        { "name": "Culture", "href": "" },
         { "name": "Company History", "href": "/company-history" },
         { "name": "Factory Tour", "href": "/factory-tour" }
       ]
@@ -75,7 +75,7 @@
       "href": "/news",
       "categories": [
         { "name": "Company News", "href": "/company-news" },
-        { "name": "Blog", "href": "/blog" }
+        { "name": "Blog", "href": "/blogs" }
       ]
     },
     {

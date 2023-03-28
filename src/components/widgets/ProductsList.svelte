@@ -9,6 +9,22 @@
 
   $: filteredProducts = productsJson.contents
     .filter((product) => {
+      if (filterValue && filterType) {
+        if (filterType === "all") {
+          return true;
+        } else if (filterType === "category") {
+          return product.category
+            .toLowerCase()
+            .includes(filterValue.toLowerCase());
+        } else if (filterType === "sub-category") {
+          return product.subCategory
+            .toLowerCase()
+            .includes(filterValue.toLowerCase());
+        } else if (filterType === "industry") {
+          return product.industry.includes(filterValue.toLowerCase());
+        }
+      }
+
       if (searchValue === "") {
         return true;
       } else if (searchValue) {
@@ -25,22 +41,6 @@
             .map((entry) => utilSlugToText(entry))
             .includes(searchValue.toLowerCase())
         );
-      }
-
-      if (filterValue && filterType) {
-        if (filterType === "all") {
-          return true;
-        } else if (filterType === "category") {
-          return product.category
-            .toLowerCase()
-            .includes(filterValue.toLowerCase());
-        } else if (filterType === "sub-category") {
-          return product.subCategory
-            .toLowerCase()
-            .includes(filterValue.toLowerCase());
-        } else if (filterType === "industry") {
-          return product.industry.includes(filterValue.toLowerCase());
-        }
       }
     })
     .sort((a, b) => {

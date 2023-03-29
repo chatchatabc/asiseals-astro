@@ -10,96 +10,164 @@ import { Img } from "astro-imagetools/components";
     <h1 class="text-5xl text-center">Company History</h1>
   </header>
 
-  <!-- Content Container -->
-  <section class="max-w-6xl mx-auto relative mt-8 px-4 lg:px-8">
-    <!-- Carousel -->
-    <ul
-      id="carousel"
-      class="bg-white shadow-lg scroll-smooth flex snap-x overflow-hidden"
-    >
-      {
-        companyHistoryJson.contents.map((history) => {
-          return (
-            <li class="slides snap-start w-full flex flex-col flex-shrink-0 md:pl-16">
-              <figure class="flex flex-wrap h-full flex-row-reverse">
-                <div class="w-full p-8 md:w-1/2">
-                  <Img src={history.image} alt={history.name} />
-                </div>
-                <figcaption class="py-8 md:w-1/2 lg:pt-16">
-                  <header class="flex items-center">
-                    <div class="h-[0.1rem] w-8 bg-blue-500" />
-                    <h2 class="pl-8 text-2xl text-primary">{history.name}</h2>
-                  </header>
-                  <p class="pl-16 lg:text-xl">{history.summary}</p>
-                </figcaption>
-              </figure>
-            </li>
-          );
-        })
-      }
-    </ul>
-
-    <!-- Timeline Container -->
-    <section class="flex items-center relative mt-8 overflow-hidden">
-      <!-- line -->
-      <div class="h-1 bg-blue-500 absolute w-full top-1/2 -translate-y-1/2">
-      </div>
-
-      <button
-        id="prev-btn"
-        aria-label="Previous Button"
-        class="h-6 w-6 rounded-full bg-white relative"
+  <section class="max-w-6xl mx-auto mt-8 px-4 lg:px-8">
+    <!-- Carousel Container -->
+    <section class="relative pb-20">
+      <!-- Content Carousel -->
+      <ul
+        id="carousel"
+        class="bg-white shadow-lg scroll-smooth flex snap-x overflow-hidden"
       >
-        <Icon class="h-full w-full" name="mdi:chevron-left" />
-      </button>
-
-      <!-- Timeline -->
-      <ul class="flex-1 flex">
         {
           companyHistoryJson.contents.map((history) => {
             return (
-              <li class="w-1/4 flex-shrink-0 pl-4">
-                <div class="absolute h-96 w-1 bg-primary" />
-                <p class="absolute bottom-0 translate-y-full">{history.name}</p>
-
-                <div class="h-10 w-10 rounded-full bg-black relative">
-                  <div class="z-[1] vertical-line absolute h-96 w-1 left-1/2 -translate-x-1/2 bg-blue-500" />
-                  <div class="absolute w-1/3 h-1/3 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-white rounded-full" />
-                </div>
+              <li class="slides snap-start w-full flex flex-col flex-shrink-0 px-8 md:pl-16">
+                <figure class="flex flex-wrap h-full flex-row-reverse">
+                  <div class="w-full md:p-8 md:w-1/2">
+                    <Img src={history.image} alt={history.name} />
+                  </div>
+                  <figcaption class="py-8 md:w-1/2 lg:pt-16">
+                    <header class="flex items-center">
+                      <div class="h-[0.1rem] hidden translate-x-1 w-8 bg-primary md:block" />
+                      <h2 class="px-4 text-2xl text-primary md:pl-8">
+                        {history.name}
+                      </h2>
+                    </header>
+                    <p class="px-4 md:pl-16 lg:text-xl">{history.summary}</p>
+                  </figcaption>
+                </figure>
               </li>
             );
           })
         }
       </ul>
-      <button
-        id="next-btn"
-        aria-label="Next Button"
-        class="h-6 w-6 rounded-full bg-white relative"
-      >
-        <Icon class="h-full w-full" name="mdi:chevron-right" />
-      </button>
-    </section>
 
-    <button class="mx-auto">View More</button>
+      <!-- Indicator Carousel -->
+      <section class="absolute h-full w-full top-0 left-0">
+        <div
+          class="w-full absolute h-[0.2rem] left-0 bottom-10 -translate-y-1/2 bg-primary"
+        >
+        </div>
+        <!-- Indicators -->
+        <ul
+          id="indicator-carousel"
+          class="flex-1 flex items-end snap-x absolute scroll-smooth overflow-hidden h-full w-full top-0 left-0"
+        >
+          {
+            companyHistoryJson.contents.map((history) => {
+              return (
+                <li class="w-[200px] snap-start flex-shrink-0 pl-12">
+                  <div class="circles h-10 w-10 rounded-full bg-white border-2 border-primary relative">
+                    <div class="absolute w-1/3 h-1/3 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-primary rounded-full">
+                      <div class="vertical-lines hidden absolute left-1/2 w-[0.2rem] top-0 -translate-y-full z-[10] bg-primary -translate-x-1/2 md:h-[450px]" />
+                    </div>
+                  </div>
+                  <p>{history.name}</p>
+                </li>
+              );
+            })
+          }
+          {
+            [...Array(6)].map(() => {
+              return <li class="w-1/4 snap-start flex-shrink-0 pl-12" />;
+            })
+          }
+        </ul>
+
+        <!-- Prev Button -->
+        <button
+          id="prev-btn"
+          aria-label="Previous Button"
+          class="h-8 w-8 rounded-full bottom-7 transition left-0 absolute bg-white hover:text-onPrimary hover:bg-primary"
+        >
+          <Icon class="h-full w-full" name="mdi:chevron-left" />
+        </button>
+        <!-- Next Button -->
+        <button
+          id="next-btn"
+          aria-label="Next Button"
+          class="h-8 w-8 rounded-full bottom-7 right-0 bg-white absolute transition hover:text-onPrimary hover:bg-primary"
+        >
+          <Icon class="h-full w-full" name="mdi:chevron-right" />
+        </button>
+      </section>
+    </section>
+    <a
+      href="/about/company-history"
+      class="mx-auto w-fit block bg-primary text-onPrimary text-xl mt-8 px-8 py-4"
+    >
+      View More
+    </a>
   </section>
 </company-history>
 
 <script>
+  import companyHistoryJson from "@data/company-history.json";
+
   class CompanyHistory extends HTMLElement {
     constructor() {
       super();
 
+      let index = 0;
+      let listLength = companyHistoryJson.contents.length;
+
       const carousel = this.querySelector("#carousel");
+      const indicatorCarousel = this.querySelector("#indicator-carousel");
       const prevBtn = this.querySelector("#prev-btn");
       const nextBtn = this.querySelector("#next-btn");
+      const verticalLines = this.querySelectorAll(".vertical-lines");
+      const circles = this.querySelectorAll(".circles");
+
+      carousel?.addEventListener("scroll", () => {
+        index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+        handleVerticalLines();
+      });
 
       prevBtn?.addEventListener("click", () => {
-        carousel?.scrollBy(-carousel.clientWidth, 0);
+        if (index > 0) {
+          nextSlide(false);
+          nextIndicator(false);
+        }
       });
 
       nextBtn?.addEventListener("click", () => {
-        carousel?.scrollBy(carousel.clientWidth, 0);
+        if (index < listLength - 1) {
+          nextSlide();
+          nextIndicator();
+        }
       });
+
+      function nextIndicator(move: boolean = true) {
+        if (move) {
+          indicatorCarousel?.scrollBy(100, 0);
+        } else {
+          indicatorCarousel?.scrollBy(-100, 0);
+        }
+      }
+
+      function nextSlide(move: boolean = true) {
+        if (move) {
+          carousel?.scrollBy(carousel.clientWidth, 0);
+        } else {
+          carousel?.scrollBy(-carousel.clientWidth, 0);
+        }
+      }
+
+      function handleVerticalLines() {
+        verticalLines.forEach((line) => {
+          line.classList.add("hidden");
+        });
+        circles.forEach((circle) => {
+          circle.classList.remove("bg-white");
+          circle.classList.remove("border-2");
+        });
+
+        circles[index].classList.add("bg-white");
+        circles[index].classList.add("border-2");
+        verticalLines[index].classList.remove("hidden");
+      }
+
+      handleVerticalLines();
     }
   }
 

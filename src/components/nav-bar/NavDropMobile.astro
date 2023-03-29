@@ -29,7 +29,7 @@ const { link } = Astro.props as Props;
       link.categories.map((category) => {
         return (
           <li>
-            <a class="block pl-4 py-4" href={category.href}>
+            <a class="block pl-4 py-4" href={`${link.href}${category.href}`}>
               {category.name}
             </a>
           </li>

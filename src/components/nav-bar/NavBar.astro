@@ -118,6 +118,7 @@ const { pathname } = Astro.url;
   const searchInput =
     document.querySelector<HTMLInputElement>("#search-input")!;
   const form = document.querySelector<HTMLFormElement>("#form")!;
+  const links = navMenu.querySelectorAll("a");
 
   navMenuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("-translate-y-full");
@@ -136,5 +137,13 @@ const { pathname } = Astro.url;
     form.classList.add("scale-x-0");
     closeSearchBtn.classList.add("hidden");
     openSearchBtn.classList.remove("hidden");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.add("-translate-y-full");
+      navMenu.classList.add("opacity-0");
+      navMenu.classList.add("pointer-events-none");
+    });
   });
 </script>

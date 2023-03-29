@@ -1,5 +1,7 @@
 ---
 import LayoutCategory from "@layouts/LayoutCategory.astro";
+import companyHistoryJson from "@data/company-history.json";
+import { Img } from "astro-imagetools/components";
 ---
 
 <LayoutCategory
@@ -7,5 +9,60 @@ import LayoutCategory from "@layouts/LayoutCategory.astro";
   title="Company History"
   pageTitle="Company History"
 >
-  Company History
+  <section class="mx-auto max-w-7xl py-16 px-4 lg:px-8">
+    <ul class="flex-col flex relative">
+      <div
+        class="h-full absolute left-0 mx-auto w-[0.1rem] bg-background md:right-0"
+      >
+        <div
+          class="absolute top-0 h-4 w-4 rounded-full bg-background left-1/2 -translate-x-1/2"
+        >
+        </div>
+        <div
+          class="absolute bottom-0 h-4 w-4 rounded-full bg-background left-1/2 -translate-x-1/2"
+        >
+        </div>
+      </div>
+      {
+        companyHistoryJson.contents.map((item, index) => {
+          return (
+            <li
+              class={`w-full relative px-8 py-16 ${
+                index % 2 === 1 ? "mr-auto" : "ml-auto"
+              } md:w-1/2`}
+            >
+              <figure>
+                <div>
+                  <div
+                    class={`bg-background max-w-fit ${
+                      index % 2 === 1 ? "md:ml-auto" : ""
+                    } px-4 py-1 mb-4 rounded-lg`}
+                  >
+                    <div
+                      class={`absolute h-6 w-6 rounded-full grid place-items-center ${
+                        index % 2 === 1
+                          ? "right-0 md:translate-x-1/2 md:left-[unset]"
+                          : ""
+                      } left-0 -translate-x-1/2 bg-white border-2 border-background`}
+                    >
+                      <div class="w-1/2 h-1/2 rounded-full bg-background relative" />
+                    </div>
+                    <p class="text-white text-xl">{item.name}</p>
+                  </div>
+
+                  <Img src={item.image} alt={item.name} />
+                </div>
+                <figcaption class="py-2">
+                  <header class="sr-only">
+                    <h1>{item.name}</h1>
+                  </header>
+                  <p>{item.summary}</p>
+                </figcaption>
+              </figure>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
 </LayoutCategory>

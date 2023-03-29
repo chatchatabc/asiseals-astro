@@ -1,19 +1,27 @@
 ---
 import { Img } from "astro-imagetools/components";
+import { Icon } from "astro-icon";
 
 type Props = {
   data: Record<string, any>[];
 };
 
 const { data } = Astro.props as Props;
+
+while (data.length < 4) {
+  data.push(...data);
+}
 ---
 
-<div>
-  <ul class="flex overflow-hidden">
+<related-products class="flex items-center">
+  <button id="prev-btn" aria-label="Previous Button">
+    <Icon name="mdi:chevron-left" class="w-8 h-8" />
+  </button>
+  <ul id="carousel" class="flex overflow-hidden snap-x">
     {
       data.map((entry) => {
         return (
-          <li class="w-1/4 flex-shrink-0 p-2">
+          <li class="w-1/4 snap-start flex-shrink-0 p-2">
             <figure class="relative">
               <div>
                 <Img src={entry.imageUrl} alt={entry.name} />
@@ -31,4 +39,65 @@ const { data } = Astro.props as Props;
       })
     }
   </ul>
-</div>
+  <button id="next-btn" aria-label="Next Button">
+    <Icon name="mdi:chevron-right" class="w-8 h-8" />
+  </button>
+</related-products>
+
+<script>
+  class RelatedProducts extends HTMLElement {
+    constructor() {
+      super();
+
+      const carousel = this.querySelector<HTMLElement>("#carousel")!;
+      const prevBtn = this.querySelector<HTMLElement>("#prev-btn")!;
+      const nextBtn = this.querySelector<HTMLElement>("#next-btn")!;
+      let interval: any;
+
+      prevBtn.addEventListener("click", () => {
+        moveFirstItemToLast(false);
+        nextSlide(false);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        moveFirstItemToLast();
+        nextSlide();
+      });
+
+      function resetInterval() {
+        if (interval) {
+          clearInterval(interval);
+        }
+
+        interval = setInterval(() => {
+          moveFirstItemToLast();
+          nextSlide();
+        }, 4000);
+      }
+
+      function nextSlide(move: boolean = true) {
+        if (move) {
+          carousel.scrollBy({ left: 100, behavior: "smooth" });
+        } else {
+          carousel.scrollBy({ left: -100, behavior: "smooth" });
+        }
+        resetInterval();
+      }
+
+      function moveFirstItemToLast(move: boolean = true) {
+        if (move) {
+          const firstItem = carousel.firstElementChild!;
+          carousel.appendChild(firstItem);
+        } else {
+          const lastItem = carousel.lastElementChild!;
+          carousel.insertBefore(lastItem, carousel.firstElementChild);
+        }
+      }
+
+      resetInterval();
+      nextSlide();
+    }
+  }
+
+  customElements.define("related-products", RelatedProducts);
+</script>

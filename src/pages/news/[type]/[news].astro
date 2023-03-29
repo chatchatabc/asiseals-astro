@@ -58,7 +58,9 @@ const { Content } = await news.render();
             </p>
             <p class="px-4">Origin: {origin}</p>
           </section>
-          <section class="text-center">ShareThis</section>
+          <section class="flex justify-center">
+            <div class="sharethis-inline-share-buttons"></div>
+          </section>
         </header>
         <div>
           <Img src={imageUrl} alt={name} />

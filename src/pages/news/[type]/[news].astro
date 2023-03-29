@@ -1,0 +1,112 @@
+---
+import LayoutCategory from "@layouts/LayoutCategory.astro";
+import { getCollection } from "astro:content";
+import { utilSlugToTitle } from "src/helpers/commonUtils";
+import { Img } from "astro-imagetools/components";
+import ContactUsForm from "@components/widgets/ContactUsForm.astro";
+
+export async function getStaticPaths() {
+  const newsCollection = await getCollection("news");
+
+  return newsCollection.map((news) => ({
+    params: {
+      type: news.data.type,
+      news: news.slug,
+    },
+    props: {
+      news,
+    },
+  }));
+}
+
+type Props = {
+  news: Record<string, any>;
+};
+
+const { news } = Astro.props as Props;
+const { name, type, imageUrl, author, date, origin } = news.data;
+
+const newsCollection = await getCollection(
+  "news",
+  (news) => news.data.type === type
+);
+
+const { Content } = await news.render();
+---
+
+<LayoutCategory
+  image="/images/news/banner.webp"
+  title={utilSlugToTitle(type)}
+  pageTitle={name}
+>
+  <section class="max-w-7xl my-8 mx-auto px-4 flex flex-wrap lg:px-8">
+    <!-- Main Content -->
+    <section class="w-full lg:w-2/3">
+      <!-- Article -->
+      <article class="space-y-2">
+        <header class="space-y-2">
+          <h1 class="text-center text-4xl">{name}</h1>
+          <section class="flex justify-center text-lg flex-wrap">
+            <p class="px-4">Views: 13</p>
+            <p class="px-4">Author: {author}</p>
+            <p class="px-4">
+              Published: {
+                new Intl.DateTimeFormat("en", { dateStyle: "short" }).format(
+                  date
+                )
+              }
+            </p>
+            <p class="px-4">Origin: {origin}</p>
+          </section>
+          <section class="text-center">ShareThis</section>
+        </header>
+        <div>
+          <Img src={imageUrl} alt={name} />
+        </div>
+        <section class="text-xl markdown">
+          <Content />
+        </section>
+      </article>
+    </section>
+
+    <!-- Side Content -->
+    <section class="w-full px-4 lg:w-1/3">
+      <!-- Related Items -->
+      <section>
+        <header
+          class="bg-gray-100 border-l-4 py-2 px-4 text-3xl border-background"
+        >
+          <h1>Related News</h1>
+        </header>
+        <ul class="py-4 px-8 list-disc">
+          {
+            [...newsCollection].splice(0, 5).map((news) => {
+              return (
+                <li>
+                  <a
+                    class="text-xl"
+                    href={`/news/${news.data.type}/${news.slug}`}
+                  >
+                    {news.data.name}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </section>
+
+      <!-- Contact Us Form -->
+      <section>
+        <header
+          class="bg-gray-100 border-l-4 py-2 px-4 text-3xl border-background"
+        >
+          <h1>Contact Us Now</h1>
+        </header>
+        <section class="p-4">
+          <ContactUsForm />
+        </section>
+      </section>
+    </section>
+  </section>
+</LayoutCategory>

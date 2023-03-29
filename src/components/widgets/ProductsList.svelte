@@ -5,6 +5,8 @@
 
   export let filterValue: string | null, filterType: string | null;
 
+  let loading = true;
+
   let searchValue = "";
 
   $: filteredProducts = productsJson.contents
@@ -60,38 +62,47 @@
     if (searchParam) {
       searchValue = searchParam;
     }
+
+    loading = false;
   });
 </script>
 
-<ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-  {#each filteredProducts as product}
-    <li class="p-2">
-      <figure class="group bg-gray-200">
-        <div class="relative p-1">
-          <a
-            href="/products/{product.category}/{product.subCategory}/{product.slug}"
-          >
-            <img src={product.imageUrl} alt={product.name} />
-          </a>
-          <div
-            class="h-[0.1rem] w-full bg-[#3B71A1] absolute top-0 duration-300 left-0 scale-x-0 group-hover:scale-x-100"
-          />
-        </div>
-
-        <figcaption class="p-2">
-          <header>
+{#if loading}
+  <div>
+    <div class="loader" />
+    <p class="text-2xl text-center mt-8">Searching...</p>
+  </div>
+{:else}
+  <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    {#each filteredProducts as product}
+      <li class="p-2">
+        <figure class="group bg-gray-200">
+          <div class="relative p-1">
             <a
-              class="block"
               href="/products/{product.category}/{product.subCategory}/{product.slug}"
             >
-              <h3 class="text-center text-2xl font-bold text-[#3B71A1]">
-                {product.name}
-              </h3>
+              <img src={product.imageUrl} alt={product.name} />
             </a>
-          </header>
-          <p class="mt-4 text-xl text-center">{product.summary}</p>
-        </figcaption>
-      </figure>
-    </li>
-  {/each}
-</ul>
+            <div
+              class="h-[0.1rem] w-full bg-[#3B71A1] absolute top-0 duration-300 left-0 scale-x-0 group-hover:scale-x-100"
+            />
+          </div>
+
+          <figcaption class="p-2">
+            <header>
+              <a
+                class="block"
+                href="/products/{product.category}/{product.subCategory}/{product.slug}"
+              >
+                <h3 class="text-center text-2xl font-bold text-[#3B71A1]">
+                  {product.name}
+                </h3>
+              </a>
+            </header>
+            <p class="mt-4 text-xl text-center">{product.summary}</p>
+          </figcaption>
+        </figure>
+      </li>
+    {/each}
+  </ul>
+{/if}

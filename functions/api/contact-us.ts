@@ -14,11 +14,16 @@ export async function onRequest(context) {
     }).format(date);
 
     try {
-      // Validate the data
-      ContactUsFormSchema.parse(data);
+      Object.keys(data).forEach((key) => {
+        if (data[key] === "") delete data[key];
+      });
 
       // Set default values
       if (!data.companyName) data.companyName = "Anonymous Company";
+      if (!data.telephone) data.telephone = "Anonymous Telephone";
+
+      // Validate the data
+      ContactUsFormSchema.parse(data);
 
       // Create email body
       const body = {
@@ -27,7 +32,7 @@ export async function onRequest(context) {
             to: [
               {
                 email: "lucious.greenfelder97@ethereal.email",
-                name: "Lucious Greenfelder",
+                name: "Advantage Seal Inquiry",
               },
             ],
           },
@@ -65,7 +70,7 @@ export async function onRequest(context) {
       };
 
       // Sending of email
-      const response = await fetch("https://api.mailchannels.net/tx/v1/send", {
+      await fetch("https://api.mailchannels.net/tx/v1/send", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -73,7 +78,7 @@ export async function onRequest(context) {
         body: JSON.stringify(body),
       });
 
-      return new Response("Success", { status: 200 });
+      return new Response(JSON.stringify({ success: true }), { status: 200 });
     } catch (e) {
       console.log(e);
 

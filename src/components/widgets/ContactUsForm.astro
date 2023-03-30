@@ -1,5 +1,14 @@
+---
+interface Props {
+  slug?: string;
+}
+
+const { slug } = Astro.props as Props;
+---
+
 <contact-us-form class="relative">
   <form id="form" class="space-y-4">
+    {slug && <input id="slug" type="hidden" value={slug} />}
     <input
       class="text-2xl w-full border-2 px-2 py-1"
       name="name"

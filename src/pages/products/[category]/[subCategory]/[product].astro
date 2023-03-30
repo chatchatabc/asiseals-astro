@@ -42,6 +42,8 @@ const productSpecs = informationCollection.filter((entry) => {
 const fileDetails =
   informationCollection.find((entry) => entry.id.includes("details")) ?? null;
 const details = fileDetails ? await fileDetails.render() : null;
+
+const { pathname } = Astro.url;
 ---
 
 <LayoutCategory
@@ -96,11 +98,12 @@ const details = fileDetails ? await fileDetails.render() : null;
         </section>
 
         <!-- Product Inquiry -->
-        <button
+        <a
+          href={pathname + "/inquire"}
           class="px-8 py-2 bg-primary text-onPrimary block w-fit rounded-full"
         >
           Inquire
-        </button>
+        </a>
       </figcaption>
     </figure>
   </section>

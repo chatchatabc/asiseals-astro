@@ -1,4 +1,5 @@
 import { ContactUsFormSchema } from "../schema/ContactUsSchema";
+import productsJson from "../../data/products.json";
 
 export async function onRequest(context) {
   const { request } = context;
@@ -24,6 +25,10 @@ export async function onRequest(context) {
 
       // Validate the data
       ContactUsFormSchema.parse(data);
+
+      const product = productsJson.contents.find(
+        (product) => product.slug === data.slug
+      );
 
       // Create email body
       const body = {
@@ -52,6 +57,13 @@ export async function onRequest(context) {
             Company Name: ${data.companyName}
             Telephone: ${data.telephone}
             Message: ${data.message}
+            ${product ? "Product: " + product.name : ""}
+            ${
+              product
+                ? "Product Link: " +
+                  `https://asiseals.pages.dev/products/${product.category}/${product.subCategory}/${product.slug}`
+                : ""
+            }
           `,
           },
           {
@@ -64,6 +76,23 @@ export async function onRequest(context) {
             <p><strong>Company Name:</strong> ${data.companyName}</p>
             <p><strong>Telephone:</strong> ${data.telephone}</p>
             <p><strong>Message:</strong> ${data.message}</p>
+            ${
+              product
+                ? "<p><strong>Product:</strong> " + product.name + "</p>"
+                : ""
+            }
+            ${
+              product
+                ? "<p><strong>Product Link:</strong> " +
+                  `<a href="https://asiseals.pages.dev/products/${product.category}/${product.subCategory}/${product.slug}">https://asiseals.pages.dev/products/${product.category}/${product.subCategory}/${product.slug}</a>` +
+                  "</p>"
+                : ""
+            }
+            ${
+              product
+                ? `<img width=300px height=300px src="https://asiseals.pages.dev/${product.imageUrl}" />`
+                : ""
+            }
           `,
           },
         ],

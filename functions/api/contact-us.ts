@@ -30,6 +30,17 @@ export async function onRequest(context) {
         (product) => product.slug === data.slug
       );
 
+      if (!product)
+        return new Response(
+          JSON.stringify({
+            message: `No product found for ${data.slug}`,
+            products: productsJson.contents,
+          }),
+          {
+            status: 404,
+          }
+        );
+
       // Create email body
       const body = {
         personalizations: [
@@ -111,7 +122,7 @@ export async function onRequest(context) {
     } catch (e) {
       console.log(e);
 
-      return new Response("Error", { status: 500 });
+      return new Response(JSON.stringify(e), { status: 500 });
     }
   }
 

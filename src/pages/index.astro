@@ -3,6 +3,13 @@ import CompanyHistory from "@components/landing-page/CompanyHistory.astro";
 import HeroSection from "@components/landing-page/HeroSection.astro";
 import IndustrySection from "@components/landing-page/IndustrySection.astro";
 import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const newsCollection = await getCollection("news");
+const companyNews = newsCollection.filter(
+  (item) => item.data.type === "company-news"
+);
+const blog = newsCollection.filter((item) => item.data.type === "blogs");
 ---
 
 <Layout>
@@ -50,9 +57,12 @@ import Layout from "@layouts/Layout.astro";
             delivery are all areas in which we aim to exceed our clients'
             expectations consistently.
           </p>
-          <button class="px-6 py-2 mt-12 text-white bg-[#E14753]">
+          <a
+            href="/about"
+            class="px-6 inline-block py-2 mt-12 text-white bg-[#E14753]"
+          >
             View our seal line &gt;
-          </button>
+          </a>
         </figcaption>
       </figure>
     </section>
@@ -66,5 +76,75 @@ import Layout from "@layouts/Layout.astro";
   <!-- Company History -->
   <section class="bg-[#DCECF9] py-16">
     <CompanyHistory />
+  </section>
+
+  <!-- News Section -->
+  <section class="max-w-7xl mx-auto py-8 px-4 md:py-16 lg:px-8">
+    <header class="flex items-center justify-between">
+      <h1 class="text-5xl">Recent News</h1>
+      <a
+        href="/news"
+        class="inline-block text-xl px-4 py-2 bg-primary text-onPrimary"
+      >
+        View more
+      </a>
+    </header>
+    <section class="flex flex-wrap md:pt-8">
+      <!-- Blogs Section -->
+      <section class="w-full py-4 md:w-1/2">
+        <header>
+          <h2 class="text-2xl">Blog</h2>
+        </header>
+        {
+          blog[0] ? (
+            <article>
+              <header>
+                <h3 class="pt-2 text-4xl text-background">
+                  <a href="#">{blog[0].data.name}</a>
+                </h3>
+              </header>
+              <p class="text-lg text-gray-500">{blog[0].data.summary}</p>
+              <footer>
+                <p class="mt-4 text-lg text-background font-bold">
+                  <time datetime={blog[0].data.date.toISOString()}>
+                    {new Intl.DateTimeFormat().format(blog[0].data.date)}
+                  </time>
+                </p>
+              </footer>
+            </article>
+          ) : (
+            <p>No Blogs</p>
+          )
+        }
+      </section>
+
+      <!-- Company News section -->
+      <section class="w-full py-4 md:w-1/2">
+        <header>
+          <h2 class="text-2xl">Company News</h2>
+        </header>
+        {
+          companyNews[0] ? (
+            <article>
+              <header>
+                <h3 class="pt-2 text-4xl text-background">
+                  <a href="#">{companyNews[0].data.name}</a>
+                </h3>
+              </header>
+              <p class="text-lg text-gray-500">{companyNews[0].data.summary}</p>
+              <footer>
+                <p class="mt-4 text-lg text-background font-bold">
+                  <time datetime={companyNews[0].data.date.toISOString()}>
+                    {new Intl.DateTimeFormat().format(companyNews[0].data.date)}
+                  </time>
+                </p>
+              </footer>
+            </article>
+          ) : (
+            <p>No Blogs</p>
+          )
+        }
+      </section>
+    </section>
   </section>
 </Layout>

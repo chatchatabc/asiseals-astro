@@ -3,13 +3,16 @@ import { Img } from "astro-imagetools/components";
 import { Icon } from "astro-icon";
 
 type Props = {
+  slug?: string;
   data: Record<string, any>[];
 };
 
-const { data } = Astro.props as Props;
+const { data, slug } = Astro.props as Props;
 
-while (data.length < 4) {
-  data.push(...data);
+const filteredData = data.filter((entry) => entry.slug !== slug);
+
+while (filteredData.length < 4) {
+  filteredData.push(...filteredData);
 }
 ---
 
@@ -19,7 +22,7 @@ while (data.length < 4) {
   </button>
   <ul id="carousel" class="flex overflow-hidden snap-x">
     {
-      data.map((entry) => {
+      filteredData.map((entry) => {
         return (
           <li class="snap-start flex-shrink-0 p-2 w-1/2 md:w-1/3 lg:w-1/4">
             <figure class="relative">

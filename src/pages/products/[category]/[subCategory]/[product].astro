@@ -149,6 +149,7 @@ const { pathname } = Astro.url;
     </header>
     <section class="p-4">
       <RelatedProducts
+        slug={product.slug}
         data={productsJson.contents.filter(
           (entry) => entry.subCategory === product.subCategory
         )}

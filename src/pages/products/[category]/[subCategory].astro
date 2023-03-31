@@ -1,7 +1,7 @@
 ---
 import productCategoriesJson from "@data/product-categories.json";
 import LayoutCategory from "@layouts/LayoutCategory.astro";
-import { getEntryBySlug } from "astro:content";
+import { getCollection } from "astro:content";
 import ProductSearch from "@components/widgets/ProductSearch.astro";
 import type { InferGetStaticPropsType } from "astro";
 import ProductsList from "@components/widgets/ProductsList.svelte";
@@ -29,7 +29,11 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { subCategory } = Astro.props as Props;
 
-const mdFile = await getEntryBySlug("product-categories", subCategory.slug);
+const collection = await getCollection("product-categories");
+
+const mdFile = collection.find((entry) =>
+  entry.slug.includes(subCategory.slug)
+);
 
 const { Content } = (await mdFile?.render()) ?? {};
 ---

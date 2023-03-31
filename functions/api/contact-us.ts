@@ -1,7 +1,7 @@
 import { ContactUsFormSchema } from "../schema/ContactUsSchema";
 import productsJson from "../../data/products.json";
 
-export async function onRequest(context) {
+export async function onRequest(context: any) {
   const { request } = context;
 
   if (request.method === "POST") {
@@ -80,31 +80,76 @@ export async function onRequest(context) {
           {
             type: "text/html",
             value: `
-            <h1>Contact Us Form Submission</h1>
-            <p><strong>Date:</strong> ${dateFormatted}</p>
-            <p><strong>Name:</strong> ${data.name}</p>
-            <p><strong>Email:</strong> ${data.email}</p>
-            <p><strong>Company Name:</strong> ${data.companyName}</p>
-            <p><strong>Telephone:</strong> ${data.telephone}</p>
-            <p><strong>Message:</strong> ${data.message}</p>
-            ${
-              product
-                ? "<p><strong>Product:</strong> " + product.name + "</p>"
-                : ""
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.4;
+                color: #333;
+              }
+
+              h1 {
+                font-size: 28px;
+                margin-bottom: 20px;
+              }
+
+              p {
+                margin-bottom: 10px;
+              }
+
+              strong {
+                font-weight: bold;
+              }
+
+              a {
+                color: #0078ae;
+                text-decoration: none;
+              }
+
+              img {
+                display: block;
+                margin-top: 20px;
+                max-width: 100%;
+                height: auto;
+              }
+
+              /* Responsive styles */
+              @media screen and (max-width: 600px) {
+              body {
+                font-size: 14px;
+              }
+              h1 {
+                font-size: 24px;
+              }
             }
-            ${
-              product
-                ? "<p><strong>Product Link:</strong> " +
-                  `<a href="https://asiseals.pages.dev/products/${product.category}/${product.subCategory}/${product.slug}">https://asiseals.pages.dev/products/${product.category}/${product.subCategory}/${product.slug}</a>` +
-                  "</p>"
-                : ""
-            }
-            ${
-              product
-                ? `<img width=300px height=300px src="https://asiseals.pages.dev/${product.imageUrl}" />`
-                : ""
-            }
-          `,
+            </style>
+            <div style="max-width: 600px; margin: 0 auto;">
+              <h1>Contact Us Form Submission</h1>
+              <p><strong>Date:</strong> ${dateFormatted}</p>
+              <p><strong>Name:</strong> ${data.name}</p>
+              <p><strong>Email:</strong> ${data.email}</p>
+              <p><strong>Company Name:</strong> ${data.companyName}</p>
+              <p><strong>Telephone:</strong> ${data.telephone}</p>
+              <p><strong>Message:</strong> ${data.message}</p>
+              ${
+                product
+                  ? "<p><strong>Product:</strong> " + product.name + "</p>"
+                  : ""
+              }
+              ${
+                product
+                  ? "<p><strong>Product Link:</strong> " +
+                    `<a href="https://asiseals.pages.dev/products/${product.category}/${product.subCategory}/${product.slug}">https://asiseals.pages.dev/products/${product.category}/${product.subCategory}/${product.slug}</a>` +
+                    "</p>"
+                  : ""
+              }
+              ${
+                product
+                  ? `<img src="https://asiseals.pages.dev/${product.imageUrl}" alt="${product.name}" />`
+                  : ""
+              }
+            </div>
+            `,
           },
         ],
       };

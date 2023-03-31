@@ -100,7 +100,9 @@ const blog = newsCollection.filter((item) => item.data.type === "blogs");
             <article>
               <header>
                 <h3 class="pt-2 text-4xl text-background">
-                  <a href="#">{blog[0].data.name}</a>
+                  <a href={`/news/${blog[0].data.type}/${blog[0].slug}`}>
+                    {blog[0].data.name}
+                  </a>
                 </h3>
               </header>
               <p class="text-lg text-gray-500">{blog[0].data.summary}</p>
@@ -128,7 +130,11 @@ const blog = newsCollection.filter((item) => item.data.type === "blogs");
             <article>
               <header>
                 <h3 class="pt-2 text-4xl text-background">
-                  <a href="#">{companyNews[0].data.name}</a>
+                  <a
+                    href={`/news/${companyNews[0].data.type}/${companyNews[0].slug}`}
+                  >
+                    {companyNews[0].data.name}
+                  </a>
                 </h3>
               </header>
               <p class="text-lg text-gray-500">{companyNews[0].data.summary}</p>

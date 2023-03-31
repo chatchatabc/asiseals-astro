@@ -8,3 +8,7 @@ export function utilSlugToTitle(slug: string): string {
 export function utilSlugToText(slug: string): string {
   return slug.split("-").join(" ");
 }
+
+export function utilTextToUrl(text: string): string {
+  return text.split(" ").join("-");
+}

@@ -1,0 +1,49 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  productSpecs: CollectionEntry<"product-information">[];
+}
+
+const { productSpecs } = Astro.props as Props;
+---
+
+<details-header class="block bg-white border">
+  <ul class="flex justify-around">
+    {
+      productSpecs.map((item) => {
+        return <li id={item.slug}>{item.data.name}</li>;
+      })
+    }
+  </ul>
+</details-header>
+
+<script>
+  import { utilTextToUrl } from "src/helpers/commonUtils";
+
+  class DetailsHeader extends HTMLElement {
+    constructor() {
+      super();
+
+      const details = this.querySelectorAll("li");
+
+      details.forEach((element) => {
+        const innerHtml = utilTextToUrl(element.innerHTML);
+
+        const detail = document.querySelector<HTMLElement>(`#${innerHtml}`)!;
+
+        const offsetTop = detail.offsetTop;
+
+        document.addEventListener("scroll", () => {
+          if (window.scrollY >= offsetTop - 100) {
+            element.classList.add("bg-red-500");
+          } else {
+            element.classList.remove("bg-red-500");
+          }
+        });
+      });
+    }
+  }
+
+  customElements.define("details-header", DetailsHeader);
+</script>

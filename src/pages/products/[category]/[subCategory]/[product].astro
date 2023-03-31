@@ -58,8 +58,10 @@ const { pathname } = Astro.url;
       <!-- Product Image -->
       <div class="flex flex-row-reverse flex-wrap w-full mx-auto md:w-1/2">
         <!-- Carousel -->
-        <div class="w-full lg:w-4/5">
-          <Img src={product.imageUrl} alt={product.name} />
+        <div class="w-full relative pb-[80%] h-fit lg:w-4/5">
+          <div class="absolute left-0 top-0 w-full h-full">
+            <Img src={product.imageUrl} alt={product.name} />
+          </div>
         </div>
 
         <!-- Image Gallery Selection -->

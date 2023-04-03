@@ -2,6 +2,7 @@
 import footerJson from "@data/footer.json";
 import headquartersJson from "@data/headquarters.json";
 import contactsJson from "@data/contacts.json";
+import { Icon } from "astro-icon";
 
 const { links, title, message, socialLinks } = footerJson;
 ---
@@ -22,7 +23,10 @@ const { links, title, message, socialLinks } = footerJson;
             contactsJson.contents.map((link) => {
               return (
                 <li>
-                  <a href={link.href}>{link.name}</a>
+                  <a class="flex items-center w-fit" href={link.href}>
+                    <Icon class="h-6 w-6" name={link.icon} />
+                    <span class="px-1">{link.name}</span>
+                  </a>
                 </li>
               );
             })

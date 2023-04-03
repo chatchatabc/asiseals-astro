@@ -3,21 +3,21 @@
     {
       "type": "email",
       "name": "river@asiseal.com",
-      "href": "/",
+      "href": "mailto:river@asiseal.com",
       "message": "Send Email",
       "icon": "ic:round-mail-outline"
     },
     {
       "type": "phone",
       "name": "+86-18858080728",
-      "href": "/",
+      "href": "tel:+8618858080728",
       "message": "Call Us",
       "icon": "ic:baseline-local-phone"
     },
     {
       "type": "wechat",
       "name": "riverliu01",
-      "href": "/",
+      "href": "",
       "message": "WeChat",
       "icon": "ic:baseline-wechat"
     }

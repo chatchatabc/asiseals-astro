@@ -4,17 +4,20 @@
   "features": [
     {
       "name": "Design",
-      "icon": "",
+      "icon": "/images/about-us/pencil.svg",
+      "color": "#fb9a67",
       "summary": "Advantage Seal employs design engineers throughout the globe using the latest design software and equipment. Our more than 25 years of mechanical seal experience allows us to incorporate innovative ways to analyze and solve the most demanding seal application problems, and prolong seal life."
     },
     {
       "name": "Manufacturing",
-      "icon": "",
+      "icon": "/images/about-us/cog.svg",
+      "color": "#fb9a67",
       "summary": "Advantage Seal ISO 9001:2008 modern facilities operate lean and efficient with non-compromising focus on quality. We take advantage of a low-cost manufacturing environment, while producing the highest quality product into the market."
     },
     {
       "name": "Service",
-      "icon": "",
+      "icon": "/images/about-us/handshake.svg",
+      "color": "#fb9a67",
       "summary": "Advantage Seal’s lean operation allows us to provide fast and responsive customer service. We view our relationship with our customers as a partnership, which benefits both companies’ interest. We can provide a quote based on prints, cad files, PS numbers, and/or samples. We exist to serve your needs."
     }
   ],

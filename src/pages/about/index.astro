@@ -2,7 +2,7 @@
 import LayoutCategory from "@layouts/LayoutCategory.astro";
 import CertificateSection from "@components/about-us/CertificateSection.astro";
 import aboutUsJson from "@data/about-us.json";
-import { Icon } from "astro-icon";
+import { Img } from "astro-imagetools/components";
 ---
 
 <LayoutCategory
@@ -45,6 +45,11 @@ import { Icon } from "astro-icon";
               <figure>
                 <figcaption>
                   <header>
+                    <img
+                      class="w-16 h-16"
+                      src={feature.icon}
+                      alt={feature.name}
+                    />
                     <h1 class="text-3xl font-bold">{feature.name}</h1>
                   </header>
                   <p class="mt-4 text-xl">{feature.summary}</p>

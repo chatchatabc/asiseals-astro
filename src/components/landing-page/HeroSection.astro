@@ -30,7 +30,7 @@ const productCategories = await getCollection(
 
     <!-- Carousel -->
     <ul
-      class="flex-1 relative max-h-[600px] h-[60vh] overflow-hidden md:h-[70vh] md:px-32"
+      class="flex-1 relative max-h-[600px] h-[60vh] overflow-visible md:h-[70vh] md:px-32"
     >
       {
         productCategories.map(async (product) => {
@@ -39,7 +39,7 @@ const productCategories = await getCollection(
           const { Content } = await product.render();
           return (
             <li>
-              <figure class="items px-8 duration-500 opacity-0 pointer-events-none translate-x-1/2 absolute left-0 top-0 right-0 h-full w-full flex flex-col justify-center">
+              <figure class="items px-8 duration-300 opacity-0 pointer-events-none translate-x-1/2 absolute left-0 top-0 right-0 h-full w-full flex flex-col justify-center">
                 <figcaption class="-translate-y-1/4 md:w-2/3">
                   <header>
                     <h1 class="-mb-4 py-2 text-2xl lg:mb-0 lg:text-4xl">
@@ -56,7 +56,7 @@ const productCategories = await getCollection(
                     View More
                   </a>
                 </figcaption>
-                <div class="absolute right-0 bottom-1/2 z-[-1] h-1/3 translate-y-full md:translate-y-1/2 md:h-2/3">
+                <div class="images delay-300 duration-500 opacity-0 absolute right-0 bottom-1/2 z-[-1] h-1/3 translate-y-full md:translate-y-1/2 md:h-2/3">
                   <Picture src={imageUrl} alt={name} />
                 </div>
               </figure>
@@ -81,45 +81,61 @@ const productCategories = await getCollection(
       const items = this.querySelectorAll(".items")!;
       const prevBtn = this.querySelector("#prev-btn")!;
       const nextBtn = this.querySelector("#next-btn")!;
+      const images = this.querySelectorAll(".images")!;
       let index = 0;
+      let timer: any;
 
-      const timer = setInterval(() => {
-        index++;
-        if (index > items.length - 1) {
-          index = 0;
-        }
-        updateSlide();
-      }, 3000);
-
-      const updateSlide = () => {
-        items.forEach((item) => {
-          item.classList.add("opacity-0");
-          item.classList.add("pointer-events-none");
-          item.classList.add("translate-x-1/2");
-        });
-        items[index].classList.remove("opacity-0");
-        items[index].classList.remove("pointer-events-none");
-        items[index].classList.remove("translate-x-1/2");
-
-        clearInterval(timer);
-      };
-
+      // Event Listeners
       prevBtn.addEventListener("click", () => {
         index--;
         if (index < 0) {
           index = items.length - 1;
         }
+        resetTimer();
         updateSlide();
       });
-
       nextBtn.addEventListener("click", () => {
         index++;
         if (index > items.length - 1) {
           index = 0;
         }
+        resetTimer();
         updateSlide();
       });
 
+      // Functions
+      function updateSlide() {
+        items.forEach((item) => {
+          item.classList.add("opacity-0");
+          item.classList.add("pointer-events-none");
+          item.classList.add("translate-x-1/2");
+        });
+        images.forEach((image) => {
+          image.classList.add("opacity-0");
+        });
+
+        setTimeout(() => {
+          images[index].classList.remove("opacity-0");
+          items[index].classList.remove("opacity-0");
+          items[index].classList.remove("pointer-events-none");
+          items[index].classList.remove("translate-x-1/2");
+        }, 300);
+      }
+      function resetTimer() {
+        if (timer) {
+          clearInterval(timer);
+        }
+        timer = setInterval(() => {
+          index++;
+          if (index > items.length - 1) {
+            index = 0;
+          }
+          updateSlide();
+        }, 5000);
+      }
+
+      // Starting Script
+      resetTimer();
       updateSlide();
     }
   }

@@ -6,11 +6,11 @@
     {
       "name": "Products",
       "links": [
-        { "name": "Pump Seals", "href": "/pump-seals" },
-        { "name": "Cartridge Seals", "href": "/cartridge-seals" },
+        { "name": "Pump Seals", "href": "/products/pump-seals" },
+        { "name": "Cartridge Seals", "href": "/products/cartridge-seals" },
         {
           "name": "Customized Seals",
-          "href": "/customized-seals"
+          "href": "/products/customized-seals"
         }
       ]
     },
@@ -19,41 +19,47 @@
       "links": [
         {
           "name": "Engineering Design Services",
-          "href": "/engineering-design-services"
+          "href": "/services#engineering-design-services"
         },
         {
           "name": "Inventory Management Services",
-          "href": "/inventory-management-services"
+          "href": "/services#inventory-management-services"
         },
-        { "name": "After Sales Services", "href": "/after-sales-services" }
+        {
+          "name": "After Sales Services",
+          "href": "/services#after-sales-services"
+        }
       ]
     },
     {
       "name": "Industries",
       "links": [
-        { "name": "Automotive", "href": "/automotive" },
-        { "name": "Agriculture", "href": "/agriculture" },
-        { "name": "Food and Beverage", "href": "/food-and-beverage" },
-        { "name": "Pulp and Paper", "href": "/pulp-and-paper" },
-        { "name": "Mining", "href": "/mining" },
-        { "name": "Chemical", "href": "/chemical" },
-        { "name": "Power Generation", "href": "/power-generation" },
-        { "name": "Waste Water", "href": "/waste-water" },
+        { "name": "Automotive", "href": "/industries/automotive" },
+        { "name": "Agriculture", "href": "/industries/agriculture" },
+        {
+          "name": "Food and Beverage",
+          "href": "/industries/food-and-beverage"
+        },
+        { "name": "Pulp and Paper", "href": "/industries/pulp-and-paper" },
+        { "name": "Mining", "href": "/industries/mining" },
+        { "name": "Chemical", "href": "/industries/chemical" },
+        { "name": "Power Generation", "href": "/industries/power-generation" },
+        { "name": "Waste Water", "href": "/industries/waste-water" },
         {
           "name": "Pharmaceuticals Industry",
-          "href": "/pharmaceuticals-industry"
+          "href": "/industries/pharmaceuticals-industry"
         }
       ]
     },
     {
       "name": "About",
       "links": [
-        { "name": "Culture", "href": "/culture" },
-        { "name": "Company History", "href": "/company-history" },
-        { "name": "Factory Tour", "href": "/factory-tour" },
+        { "name": "Culture", "href": "/about" },
+        { "name": "Company History", "href": "/about/company-history" },
+        { "name": "Factory Tour", "href": "/about/factory-tour" },
         { "name": "Resources", "href": "/resources" },
-        { "name": "Company News", "href": "/company-news" },
-        { "name": "Blog", "href": "/blog" },
+        { "name": "Company News", "href": "/news/company-news" },
+        { "name": "Blog", "href": "/news/blogs" },
         { "name": "Contact Us", "href": "/contact-us" }
       ]
     }

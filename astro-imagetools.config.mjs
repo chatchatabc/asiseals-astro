@@ -5,4 +5,5 @@ export default defineConfig({
   fallbackFormat: "webp",
   includeSourceFormat: false,
   layout: "fill",
+  fadeInTransition: false,
 });

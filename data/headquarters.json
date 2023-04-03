@@ -6,12 +6,19 @@
       "background": "#7A9FBF",
       "contacts": [
         {
+          "type": "email",
+          "name": "sales@advantageseal.com",
+          "href": "mailto:sales@advantageseal.com"
+        },
+        {
           "type": "telephone",
-          "name": "+1 (630) 226-0200"
+          "name": "+1 (630) 226-0200",
+          "href": "tel:+16302260200"
         },
         {
           "type": "fax",
-          "name": "+1 (630) 226-0202"
+          "name": "+1 (630) 226-0202",
+          "href": "tel:+16302260202"
         }
       ]
     },
@@ -21,12 +28,19 @@
       "background": "#A0BBD2",
       "contacts": [
         {
+          "type": "email",
+          "name": "admin@advantageseal.cn",
+          "href": "mailto:admin@advantageseal.cn"
+        },
+        {
           "type": "telephone",
-          "name": "+86 (574) 8750 0883"
+          "name": "+86 (574) 8750 0883",
+          "href": "tel:+865748750883"
         },
         {
           "type": "fax",
-          "name": "+86 (574) 8750-2803"
+          "name": "+86 (574) 8750-2803",
+          "href": "tel:+865748752803"
         }
       ]
     },
@@ -36,12 +50,19 @@
       "background": "#C6D6E4",
       "contacts": [
         {
+          "type": "email",
+          "name": "sales-ph@advantageseal.com",
+          "href": "mailto:sales-ph@advantageseal.com"
+        },
+        {
           "type": "telephone",
-          "name": "+63 (82) 285 3540"
+          "name": "+63 (82) 285 3540",
+          "href": "tel:+63822853540"
         },
         {
           "type": "fax",
-          "name": "+63 (82) 285-7498"
+          "name": "+63 (82) 285-7498",
+          "href": "tel:+63822857498"
         }
       ]
     }

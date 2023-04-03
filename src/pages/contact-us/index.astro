@@ -96,8 +96,19 @@ import { Icon } from "astro-icon";
                   <ul class="mt-8">
                     {headquarter.contacts.map((contact) => {
                       return (
-                        <li class="flex">
-                          <span>{contact.name}</span>
+                        <li>
+                          <a class="flex items-center" href={contact.href}>
+                            {contact.type === "email" && (
+                              <Icon class="h-6 w-6" name="ic:baseline-email" />
+                            )}
+                            {contact.type === "telephone" && (
+                              <Icon class="h-6 w-6" name="ic:baseline-phone" />
+                            )}
+                            {contact.type === "fax" && (
+                              <Icon class="h-6 w-6" name="ic:baseline-fax" />
+                            )}
+                            <span class="px-2">{contact.name}</span>
+                          </a>
                         </li>
                       );
                     })}

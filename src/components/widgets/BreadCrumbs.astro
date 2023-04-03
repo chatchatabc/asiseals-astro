@@ -1,4 +1,6 @@
 ---
+import { utilSlugToTitle } from "src/helpers/commonUtils";
+
 const { pathname } = Astro.url;
 let connectedPaths = "";
 const paths = [
@@ -12,7 +14,7 @@ const paths = [
     .map((path) => {
       connectedPaths += `/${path}`;
       return {
-        name: path,
+        name: utilSlugToTitle(path),
         href: connectedPaths,
       };
     }),

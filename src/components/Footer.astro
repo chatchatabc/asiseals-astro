@@ -36,12 +36,18 @@ const { links, title, message, socialLinks } = footerJson;
 
       <!-- Social Media -->
       <nav>
-        <ul>
+        <ul class="flex flex-wrap">
           {
             socialLinks.map((link) => {
               return (
-                <li>
-                  <a href={link.href}>{link.name}</a>
+                <li class="p-1">
+                  <a
+                    target="_blank"
+                    class="inline-block text-background bg-background1 p-1"
+                    href={link.href}
+                  >
+                    <Icon class="h-6 w-6" name={link.icon} />
+                  </a>
                 </li>
               );
             })

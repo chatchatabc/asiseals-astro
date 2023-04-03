@@ -1,7 +1,38 @@
 {
   "title": "Advantage Seal",
   "message": "Contact Advantage Seal for your fluid sealing requirements.",
-  "socialLinks": [{ "name": "Facebook", "href": "/" }],
+  "socialLinks": [
+    {
+      "name": "Facebook",
+      "href": "https://www.facebook.com/advantagesealph",
+      "type": "facebook",
+      "icon": "uil:facebook-f"
+    },
+    {
+      "name": "Instagram",
+      "href": "https://www.instagram.com/advantageseal/",
+      "type": "instagram",
+      "icon": "mdi:instagram"
+    },
+    {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/company/asiseals",
+      "type": "linkedin",
+      "icon": "mdi:linkedin"
+    },
+    {
+      "name": "Twitter",
+      "href": "https://twitter.com/advantage_seal",
+      "type": "twitter",
+      "icon": "mdi:twitter"
+    },
+    {
+      "name": "YouTube",
+      "href": "https://www.youtube.com/channel/UCc4yzANkm2NeQa7wW6DNOPw",
+      "type": "youtube",
+      "icon": "mdi:youtube"
+    }
+  ],
   "links": [
     {
       "name": "Products",

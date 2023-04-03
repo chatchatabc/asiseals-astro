@@ -8,14 +8,19 @@ interface Props {
 const { productSpecs } = Astro.props as Props;
 ---
 
-<details-header id="container" class="block duration-500 bg-white border">
-  <ul class="flex">
+<details-header
+  id="container"
+  class="duration-500 bg-white border hidden lg:block"
+>
+  <ul class="flex divide-x">
     {
       productSpecs.map((item) => {
         return (
           <li data-id={item.data.name} class="relative flex-1">
-            <div class="absolute scale-x-0 origin-left duration-1000 h-full w-full bg-blue-500" />
-            <p class="text-center relative">{item.data.name}</p>
+            <div class="absolute scale-y-0 transition h-full w-full bg-blue-500" />
+            <button class="px-2 block w-full">
+              <span class="text-center relative">{item.data.name}</span>
+            </button>
           </li>
         );
       })
@@ -37,14 +42,29 @@ const { productSpecs } = Astro.props as Props;
         const dataId = utilTextToUrl(element.dataset.id!);
         const detail = document.querySelector<HTMLElement>(`#${dataId}`)!;
         const offsetTop = detail.offsetTop;
+        const offsetHeight = detail.offsetHeight;
         const loading = element.querySelector("div")!;
+        const span = element.querySelector("span")!;
+        const button = element.querySelector("button")!;
 
         document.addEventListener("scroll", () => {
-          if (window.scrollY >= offsetTop - 100) {
-            loading.classList.remove("scale-x-0");
+          if (
+            window.scrollY >= offsetTop - 115 &&
+            window.scrollY < offsetTop + offsetHeight - 115
+          ) {
+            loading.classList.remove("scale-y-0");
+            span.classList.add("text-white");
           } else {
-            loading.classList.add("scale-x-0");
+            loading.classList.add("scale-y-0");
+            span.classList.remove("text-white");
           }
+        });
+
+        button.addEventListener("click", () => {
+          window.scrollTo({
+            top: offsetTop - 115,
+            behavior: "smooth",
+          });
         });
 
         if (index === details.length - 1) {

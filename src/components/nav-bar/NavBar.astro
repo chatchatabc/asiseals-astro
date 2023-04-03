@@ -97,10 +97,12 @@ const { pathname } = Astro.url;
     id="nav-menu"
     class="transition pb-8 -translate-y-full pointer-events-none opacity-0 bg-white overflow-auto fixed w-full h-full left-0 px-4 lg:hidden"
   >
-    <section class="flex py-4 border-b-2">
-      <button class="pr-4"><Icon name="mdi:magnify" class="w-6 h-6" /></button>
+    <form action="/products/search" class="flex py-4 border-b-2">
+      <button type="submit" class="pr-4">
+        <Icon name="mdi:magnify" class="w-6 h-6" />
+      </button>
       <input class="flex-1" placeholder="Search..." />
-    </section>
+    </form>
     <nav>
       <ul class="divide-y-2">
         {

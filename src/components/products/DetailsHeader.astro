@@ -71,7 +71,7 @@ const { productSpecs } = Astro.props as Props;
           const endPoint = detail.offsetTop + detail.offsetHeight;
 
           document.addEventListener("scroll", () => {
-            if (window.scrollY >= endPoint - 100) {
+            if (window.scrollY >= endPoint - 115) {
               container?.classList.add("-translate-y-full");
             } else {
               container?.classList.remove("-translate-y-full");

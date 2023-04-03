@@ -8,11 +8,16 @@ interface Props {
 const { productSpecs } = Astro.props as Props;
 ---
 
-<details-header class="block bg-white border">
-  <ul class="flex justify-around">
+<details-header id="container" class="block duration-500 bg-white border">
+  <ul class="flex">
     {
       productSpecs.map((item) => {
-        return <li id={item.slug}>{item.data.name}</li>;
+        return (
+          <li data-id={item.data.name} class="relative flex-1">
+            <div class="absolute scale-x-0 origin-left duration-1000 h-full w-full bg-blue-500" />
+            <p class="text-center relative">{item.data.name}</p>
+          </li>
+        );
       })
     }
   </ul>
@@ -26,21 +31,33 @@ const { productSpecs } = Astro.props as Props;
       super();
 
       const details = this.querySelectorAll("li");
+      const container = document.querySelector<HTMLElement>("#container")!;
 
-      details.forEach((element) => {
-        const innerHtml = utilTextToUrl(element.innerHTML);
-
-        const detail = document.querySelector<HTMLElement>(`#${innerHtml}`)!;
-
+      details.forEach((element, index) => {
+        const dataId = utilTextToUrl(element.dataset.id!);
+        const detail = document.querySelector<HTMLElement>(`#${dataId}`)!;
         const offsetTop = detail.offsetTop;
+        const loading = element.querySelector("div")!;
 
         document.addEventListener("scroll", () => {
           if (window.scrollY >= offsetTop - 100) {
-            element.classList.add("bg-red-500");
+            loading.classList.remove("scale-x-0");
           } else {
-            element.classList.remove("bg-red-500");
+            loading.classList.add("scale-x-0");
           }
         });
+
+        if (index === details.length - 1) {
+          const endPoint = detail.offsetTop + detail.offsetHeight;
+
+          document.addEventListener("scroll", () => {
+            if (window.scrollY >= endPoint - 100) {
+              container?.classList.add("-translate-y-full");
+            } else {
+              container?.classList.remove("-translate-y-full");
+            }
+          });
+        }
       });
     }
   }

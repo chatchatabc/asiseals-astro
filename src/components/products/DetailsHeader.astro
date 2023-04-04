@@ -18,7 +18,7 @@ const { productSpecs } = Astro.props as Props;
         return (
           <li data-id={item.data.name} class="relative flex-1">
             <div class="absolute scale-y-0 transition h-full w-full bg-blue-500" />
-            <button class="px-2 block w-full">
+            <button class="px-2 py-1 text-lg block w-full">
               <span class="text-center relative">{item.data.name}</span>
             </button>
           </li>

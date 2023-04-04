@@ -1,0 +1,72 @@
+---
+import { Img } from "astro-imagetools/components";
+
+interface Props {
+  src: string;
+  alt: string;
+  className?: string;
+}
+
+const { src, alt, className } = Astro.props as Props;
+---
+
+<image-preview class="block">
+  <section
+    id="image-preview"
+    class="fixed bg-black bg-opacity-50 flex-col top-0 left-0 w-full h-full hidden"
+  >
+    <header class="h-fit">
+      <button id="close-btn">Close</button>
+    </header>
+
+    <div class="flex-1 flex relative">
+      <div class="w-1/2 max-h-[70%] mx-auto">
+        <img
+          id="image"
+          class="mx-auto h-full w-full object-contain"
+          src={src}
+          alt={alt}
+        />
+      </div>
+    </div>
+  </section>
+  <div class={`relative z-[1] ${className ? className : "pb-[100%]"}`}>
+    <button id="image-thumbnail" class="absolute h-full w-full">
+      <Img src={src} alt={alt} layout="constrained" />
+    </button>
+  </div>
+</image-preview>
+
+<script>
+  class ImagePreview extends HTMLElement {
+    constructor() {
+      super();
+
+      const imageThumbnail = this.querySelector("#image-thumbnail")!;
+      const imagePreview = this.querySelector("#image-preview")!;
+      const image = this.querySelector("#image")!;
+      const closeBtn = this.querySelector("#close-btn")!;
+
+      imageThumbnail.addEventListener("click", () => {
+        imagePreview.classList.remove("hidden");
+        imagePreview.classList.add("flex");
+        imagePreview.classList.add("z-10");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        imagePreview.classList.add("hidden");
+        imagePreview.classList.remove("flex");
+        imagePreview.classList.remove("z-10");
+      });
+
+      imagePreview.addEventListener("click", (e) => {
+        if (e.target !== image) {
+          imagePreview.classList.add("hidden");
+          imagePreview.classList.remove("z-10");
+        }
+      });
+    }
+  }
+
+  customElements.define("image-preview", ImagePreview);
+</script>

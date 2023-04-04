@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import productsJson from "@data/products.json";
-  import { utilSlugToText } from "src/helpers/commonUtils";
+  import Fuse from "fuse.js";
 
   export let filterValue: string | null, filterType: string | null;
 
@@ -9,51 +9,32 @@
 
   let searchValue = "";
 
-  $: filteredProducts = productsJson.contents
-    .filter((product) => {
-      if (filterValue && filterType) {
-        if (filterType === "all") {
-          return true;
-        } else if (filterType === "category") {
-          return product.category
-            .toLowerCase()
-            .includes(filterValue.toLowerCase());
-        } else if (filterType === "sub-category") {
-          return product.subCategory
-            .toLowerCase()
-            .includes(filterValue.toLowerCase());
-        } else if (filterType === "industry") {
-          return product.industry.includes(filterValue.toLowerCase());
-        }
-      }
-
-      if (searchValue === "") {
+  $: filteredProducts = productsJson.contents.filter((product) => {
+    if (filterValue && filterType) {
+      if (filterType === "all") {
         return true;
-      } else if (searchValue) {
-        return (
-          product.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-          product.summary.toLowerCase().includes(searchValue.toLowerCase()) ||
-          utilSlugToText(product.category).includes(
-            searchValue.toLowerCase()
-          ) ||
-          utilSlugToText(product.subCategory).includes(
-            searchValue.toLowerCase()
-          ) ||
-          product.industry
-            .map((entry) => utilSlugToText(entry))
-            .includes(searchValue.toLowerCase())
-        );
+      } else if (filterType === "category") {
+        return product.category
+          .toLowerCase()
+          .includes(filterValue.toLowerCase());
+      } else if (filterType === "sub-category") {
+        return product.subCategory
+          .toLowerCase()
+          .includes(filterValue.toLowerCase());
+      } else if (filterType === "industry") {
+        return product.industry.includes(filterValue.toLowerCase());
       }
-    })
-    .sort((a, b) => {
-      if (a.name < b.name) {
-        return -1;
-      } else if (a.name > b.name) {
-        return 1;
-      } else {
-        return 0;
-      }
+    }
+    return true;
+  });
+
+  $: if (searchValue) {
+    const fuse = new Fuse(filteredProducts, {
+      keys: ["name", "summary", "category", "subCategory", "industry"],
     });
+
+    filteredProducts = fuse.search(searchValue).map((entry) => entry.item);
+  }
 
   onMount(() => {
     // Get search params from url

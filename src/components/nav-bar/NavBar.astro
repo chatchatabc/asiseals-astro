@@ -89,7 +89,23 @@ const { pathname } = Astro.url;
     </div>
 
     <!-- Mobile Menu Btn -->
-    <button id="nav-menu-btn" class="lg:hidden">Menu</button>
+    <button id="nav-menu-btn" class="lg:hidden">
+      <!-- burger -->
+      <div id="burger" class="space-y-1">
+        <div
+          id="burger-1"
+          class="w-6 h-1 origin-top-left transition rounded-full bg-primary"
+        >
+        </div>
+        <div id="burger-2" class="w-6 h-1 transition rounded-full bg-primary">
+        </div>
+        <div
+          id="burger-3"
+          class="w-6 h-1 origin-bottom-left transition rounded-full bg-primary"
+        >
+        </div>
+      </div>
+    </button>
   </section>
 
   <!-- Mobile Nav Menu -->
@@ -124,11 +140,17 @@ const { pathname } = Astro.url;
     document.querySelector<HTMLInputElement>("#search-input")!;
   const form = document.querySelector<HTMLFormElement>("#form")!;
   const links = navMenu.querySelectorAll("a");
+  const burger1 = document.querySelector("#burger-1")!;
+  const burger2 = document.querySelector("#burger-2")!;
+  const burger3 = document.querySelector("#burger-3")!;
 
   navMenuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("-translate-y-full");
     navMenu.classList.toggle("opacity-0");
     navMenu.classList.toggle("pointer-events-none");
+    burger1.classList.toggle("rotate-45");
+    burger2.classList.toggle("opacity-0");
+    burger3.classList.toggle("rotate-[-45deg]");
   });
 
   openSearchBtn.addEventListener("click", () => {

@@ -3,37 +3,41 @@ name: Pump Information
 order: 2
 ---
 
-##### Flygt Pump Model
+import TableComp from "@components/widgets/TableComp.astro";
 
-- 2610、2620、2630、2640、4610&4620 (20mm | ASI-VC-20)
-- 4630&4640 (25mm | ASI-VC-25)
-- 2670、3153、5100.210、5100.211、5100.220&5100.221 (35mm | ASI-VC-35)
-- 3171、4650、4660、5100.250、5100.251、5100.260&5100.261 (45mm | ASI-VC-45)
-- 3202, 4670, 4680, 5100.300, 5100, 310, 5150.300&5150.310 (60mm | ASI-VC-60)
-- 3301、5150.350&5150.360 (90mm | ASI-VC-90)
-
-##### OEM Seal Reference
-
-- Flygt 556 60 00
-- Flygt 641 70 00
-- Flygt 641 50 02
-- Flygt 641 50 01
-- Flygt 641 50 00
-- Flygt 641 30 03
-- Flygt 641 30 02
-- Flygt 641 30 01
-- Flygt 641 24 03
-- Flygt 641 24 02
-- Flygt 641 24 01
-- Flygt 631 37 00
-- Flygt 619 64 02
-- Flygt 619 64 01
-- Flygt 619 64 00
-- Flygt 556 60 02
-- Grindex 50 901 23(Plug in Seal)
-- Grindex 51 028 20(Plug in Seal)
-- Grindex 64 130 22(Plug in Seal)
-
-##### Standard materials
-
-- TC/TC/TC/TC/Vit
+<TableComp
+  headers={[
+    "Xylem Flygt  Pumps",
+    "Shaft  Size",
+    "ASI Seal Code",
+    "Standard materials",
+  ]}
+  rows={[
+    [
+      "2610、2620、2630、2640、4610&4620",
+      "20mm",
+      "ASI-VC-20",
+      "TC/TC/TC/TC/Vit",
+    ],
+    ["4630&4640", "25mm", "ASI-VC-25", "TC/TC/TC/TC/Vit"],
+    [
+      "2670、3153、5100.210、5100.211、5100.220&5100.221",
+      "35mm",
+      "ASI-VC-35",
+      "TC/TC/TC/TC/Vit",
+    ],
+    [
+      "3171、4650、4660、5100.250、5100.251、5100.260&5100.261",
+      "45mm",
+      "ASI-VC-45",
+      "TC/TC/TC/TC/Vit",
+    ],
+    [
+      "3202,4670,4680,5100.300,5100,310,5150.300&5150.310",
+      "60mm",
+      "ASI-VC-60",
+      "TC/TC/TC/TC/Vit",
+    ],
+    ["3301、5150.350&5150.360", "90mm", "ASI-VC-90", "TC/TC/TC/TC/Vit"],
+  ]}
+/>

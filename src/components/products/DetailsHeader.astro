@@ -49,8 +49,8 @@ const { productSpecs } = Astro.props as Props;
 
         document.addEventListener("scroll", () => {
           if (
-            window.scrollY >= offsetTop - 125 &&
-            window.scrollY < offsetTop + offsetHeight - 125
+            window.scrollY >= offsetTop - 115 &&
+            window.scrollY < offsetTop + offsetHeight - 115
           ) {
             loading.classList.remove("scale-y-0");
             span.classList.add("text-white");
@@ -62,7 +62,7 @@ const { productSpecs } = Astro.props as Props;
 
         button.addEventListener("click", () => {
           window.scrollTo({
-            top: offsetTop - 125,
+            top: offsetTop - 115,
             behavior: "smooth",
           });
         });
@@ -71,7 +71,7 @@ const { productSpecs } = Astro.props as Props;
           const endPoint = detail.offsetTop + detail.offsetHeight;
 
           document.addEventListener("scroll", () => {
-            if (window.scrollY >= endPoint - 125) {
+            if (window.scrollY >= endPoint - 115) {
               container?.classList.add("-translate-y-full");
             } else {
               container?.classList.remove("-translate-y-full");

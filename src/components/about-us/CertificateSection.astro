@@ -1,5 +1,5 @@
 ---
-import ImagePreview from "@components/widgets/ImagePreview.astro";
+import { Img } from "astro-imagetools/components";
 import aboutUsJson from "@data/about-us.json";
 import { Icon } from "astro-icon";
 ---
@@ -16,13 +16,16 @@ import { Icon } from "astro-icon";
     {
       aboutUsJson.certificates.map((certificate) => {
         return (
-          <li class="snap-start flex-shrink-0 p-2 w-full md:w-1/3 lg:w-1/5">
+          <li class="flex-shrink-0 p-2 w-10/12 snap-center md:snap-start md:w-1/3 lg:w-1/5">
             <figure>
-              <ImagePreview
-                className="pb-[150%]"
-                src={certificate.imageUrl}
-                alt={certificate.name}
-              />
+              <div class="relative">
+                <Img src={certificate.imageUrl} alt={certificate.name} />
+                <a
+                  href={certificate.imageUrl}
+                  class="absolute h-full w-full top-0 left-0"
+                  target="_blank"
+                />
+              </div>
               <figcaption>
                 <h2 class="text-center">{certificate.name}</h2>
               </figcaption>

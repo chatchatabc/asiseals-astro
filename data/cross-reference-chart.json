@@ -4,10 +4,217 @@
       "asi": "846",
       "aes": "W07DMU",
       "burgmann": "M7N",
-      "john": "",
+      "john": " ",
       "vulcan": "1677",
-      "flowserve": "",
-      "others": ""
+      "flowserve": " ",
+      "others": " "
+    },
+    {
+      "asi": "846B",
+      "aes": "W07DMUB",
+      "burgmann": "H7N",
+      "john": " ",
+      "vulcan": "1678",
+      "flowserve": " ",
+      "others": " "
+    },
+    {
+      "asi": "850",
+      "aes": " ",
+      "burgmann": "M74D",
+      "john": " ",
+      "vulcan": " ",
+      "flowserve": " ",
+      "others": " "
+    },
+    {
+      "asi": "850B",
+      "aes": " ",
+      "burgmann": "H74D",
+      "john": " ",
+      "vulcan": " ",
+      "flowserve": " ",
+      "others": " "
+    },
+    {
+      "asi": "37",
+      "aes": " ",
+      "burgmann": "M3N/M2N",
+      "john": " ",
+      "vulcan": "8/8.DIN/9/8B",
+      "flowserve": "38/38D/39",
+      "others": "22/L4B"
+    },
+    {
+      "asi": "7W",
+      "aes": "W02U",
+      "burgmann": " ",
+      "john": " ",
+      "vulcan": "1688L",
+      "flowserve": " ",
+      "others": "UNITEN 7K"
+    },
+    {
+      "asi": "852",
+      "aes": "M010",
+      "burgmann": "HJ92N",
+      "john": " ",
+      "vulcan": "40S",
+      "flowserve": " ",
+      "others": "EHS"
+    },
+    {
+      "asi": "201",
+      "aes": " ",
+      "burgmann": "M3,M2,M377",
+      "john": "1/21/2100",
+      "vulcan": " ",
+      "flowserve": " ",
+      "others": "43 CE LONG"
+    },
+    {
+      "asi": "202",
+      "aes": " ",
+      "burgmann": " ",
+      "john": "1/21/2100",
+      "vulcan": " ",
+      "flowserve": " ",
+      "others": "43 CE short"
+    },
+    {
+      "asi": "201E",
+      "aes": "P04U",
+      "burgmann": " ",
+      "john": "1(USA)",
+      "vulcan": "A4",
+      "flowserve": "52",
+      "others": " "
+    },
+    {
+      "asi": "202E",
+      "aes": "P05U",
+      "burgmann": "MG901/D1-G55",
+      "john": "2(USA)",
+      "vulcan": "22/A5",
+      "flowserve": "220/51",
+      "others": " "
+    },
+    {
+      "asi": "816",
+      "aes": "B01",
+      "burgmann": "BT-AR",
+      "john": "PR/DR",
+      "vulcan": "18",
+      "flowserve": "118",
+      "others": "37B/L5/301"
+    },
+    {
+      "asi": "61",
+      "aes": "B03/B03U",
+      "burgmann": "BT-A2",
+      "john": "6A",
+      "vulcan": "70/75",
+      "flowserve": "170",
+      "others": "68"
+    },
+    {
+      "asi": "16C",
+      "aes": "B05",
+      "burgmann": " ",
+      "john": "2100",
+      "vulcan": "14DIN",
+      "flowserve": "140",
+      "others": " "
+    },
+    {
+      "asi": "202V",
+      "aes": " ",
+      "burgmann": "ED560",
+      "john": " ",
+      "vulcan": " ",
+      "flowserve": " ",
+      "others": " "
+    },
+    {
+      "asi": "16WM",
+      "aes": "B07",
+      "burgmann": " ",
+      "john": "502",
+      "vulcan": " ",
+      "flowserve": "1724",
+      "others": " "
+    },
+    {
+      "asi": "16EB",
+      "aes": "B09U",
+      "burgmann": "MG",
+      "john": " ",
+      "vulcan": " ",
+      "flowserve": "190",
+      "others": "L3/19"
+    },
+    {
+      "asi": "16",
+      "aes": "B04/B04U",
+      "burgmann": "BT-PNT",
+      "john": "106",
+      "vulcan": "60/65",
+      "flowserve": "160",
+      "others": "60L"
+    },
+    {
+      "asi": "21",
+      "aes": "P03/P04",
+      "burgmann": "MG912",
+      "john": "521/21",
+      "vulcan": "24 11",
+      "flowserve": "240/110",
+      "others": "43 CU short"
+    },
+    {
+      "asi": "81",
+      "aes": "M01SU",
+      "burgmann": " ",
+      "john": "8 1",
+      "vulcan": "1609S",
+      "flowserve": " ",
+      "others": "8"
+    },
+    {
+      "asi": "81U",
+      "aes": "M03SU",
+      "burgmann": "BT-C5.KU",
+      "john": "58U",
+      "vulcan": "1659S",
+      "flowserve": "259S",
+      "others": " "
+    },
+    {
+      "asi": "91",
+      "aes": "M01U",
+      "burgmann": " ",
+      "john": "109,9,909",
+      "vulcan": "1609",
+      "flowserve": "90",
+      "others": " "
+    },
+    {
+      "asi": "91U",
+      "aes": "M03U",
+      "burgmann": "BT-C56.KU ",
+      "john": "59U",
+      "vulcan": "1659",
+      "flowserve": " ",
+      "others": " "
+    },
+    {
+      "asi": "31WB",
+      "aes": " ",
+      "burgmann": " ",
+      "john": "WB2",
+      "vulcan": " ",
+      "flowserve": " ",
+      "others": " "
     }
   ]
 }

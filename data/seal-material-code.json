@@ -17,6 +17,1113 @@
       "metal": "316 SS",
       "rotary": "02",
       "seatAssembly": "02"
+    },
+    {
+      "sealAssembly": "03",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "03",
+      "seatAssembly": "03"
+    },
+    {
+      "sealAssembly": "04",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "04",
+      "seatAssembly": "04"
+    },
+    {
+      "sealAssembly": "05",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "EPDM",
+      "metal": "316 SS",
+      "rotary": "05",
+      "seatAssembly": "05"
+    },
+    {
+      "sealAssembly": "06",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Teflon",
+      "metal": "316 SS",
+      "rotary": "06",
+      "seatAssembly": "06"
+    },
+    {
+      "sealAssembly": "07",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Teflon Encapsulated Viton O-ring",
+      "metal": "316 SS",
+      "rotary": "07",
+      "seatAssembly": "07"
+    },
+    {
+      "sealAssembly": "08",
+      "sealRing": "Carbon",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "03",
+      "seatAssembly": "18"
+    },
+    {
+      "sealAssembly": "09",
+      "sealRing": "Carbon",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "04",
+      "seatAssembly": "19"
+    },
+    {
+      "sealAssembly": "10",
+      "sealRing": "Carbon",
+      "matingRing": "Sintered SiC",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "02",
+      "seatAssembly": "57"
+    },
+    {
+      "sealAssembly": "11",
+      "sealRing": "Carbon",
+      "matingRing": "Tungsten",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "11",
+      "seatAssembly": "26"
+    },
+    {
+      "sealAssembly": "12",
+      "sealRing": "Carbon",
+      "matingRing": "Tungsten",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "12",
+      "seatAssembly": "27"
+    },
+    {
+      "sealAssembly": "13",
+      "sealRing": "Carbon",
+      "matingRing": "Tungsten",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "13",
+      "seatAssembly": "28"
+    },
+    {
+      "sealAssembly": "14",
+      "sealRing": "Carbon",
+      "matingRing": "Tungsten",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "14",
+      "seatAssembly": "29"
+    },
+    {
+      "sealAssembly": "15",
+      "sealRing": "Carbon",
+      "matingRing": "Sintered SiC",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "03",
+      "seatAssembly": "58"
+    },
+    {
+      "sealAssembly": "16",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "16",
+      "seatAssembly": "16"
+    },
+    {
+      "sealAssembly": "17",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "17",
+      "seatAssembly": "17"
+    },
+    {
+      "sealAssembly": "18",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "18",
+      "seatAssembly": "18"
+    },
+    {
+      "sealAssembly": "19",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "19",
+      "seatAssembly": "19"
+    },
+    {
+      "sealAssembly": "20",
+      "sealRing": "Carbon",
+      "matingRing": "Sintered SiC",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "04",
+      "seatAssembly": "59"
+    },
+    {
+      "sealAssembly": "21",
+      "sealRing": "Carbon",
+      "matingRing": "Ni-Resist",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": " ",
+      "seatAssembly": "21"
+    },
+    {
+      "sealAssembly": "22",
+      "sealRing": "Carbon",
+      "matingRing": "Ni-Resist",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": " ",
+      "seatAssembly": "22"
+    },
+    {
+      "sealAssembly": "23",
+      "sealRing": "Carbon",
+      "matingRing": "Ni-Resist",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": " ",
+      "seatAssembly": "23"
+    },
+    {
+      "sealAssembly": "24",
+      "sealRing": "Carbon",
+      "matingRing": "Ni-Resist",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": " ",
+      "seatAssembly": "24"
+    },
+    {
+      "sealAssembly": "25",
+      "sealRing": "Carbon",
+      "matingRing": "Boron Silicon",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "01",
+      "seatAssembly": "71"
+    },
+    {
+      "sealAssembly": "26",
+      "sealRing": "Tungsten",
+      "matingRing": "Tungsten",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "26",
+      "seatAssembly": "26"
+    },
+    {
+      "sealAssembly": "27",
+      "sealRing": "Tungsten",
+      "matingRing": "Tungsten",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "27",
+      "seatAssembly": "27"
+    },
+    {
+      "sealAssembly": "28",
+      "sealRing": "Tungsten",
+      "matingRing": "Tungsten",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "28",
+      "seatAssembly": "28"
+    },
+    {
+      "sealAssembly": "29",
+      "sealRing": "Tungsten",
+      "matingRing": "Tungsten",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "29",
+      "seatAssembly": "29"
+    },
+    {
+      "sealAssembly": "30",
+      "sealRing": "Carbon",
+      "matingRing": "Boron Silicon",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "02",
+      "seatAssembly": "72"
+    },
+    {
+      "sealAssembly": "31",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Tungsten",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "16",
+      "seatAssembly": "26"
+    },
+    {
+      "sealAssembly": "32",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Tungsten",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "17",
+      "seatAssembly": "27"
+    },
+    {
+      "sealAssembly": "33",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Tungsten",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "18",
+      "seatAssembly": "28"
+    },
+    {
+      "sealAssembly": "34",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Tungsten",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "19",
+      "seatAssembly": "29"
+    },
+    {
+      "sealAssembly": "35",
+      "sealRing": "Carbon",
+      "matingRing": "Boron Silicon",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "03",
+      "seatAssembly": "73"
+    },
+    {
+      "sealAssembly": "36",
+      "sealRing": "Carbon",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "01",
+      "seatAssembly": "46"
+    },
+    {
+      "sealAssembly": "37",
+      "sealRing": "Carbon",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "02",
+      "seatAssembly": "47"
+    },
+    {
+      "sealAssembly": "38",
+      "sealRing": "Carbon",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "03",
+      "seatAssembly": "48"
+    },
+    {
+      "sealAssembly": "39",
+      "sealRing": "Carbon",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "04",
+      "seatAssembly": "49"
+    },
+    {
+      "sealAssembly": "41",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Tungsten",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "46",
+      "seatAssembly": "26"
+    },
+    {
+      "sealAssembly": "42",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Tungsten",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "47",
+      "seatAssembly": "27"
+    },
+    {
+      "sealAssembly": "43",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Tungsten",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "48",
+      "seatAssembly": "28"
+    },
+    {
+      "sealAssembly": "44",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Tungsten",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "49",
+      "seatAssembly": "29"
+    },
+    {
+      "sealAssembly": "45",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Aflas",
+      "metal": "316SS",
+      "rotary": "45",
+      "seatAssembly": "86"
+    },
+    {
+      "sealAssembly": "46",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "46",
+      "seatAssembly": "46"
+    },
+    {
+      "sealAssembly": "47",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "47",
+      "seatAssembly": "47"
+    },
+    {
+      "sealAssembly": "48",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "48",
+      "seatAssembly": "48"
+    },
+    {
+      "sealAssembly": "49",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "49",
+      "seatAssembly": "49"
+    },
+    {
+      "sealAssembly": "51",
+      "sealRing": "Ceramic",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "51",
+      "seatAssembly": "16"
+    },
+    {
+      "sealAssembly": "52",
+      "sealRing": "Ceramic",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "52",
+      "seatAssembly": "17"
+    },
+    {
+      "sealAssembly": "53",
+      "sealRing": "Ceramic",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "53",
+      "seatAssembly": "18"
+    },
+    {
+      "sealAssembly": "56",
+      "sealRing": "Sintered SiC",
+      "matingRing": "Sintered SiC",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "56",
+      "seatAssembly": "56"
+    },
+    {
+      "sealAssembly": "57",
+      "sealRing": "Sintered SiC",
+      "matingRing": "Sintered SiC",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "57",
+      "seatAssembly": "57"
+    },
+    {
+      "sealAssembly": "58",
+      "sealRing": "Sintered SiC",
+      "matingRing": "Sintered SiC",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "58",
+      "seatAssembly": "58"
+    },
+    {
+      "sealAssembly": "59",
+      "sealRing": "Sintered SiC",
+      "matingRing": "Sintered SiC",
+      "elastomer": "Neoprene",
+      "metal": "316 SS",
+      "rotary": "59",
+      "seatAssembly": "59"
+    },
+    {
+      "sealAssembly": "60",
+      "sealRing": "Carbon",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "SG",
+      "metal": "304SS",
+      "rotary": "60",
+      "seatAssembly": "60"
+    },
+    {
+      "sealAssembly": "61",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "HBNR",
+      "metal": "304 S3",
+      "rotary": "61",
+      "seatAssembly": "61"
+    },
+    {
+      "sealAssembly": "64",
+      "sealRing": "Carbon",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "HBNR",
+      "metal": "304 S3",
+      "rotary": "61",
+      "seatAssembly": "66"
+    },
+    {
+      "sealAssembly": "65",
+      "sealRing": "Phenolic",
+      "matingRing": "Ceramic",
+      "elastomer": "Buna",
+      "metal": " ",
+      "rotary": " ",
+      "seatAssembly": " "
+    },
+    {
+      "sealAssembly": "66",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "HBNR",
+      "metal": "316 SS",
+      "rotary": "66",
+      "seatAssembly": "66"
+    },
+    {
+      "sealAssembly": "67",
+      "sealRing": "Ceramic",
+      "matingRing": "Ceramic",
+      "elastomer": "Viton",
+      "metal": "316SS",
+      "rotary": "52",
+      "seatAssembly": "02"
+    },
+    {
+      "sealAssembly": "68",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "HBNR",
+      "metal": "316SS",
+      "rotary": "68",
+      "seatAssembly": "68"
+    },
+    {
+      "sealAssembly": "69",
+      "sealRing": "SiCPC",
+      "matingRing": "SiCPC",
+      "elastomer": "HBNR",
+      "metal": "316SS",
+      "rotary": "69",
+      "seatAssembly": "69"
+    },
+    {
+      "sealAssembly": "70",
+      "sealRing": "Tungsten",
+      "matingRing": "Tungsten",
+      "elastomer": "HBNR",
+      "metal": "316 SS",
+      "rotary": "70",
+      "seatAssembly": "70"
+    },
+    {
+      "sealAssembly": "71",
+      "sealRing": "Boron Silicon",
+      "matingRing": "Boron Silicon",
+      "elastomer": "Buna",
+      "metal": "316 SS",
+      "rotary": "71",
+      "seatAssembly": "71"
+    },
+    {
+      "sealAssembly": "72",
+      "sealRing": "Boron Silicon",
+      "matingRing": "Boron Silicon",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "72",
+      "seatAssembly": "72"
+    },
+    {
+      "sealAssembly": "73",
+      "sealRing": "Boron Silicon",
+      "matingRing": "Boron Silicon",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "73",
+      "seatAssembly": "73"
+    },
+    {
+      "sealAssembly": "74",
+      "sealRing": "Bronze",
+      "matingRing": "Tungsten",
+      "elastomer": "Neoprene",
+      "metal": "316SS",
+      "rotary": "74",
+      "seatAssembly": "29"
+    },
+    {
+      "sealAssembly": "75",
+      "sealRing": "Ceramic",
+      "matingRing": "Graphite Loaded RB",
+      "elastomer": "Buna",
+      "metal": "316SS",
+      "rotary": "51",
+      "seatAssembly": "46"
+    },
+    {
+      "sealAssembly": "76",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "HBNR",
+      "metal": "316 SS",
+      "rotary": "76",
+      "seatAssembly": "76"
+    },
+    {
+      "sealAssembly": "77",
+      "sealRing": "Bronze",
+      "matingRing": "Silicon Carbide",
+      "elastomer": "Viton",
+      "metal": "316SS",
+      "rotary": "77",
+      "seatAssembly": "17"
+    },
+    {
+      "sealAssembly": "78",
+      "sealRing": "Carbon - Antimony",
+      "matingRing": "Chromium Oxide",
+      "elastomer": "Viton",
+      "metal": "316 SS",
+      "rotary": "82",
+      "seatAssembly": "78"
+    },
+    {
+      "sealAssembly": "79",
+      "sealRing": "Sintered SiC",
+      "matingRing": "Sintered SiC",
+      "elastomer": "Teflon",
+      "metal": "316 SS",
+      "rotary": "79",
+      "seatAssembly": "79"
+    },
+    {
+      "sealAssembly": "80",
+      "sealRing": "Ceramic",
+      "matingRing": "Graphite Loaded RB",
+      "elastomer": "Viton",
+      "metal": "316SS",
+      "rotary": "52",
+      "seatAssembly": "47"
+    },
+    {
+      "sealAssembly": "81",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Teflon",
+      "metal": "316SS",
+      "rotary": "02",
+      "seatAssembly": "81"
+    },
+    {
+      "sealAssembly": "82",
+      "sealRing": "Carbon - Antimony",
+      "matingRing": "Silicon",
+      "elastomer": "Viton",
+      "metal": "316SS",
+      "rotary": "82",
+      "seatAssembly": "17"
+    },
+    {
+      "sealAssembly": "83",
+      "sealRing": "Carbon - Antimony",
+      "matingRing": "Tungsten",
+      "elastomer": "Aflas",
+      "metal": "316 SS",
+      "rotary": "83",
+      "seatAssembly": "83"
+    },
+    {
+      "sealAssembly": "84",
+      "sealRing": "Carbon",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Aflas",
+      "metal": "316 SS",
+      "rotary": "86",
+      "seatAssembly": "87"
+    },
+    {
+      "sealAssembly": "85",
+      "sealRing": "Ceramic",
+      "matingRing": "Graphite Loaded RB",
+      "elastomer": "EP",
+      "metal": "316 SS",
+      "rotary": "53",
+      "seatAssembly": "48"
+    },
+    {
+      "sealAssembly": "86",
+      "sealRing": "Cabon",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Aflas",
+      "metal": " ",
+      "rotary": "86",
+      "seatAssembly": "86"
+    },
+    {
+      "sealAssembly": "87",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Aflas",
+      "metal": "316SS",
+      "rotary": "87",
+      "seatAssembly": "87"
+    },
+    {
+      "sealAssembly": "88",
+      "sealRing": "Carbon",
+      "matingRing": "RB or Loaded - Sic",
+      "elastomer": "Teflon",
+      "metal": "316SS",
+      "rotary": "88",
+      "seatAssembly": "88"
+    },
+    {
+      "sealAssembly": "89",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Teflon",
+      "metal": "316SS",
+      "rotary": "89",
+      "seatAssembly": "89"
+    },
+    {
+      "sealAssembly": "92",
+      "sealRing": "Bronze",
+      "matingRing": "440C S.S.",
+      "elastomer": "Viton",
+      "metal": "304S3",
+      "rotary": "92",
+      "seatAssembly": "92"
+    },
+    {
+      "sealAssembly": "95",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Kalrez/Chemrez/Simriz",
+      "metal": "316SS",
+      "rotary": "95",
+      "seatAssembly": "95"
+    },
+    {
+      "sealAssembly": "96",
+      "sealRing": "Carbon",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Kalrez/Chemrez/Simriz",
+      "metal": "316SS",
+      "rotary": "99",
+      "seatAssembly": "96"
+    },
+    {
+      "sealAssembly": "97",
+      "sealRing": "Sintered SiC",
+      "matingRing": "Sintered SiC",
+      "elastomer": "Aflas",
+      "metal": "316SS",
+      "rotary": "97",
+      "seatAssembly": "97"
+    },
+    {
+      "sealAssembly": "99",
+      "sealRing": "Carbon - Antimony",
+      "matingRing": "Ceramic",
+      "elastomer": "Kalrez/Chemrez/Simriz",
+      "metal": "316SS",
+      "rotary": "99",
+      "seatAssembly": "99"
+    },
+    {
+      "sealAssembly": "100",
+      "sealRing": "Sintered SiC",
+      "matingRing": "Sintered SiC",
+      "elastomer": "Kalrez/Chemrez/Simriz",
+      "metal": "316SS",
+      "rotary": "100",
+      "seatAssembly": "100"
+    },
+    {
+      "sealAssembly": "101",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Buna",
+      "metal": "276HC",
+      "rotary": "101",
+      "seatAssembly": "101"
+    },
+    {
+      "sealAssembly": "102",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Viton",
+      "metal": "276HC",
+      "rotary": "102",
+      "seatAssembly": "102"
+    },
+    {
+      "sealAssembly": "103",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "EP",
+      "metal": "276HC",
+      "rotary": "103",
+      "seatAssembly": "103"
+    },
+    {
+      "sealAssembly": "104",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Neoprene",
+      "metal": "276HC",
+      "rotary": "104",
+      "seatAssembly": "104"
+    },
+    {
+      "sealAssembly": "106",
+      "sealRing": "Carbon",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Buna",
+      "metal": "276HC",
+      "rotary": "106",
+      "seatAssembly": "106"
+    },
+    {
+      "sealAssembly": "107",
+      "sealRing": "Carbon",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Viton",
+      "metal": "276HC",
+      "rotary": "107",
+      "seatAssembly": "107"
+    },
+    {
+      "sealAssembly": "108",
+      "sealRing": "Carbon",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "EP",
+      "metal": "276HC",
+      "rotary": "108",
+      "seatAssembly": "108"
+    },
+    {
+      "sealAssembly": "109",
+      "sealRing": "Carbon",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Neoprene",
+      "metal": "276HC",
+      "rotary": "109",
+      "seatAssembly": "109"
+    },
+    {
+      "sealAssembly": "120",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Teflon/ Teflon Encapsulated Viton O-ring",
+      "metal": "276HC",
+      "rotary": "120",
+      "seatAssembly": "820"
+    },
+    {
+      "sealAssembly": "195",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Kalrez",
+      "metal": "276HC",
+      "rotary": "195",
+      "seatAssembly": "95"
+    },
+    {
+      "sealAssembly": "196",
+      "sealRing": "Carbon",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Kalrez",
+      "metal": "276HC",
+      "rotary": "196",
+      "seatAssembly": "95"
+    },
+    {
+      "sealAssembly": "199",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Kalrez",
+      "metal": "276HC",
+      "rotary": "196",
+      "seatAssembly": "99"
+    },
+    {
+      "sealAssembly": "383",
+      "sealRing": "Carbon - Antimony",
+      "matingRing": "Tungsten",
+      "elastomer": "Viton",
+      "metal": "AM350",
+      "rotary": "383",
+      "seatAssembly": "383"
+    },
+    {
+      "sealAssembly": "601",
+      "sealRing": "Carbon - Hot Pressed",
+      "matingRing": "Ceramic 85% Alumina",
+      "elastomer": "Buna",
+      "metal": "304S3",
+      "rotary": "601",
+      "seatAssembly": "601"
+    },
+    {
+      "sealAssembly": "602",
+      "sealRing": "Carbon - Hot Pressed",
+      "matingRing": "Ceramic 85% Alumina",
+      "elastomer": "Viton",
+      "metal": "304S3",
+      "rotary": "602",
+      "seatAssembly": "602"
+    },
+    {
+      "sealAssembly": "603",
+      "sealRing": "Carbon - Hot Pressed",
+      "matingRing": "Ceramic 85% Alumina",
+      "elastomer": "EP",
+      "metal": "304S3",
+      "rotary": "603",
+      "seatAssembly": "603"
+    },
+    {
+      "sealAssembly": "604",
+      "sealRing": "Carbon - Hot Pressed",
+      "matingRing": "Ceramic 85% Alumina",
+      "elastomer": "Neoprene",
+      "metal": "304S3",
+      "rotary": "604",
+      "seatAssembly": "604"
+    },
+    {
+      "sealAssembly": "636",
+      "sealRing": "Carbon - Hot Pressed",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Buna",
+      "metal": "304S3",
+      "rotary": "601",
+      "seatAssembly": "46"
+    },
+    {
+      "sealAssembly": "661",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic 99.5% Alumina",
+      "elastomer": "HBNR",
+      "metal": "316SS",
+      "rotary": "01",
+      "seatAssembly": "661"
+    },
+    {
+      "sealAssembly": "645",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic 99.5% Alumina",
+      "elastomer": "Buna",
+      "metal": "316SS",
+      "rotary": "01",
+      "seatAssembly": "645"
+    },
+    {
+      "sealAssembly": "701",
+      "sealRing": "Teflon Glass-Filled",
+      "matingRing": "Ceramic",
+      "elastomer": "Buna",
+      "metal": "316SS",
+      "rotary": "701",
+      "seatAssembly": "01"
+    },
+    {
+      "sealAssembly": "702",
+      "sealRing": "Teflon Glass-Filled",
+      "matingRing": "Ceramic",
+      "elastomer": "Viton",
+      "metal": "316SS",
+      "rotary": "702",
+      "seatAssembly": "02"
+    },
+    {
+      "sealAssembly": "703",
+      "sealRing": "Teflon Glass-Filled",
+      "matingRing": "Ceramic",
+      "elastomer": "EP",
+      "metal": "316SS",
+      "rotary": "703",
+      "seatAssembly": "03"
+    },
+    {
+      "sealAssembly": "704",
+      "sealRing": "Teflon Glass-Filled",
+      "matingRing": "Ceramic",
+      "elastomer": "Neoprene",
+      "metal": "316SS",
+      "rotary": "704",
+      "seatAssembly": "04"
+    },
+    {
+      "sealAssembly": "706",
+      "sealRing": "Teflon Glass-Filled",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Buna",
+      "metal": "316SS",
+      "rotary": "701",
+      "seatAssembly": "16"
+    },
+    {
+      "sealAssembly": "707",
+      "sealRing": "Teflon Glass-Filled",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Viton",
+      "metal": "316SS",
+      "rotary": "702",
+      "seatAssembly": "17"
+    },
+    {
+      "sealAssembly": "708",
+      "sealRing": "Teflon Glass-Filled",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "EPDM",
+      "metal": "316SS",
+      "rotary": "703",
+      "seatAssembly": "18"
+    },
+    {
+      "sealAssembly": "709",
+      "sealRing": "Teflon Glass-Filled",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Neoprene",
+      "metal": "316SS",
+      "rotary": "704",
+      "seatAssembly": "19"
+    },
+    {
+      "sealAssembly": "802",
+      "sealRing": "Carbon",
+      "matingRing": "Ceramic",
+      "elastomer": "Teflon/ Teflon Encapsulated Viton O-ring",
+      "metal": "316 SS",
+      "rotary": "88",
+      "seatAssembly": "802"
+    },
+    {
+      "sealAssembly": "817",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Viton/ Teflon Encapsulated Viton O-ring",
+      "metal": "316SS",
+      "rotary": "817",
+      "seatAssembly": "817"
+    },
+    {
+      "sealAssembly": "820",
+      "sealRing": "Graphite Loaded SiC",
+      "matingRing": "Graphite Loaded SiC",
+      "elastomer": "Teflon/ Teflon Encapsulated Viton O-ring",
+      "metal": "316SS",
+      "rotary": "820",
+      "seatAssembly": "820"
+    },
+    {
+      "sealAssembly": "827",
+      "sealRing": "Tungsten",
+      "matingRing": "Tungsten",
+      "elastomer": "Viton/ Teflon Encapsulated Viton O-ring",
+      "metal": "316 SS",
+      "rotary": "827",
+      "seatAssembly": "827"
+    },
+    {
+      "sealAssembly": "847",
+      "sealRing": "Reaction Bonded - Sic",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Viton/ Teflon Encapsulated Viton O-ring",
+      "metal": "316SS",
+      "rotary": "847",
+      "seatAssembly": "847"
+    },
+    {
+      "sealAssembly": "883",
+      "sealRing": "Carbon - Antimony",
+      "matingRing": "Tungsten",
+      "elastomer": "Fluororubber 67% Fluorine",
+      "metal": "316SS",
+      "rotary": "883",
+      "seatAssembly": "883"
+    },
+    {
+      "sealAssembly": "886",
+      "sealRing": "Carbon - Antimony",
+      "matingRing": "Reaction Bonded - Sic",
+      "elastomer": "Fluororubber 67% Fluorine",
+      "metal": "316SS",
+      "rotary": "883",
+      "seatAssembly": "886"
+    },
+    {
+      "sealAssembly": "912",
+      "sealRing": "Bronze (Phosphor)",
+      "matingRing": "Tungsten",
+      "elastomer": "Viton",
+      "metal": " ",
+      "rotary": "912",
+      "seatAssembly": "27"
     }
   ]
 }

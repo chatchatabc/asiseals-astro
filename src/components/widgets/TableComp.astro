@@ -1,0 +1,31 @@
+---
+interface Props {
+  headers: string[];
+  rows: string[][];
+}
+
+const { headers, rows } = Astro.props as Props;
+---
+
+<table class="w-full text-left min-w-[900px] border-gray-200 border-y border-x">
+  <thead>
+    <tr class="bg-background text-white text-xl">
+      {
+        headers.map((header) => (
+          <th class="p-1 border-l border-gray-200">{header}</th>
+        ))
+      }
+    </tr>
+  </thead>
+  <tbody class="text-lg">
+    {
+      rows.map((row) => (
+        <tr class="divide-x border-t border-gray-200 divide-gray-200">
+          {row.map((cell) => (
+            <td class="p-1">{cell}</td>
+          ))}
+        </tr>
+      ))
+    }
+  </tbody>
+</table>

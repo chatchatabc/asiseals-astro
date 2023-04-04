@@ -8,7 +8,10 @@ import { Icon } from "astro-icon";
     <Icon class="h-8 w-8" name="mdi:chevron-left" />
   </button>
 
-  <ul id="carousel" class="snap-x flex-1 py-4 flex font-xl overflow-hidden">
+  <ul
+    id="carousel"
+    class="snap-x flex-1 py-4 flex font-xl scroll-smooth overflow-hidden"
+  >
     {
       aboutUsJson.certificates.map((certificate) => {
         return (
@@ -35,9 +38,13 @@ import { Icon } from "astro-icon";
     constructor() {
       super();
 
-      const carousel = this.querySelector("#carousel");
+      const carousel = this.querySelector<HTMLElement>("#carousel")!;
       const prevBtn = this.querySelector("#prev-btn");
       const nextBtn = this.querySelector("#next-btn");
+
+      let isDown = false;
+      let startX: number;
+      let scrollLeft: number;
 
       function nextSlide(move: boolean = true) {
         if (move) {
@@ -59,6 +66,47 @@ import { Icon } from "astro-icon";
 
       nextBtn?.addEventListener("click", () => {
         nextSlide();
+      });
+
+      carousel.addEventListener("mousedown", (event: MouseEvent) => {
+        isDown = true;
+        startX = event.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+
+      carousel.addEventListener("mouseleave", () => {
+        isDown = false;
+      });
+
+      carousel.addEventListener("mouseup", () => {
+        isDown = false;
+      });
+
+      carousel.addEventListener("mousemove", (event: MouseEvent) => {
+        if (!isDown) return;
+        event.preventDefault();
+        const x = event.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 3; // scroll-fast
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+
+      // scroll on swipe
+      carousel.addEventListener("touchstart", (event: TouchEvent) => {
+        isDown = true;
+        startX = event.touches[0].pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+
+      carousel.addEventListener("touchend", () => {
+        isDown = false;
+      });
+
+      carousel.addEventListener("touchmove", (event: TouchEvent) => {
+        if (!isDown) return;
+        event.preventDefault();
+        const x = event.touches[0].pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 3; // scroll-fast
+        carousel.scrollLeft = scrollLeft - walk;
       });
     }
   }

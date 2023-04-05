@@ -7,6 +7,9 @@
       "slug": "type-202",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [
+        { "name": "Type 202", "url": "/images/products/type-202.webp" }
+      ],
       "industry": []
     },
     {
@@ -16,6 +19,9 @@
       "slug": "type-201",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [
+        { "name": "Type 201", "url": "/images/products/type-201.webp" }
+      ],
       "industry": []
     },
     {
@@ -25,6 +31,7 @@
       "slug": "type-91",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [{ "name": "Type 91", "url": "/images/products/type-91.webp" }],
       "industry": ["pharmaceuticals-industry", "pulp-and-paper"]
     },
     {
@@ -34,6 +41,7 @@
       "slug": "type-81",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [{ "name": "Type 81", "url": "/images/products/type-81.webp" }],
       "industry": ["pharmaceuticals-industry", "chemical", "pulp-and-paper"]
     },
     {
@@ -43,6 +51,7 @@
       "slug": "type-61",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [{ "name": "Type 61", "url": "/images/products/type-61.webp" }],
       "industry": ["waste-water", "automotive"]
     },
     {
@@ -52,6 +61,7 @@
       "slug": "type-21",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [{ "name": "Type 21", "url": "/images/products/type-21.webp" }],
       "industry": ["waste-water", "agriculture"]
     },
     {
@@ -61,6 +71,7 @@
       "slug": "type-16",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [{ "name": "Type 16", "url": "/images/products/type-16.webp" }],
       "industry": ["waste-water", "agriculture", "food-and-beverage"]
     },
     {
@@ -70,6 +81,9 @@
       "slug": "type-37f",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [
+        { "name": "Type 37F", "url": "/images/products/type-37f.webp" }
+      ],
       "industry": ["chemical", "food-and-beverage"]
     },
     {
@@ -79,6 +93,9 @@
       "slug": "type-81b",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [
+        { "name": "Type 81B", "url": "/images/products/type-81b.webp" }
+      ],
       "industry": []
     },
     {
@@ -88,6 +105,9 @@
       "slug": "type-91b",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [
+        { "name": "Type 91B", "url": "/images/products/type-91b.webp" }
+      ],
       "industry": []
     },
     {
@@ -97,6 +117,9 @@
       "slug": "type-202e",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [
+        { "name": "Type 202E", "url": "/images/products/type-202e.webp" }
+      ],
       "industry": [
         "power-generation",
         "mining",
@@ -111,6 +134,7 @@
       "slug": "type-37",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [{ "name": "Type 37", "url": "/images/products/type-37.webp" }],
       "industry": []
     },
     {
@@ -120,6 +144,9 @@
       "slug": "type-846b",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [
+        { "name": "Type 846B", "url": "/images/products/type-846b.webp" }
+      ],
       "industry": ["power-generation", "chemical", "pulp-and-paper"]
     },
     {
@@ -129,6 +156,9 @@
       "slug": "type-846",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [
+        { "name": "Type 846", "url": "/images/products/type-846.webp" }
+      ],
       "industry": ["chemical", "agriculture", "pulp-and-paper"]
     },
     {
@@ -138,6 +168,9 @@
       "slug": "type-816",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [
+        { "name": "Type 816", "url": "/images/products/type-816.webp" }
+      ],
       "industry": ["waste-water", "agriculture"]
     },
     {
@@ -147,6 +180,9 @@
       "slug": "type-16c",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [
+        { "name": "Type 16C", "url": "/images/products/type-16c.webp" }
+      ],
       "industry": ["power-generation", "agriculture", "food-and-beverage"]
     },
     {
@@ -156,6 +192,9 @@
       "slug": "type-852",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [
+        { "name": "Type 852", "url": "/images/products/type-852.webp" }
+      ],
       "industry": [
         "pharmaceuticals-industry",
         "power-generation",
@@ -171,6 +210,9 @@
       "slug": "type-850b",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [
+        { "name": "Type 850B", "url": "/images/products/type-850b.webp" }
+      ],
       "industry": ["power-generation", "chemical", "pulp-and-paper"]
     },
     {
@@ -180,6 +222,9 @@
       "slug": "type-850",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
+      "images": [
+        { "name": "Type 850", "url": "/images/products/type-850.webp" }
+      ],
       "industry": ["chemical", "agriculture"]
     },
     {
@@ -189,6 +234,9 @@
       "slug": "type-202v",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [
+        { "name": "Type 202V", "url": "/images/products/type-202v.webp" }
+      ],
       "industry": ["waste-water"]
     },
     {
@@ -198,6 +246,9 @@
       "slug": "type-201e",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [
+        { "name": "Type 201E", "url": "/images/products/type-201e.webp" }
+      ],
       "industry": [
         "power-generation",
         "mining",
@@ -212,6 +263,9 @@
       "slug": "type-16wm",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [
+        { "name": "Type 16WM", "url": "/images/products/type-16wm.webp" }
+      ],
       "industry": ["power-generation", "mining", "food-and-beverage"]
     },
     {
@@ -221,6 +275,9 @@
       "slug": "type-16eb",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
+      "images": [
+        { "name": "Type 16EB", "url": "/images/products/type-16eb.webp" }
+      ],
       "industry": ["waste-water", "agriculture", "food-and-beverage"]
     },
     {
@@ -230,6 +287,9 @@
       "slug": "type-aa03",
       "category": "cartridge-seals",
       "subCategory": "all",
+      "images": [
+        { "name": "Type AA03", "url": "/images/products/type-aa03.webp" }
+      ],
       "industry": []
     },
     {
@@ -239,6 +299,9 @@
       "slug": "type-aa04",
       "category": "cartridge-seals",
       "subCategory": "all",
+      "images": [
+        { "name": "Type AA04", "url": "/images/products/type-aa04.webp" }
+      ],
       "industry": []
     },
     {
@@ -248,6 +311,9 @@
       "slug": "type-aa09",
       "category": "cartridge-seals",
       "subCategory": "all",
+      "images": [
+        { "name": "Type AA09", "url": "/images/products/type-aa09.webp" }
+      ],
       "industry": []
     },
     {
@@ -257,6 +323,12 @@
       "slug": "asi-b-u28-asi-b-l28",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-B-U28 & ASI-B-L28",
+          "url": "/images/products/asi-b-u28-asi-b-l28.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -266,6 +338,12 @@
       "slug": "asi-c-u22-asi-c-l22",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-C-U22 & ASI-C-L22",
+          "url": "/images/products/asi-c-u22-asi-c-l22.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -275,6 +353,12 @@
       "slug": "asi-d15-double-seal",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-D15-Double Seal",
+          "url": "/images/products/asi-d15-double-seal.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -284,6 +368,12 @@
       "slug": "asi-e-u22-asi-e-l22",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-E-U22 & ASI-E-L22",
+          "url": "/images/products/asi-e-u22-asi-e-l22.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -293,6 +383,12 @@
       "slug": "asi-f-u22-asi-f-l22",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-F-U22 & ASI-F-L22",
+          "url": "/images/products/asi-f-u22-asi-f-l22.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -302,6 +398,12 @@
       "slug": "asi-g-u20-asi-g-l20",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-G-U20 & ASI-G-L20",
+          "url": "/images/products/asi-g-u20-asi-g-l20.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -311,6 +413,12 @@
       "slug": "asi-i-u28-asi-i-l28",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-I-U28 & ASI-I-L28",
+          "url": "/images/products/asi-i-u28-asi-i-l28.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -320,6 +428,12 @@
       "slug": "asi-j-u25-asi-j-l25",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-J-U25 & ASI-J-L25",
+          "url": "/images/products/asi-j-u25-asi-j-l25.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -329,6 +443,12 @@
       "slug": "asi-k-u35-asi-k-l35",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-K-U35 & ASI-K-L35",
+          "url": "/images/products/asi-k-u35-asi-k-l35.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -338,6 +458,12 @@
       "slug": "asi-k-u35-asi-l-l35",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-K-U35 & ASI-L-L35",
+          "url": "/images/products/asi-k-u35-asi-l-l35.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -347,6 +473,12 @@
       "slug": "asi-m-u35-asi-m-l35",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-M-U35 & ASI-M-L35",
+          "url": "/images/products/asi-m-u35-asi-m-l35.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -356,6 +488,12 @@
       "slug": "asi-o-u45-asi-o-l45",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-O-U45 & ASI-O-L45",
+          "url": "/images/products/asi-o-u45-asi-o-l45.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -365,6 +503,12 @@
       "slug": "asi-p-u60-asi-p-l60",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-P-U60 & ASI-P-L60",
+          "url": "/images/products/asi-p-u60-asi-p-l60.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -374,6 +518,12 @@
       "slug": "asi-q-u60-asi-q-l60",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-Q-U60 & ASI-Q-L60",
+          "url": "/images/products/asi-q-u60-asi-q-l60.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -383,6 +533,12 @@
       "slug": "asi-a-u20-asi-a-l20",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-A-U20 & ASI-A-L20",
+          "url": "/images/products/asi-a-u20-asi-a-l20.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -392,6 +548,12 @@
       "slug": "asi-r-u60-asi-r-l60",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-R-U60 & ASI-R-L60",
+          "url": "/images/products/asi-r-u60-asi-r-l60.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -401,6 +563,12 @@
       "slug": "as1-s-u90-asi-s-l80",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "AS1-S-U90 & ASI-S-L80",
+          "url": "/images/products/as1-s-u90-asi-s-l80.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -410,6 +578,12 @@
       "slug": "asi-s-u90-asi-u-l90",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-S-U90 & ASI-U-L90",
+          "url": "/images/products/asi-s-u90-asi-u-l90.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -419,6 +593,12 @@
       "slug": "asi-s-u90-asi-t-l120",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-S-U90 & ASI-T-L120",
+          "url": "/images/products/asi-s-u90-asi-t-l120.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -428,6 +608,12 @@
       "slug": "asi-z-u25-asi-z-l24",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "ASI-Z-U25 & ASI-Z-L24",
+          "url": "/images/products/asi-z-u25-asi-z-l24.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -437,6 +623,12 @@
       "slug": "xylem-flygt-pumps",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "Xylem flygt Pumps",
+          "url": "/images/products/xylem-flygt-pumps.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -446,6 +638,12 @@
       "slug": "xylem-flygt-pumps-1",
       "category": "customized-seals",
       "subCategory": "flygt",
+      "images": [
+        {
+          "name": "Xylem flygt Pumps 1",
+          "url": "/images/products/xylem-flygt-pumps-1.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -455,6 +653,12 @@
       "slug": "type-511-12",
       "category": "customized-seals",
       "subCategory": "groundfos",
+      "images": [
+        {
+          "name": "Type 511-12",
+          "url": "/images/products/type-511-12.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -464,6 +668,12 @@
       "slug": "type-511-16",
       "category": "customized-seals",
       "subCategory": "groundfos",
+      "images": [
+        {
+          "name": "Type 511-16",
+          "url": "/images/products/type-511-16.webp"
+        }
+      ],
       "industry": []
     },
     {
@@ -473,6 +683,12 @@
       "slug": "type-511-22",
       "category": "customized-seals",
       "subCategory": "groundfos",
+      "images": [
+        {
+          "name": "Type 511-22",
+          "url": "/images/products/type-511-22.webp"
+        }
+      ],
       "industry": []
     }
   ]

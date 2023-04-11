@@ -36,6 +36,16 @@
     filteredProducts = fuse.search(searchValue).map((entry) => entry.item);
   }
 
+  $: filteredProducts.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+
   onMount(() => {
     // Get search params from url
     const urlParams = new URLSearchParams(window.location.search);

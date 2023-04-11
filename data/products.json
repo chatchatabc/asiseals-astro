@@ -8,7 +8,8 @@
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
       "images": [
-        { "name": "Type 202", "url": "/images/products/type-202.webp" }
+        { "name": "Type 202", "url": "/images/products/type-202.webp" },
+        { "name": "Type 202", "url": "/images/products/type-202-1.webp" }
       ],
       "industry": []
     },
@@ -20,7 +21,8 @@
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
       "images": [
-        { "name": "Type 201", "url": "/images/products/type-201.webp" }
+        { "name": "Type 201", "url": "/images/products/type-201.webp" },
+        { "name": "Type 201", "url": "/images/products/type-201-1.webp" }
       ],
       "industry": []
     },
@@ -31,7 +33,10 @@
       "slug": "type-91",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
-      "images": [{ "name": "Type 91", "url": "/images/products/type-91.webp" }],
+      "images": [
+        { "name": "Type 91", "url": "/images/products/type-91.webp" },
+        { "name": "Type 91", "url": "/images/products/type-91-1.webp" }
+      ],
       "industry": ["pharmaceuticals-industry", "pulp-and-paper"]
     },
     {
@@ -41,7 +46,10 @@
       "slug": "type-81",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
-      "images": [{ "name": "Type 81", "url": "/images/products/type-81.webp" }],
+      "images": [
+        { "name": "Type 81", "url": "/images/products/type-81.webp" },
+        { "name": "Type 81", "url": "/images/products/type-81-1.webp" }
+      ],
       "industry": ["pharmaceuticals-industry", "chemical", "pulp-and-paper"]
     },
     {
@@ -51,7 +59,10 @@
       "slug": "type-61",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
-      "images": [{ "name": "Type 61", "url": "/images/products/type-61.webp" }],
+      "images": [
+        { "name": "Type 61", "url": "/images/products/type-61.webp" },
+        { "name": "Type 61", "url": "/images/products/type-61-1.webp" }
+      ],
       "industry": ["waste-water", "automotive"]
     },
     {
@@ -61,7 +72,10 @@
       "slug": "type-21",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
-      "images": [{ "name": "Type 21", "url": "/images/products/type-21.webp" }],
+      "images": [
+        { "name": "Type 21", "url": "/images/products/type-21.webp" },
+        { "name": "Type 21", "url": "/images/products/type-21-1.webp" }
+      ],
       "industry": ["waste-water", "agriculture"]
     },
     {
@@ -71,7 +85,10 @@
       "slug": "type-16",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
-      "images": [{ "name": "Type 16", "url": "/images/products/type-16.webp" }],
+      "images": [
+        { "name": "Type 16", "url": "/images/products/type-16.webp" },
+        { "name": "Type 16", "url": "/images/products/type-16-1.webp" }
+      ],
       "industry": ["waste-water", "agriculture", "food-and-beverage"]
     },
     {
@@ -82,7 +99,8 @@
       "category": "pump-seals",
       "subCategory": "pusher-seals",
       "images": [
-        { "name": "Type 37F", "url": "/images/products/type-37f.webp" }
+        { "name": "Type 37F", "url": "/images/products/type-37f.webp" },
+        { "name": "Type 37F", "url": "/images/products/type-37f-1.webp" }
       ],
       "industry": ["chemical", "food-and-beverage"]
     },
@@ -94,7 +112,8 @@
       "category": "pump-seals",
       "subCategory": "pusher-seals",
       "images": [
-        { "name": "Type 81B", "url": "/images/products/type-81b.webp" }
+        { "name": "Type 81B", "url": "/images/products/type-81b.webp" },
+        { "name": "Type 81B", "url": "/images/products/type-81b-1.webp" }
       ],
       "industry": []
     },
@@ -106,7 +125,8 @@
       "category": "pump-seals",
       "subCategory": "pusher-seals",
       "images": [
-        { "name": "Type 91B", "url": "/images/products/type-91b.webp" }
+        { "name": "Type 91B", "url": "/images/products/type-91b.webp" },
+        { "name": "Type 91B", "url": "/images/products/type-91b-1.webp" }
       ],
       "industry": []
     },
@@ -118,7 +138,8 @@
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
       "images": [
-        { "name": "Type 202E", "url": "/images/products/type-202e.webp" }
+        { "name": "Type 202E", "url": "/images/products/type-202e.webp" },
+        { "name": "Type 202E", "url": "/images/products/type-202e-1.webp" }
       ],
       "industry": [
         "power-generation",
@@ -134,7 +155,10 @@
       "slug": "type-37",
       "category": "pump-seals",
       "subCategory": "pusher-seals",
-      "images": [{ "name": "Type 37", "url": "/images/products/type-37.webp" }],
+      "images": [
+        { "name": "Type 37", "url": "/images/products/type-37.webp" },
+        { "name": "Type 37", "url": "/images/products/type-37-1.webp" }
+      ],
       "industry": []
     },
     {
@@ -145,7 +169,8 @@
       "category": "pump-seals",
       "subCategory": "pusher-seals",
       "images": [
-        { "name": "Type 846B", "url": "/images/products/type-846b.webp" }
+        { "name": "Type 846B", "url": "/images/products/type-846b.webp" },
+        { "name": "Type 846B", "url": "/images/products/type-846b-1.webp" }
       ],
       "industry": ["power-generation", "chemical", "pulp-and-paper"]
     },
@@ -157,7 +182,8 @@
       "category": "pump-seals",
       "subCategory": "pusher-seals",
       "images": [
-        { "name": "Type 846", "url": "/images/products/type-846.webp" }
+        { "name": "Type 846", "url": "/images/products/type-846.webp" },
+        { "name": "Type 846", "url": "/images/products/type-846-1.webp" }
       ],
       "industry": ["chemical", "agriculture", "pulp-and-paper"]
     },
@@ -169,7 +195,8 @@
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
       "images": [
-        { "name": "Type 816", "url": "/images/products/type-816.webp" }
+        { "name": "Type 816", "url": "/images/products/type-816.webp" },
+        { "name": "Type 816", "url": "/images/products/type-816-1.webp" }
       ],
       "industry": ["waste-water", "agriculture"]
     },
@@ -181,7 +208,8 @@
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
       "images": [
-        { "name": "Type 16C", "url": "/images/products/type-16c.webp" }
+        { "name": "Type 16C", "url": "/images/products/type-16c.webp" },
+        { "name": "Type 16C", "url": "/images/products/type-16c-1.webp" }
       ],
       "industry": ["power-generation", "agriculture", "food-and-beverage"]
     },
@@ -193,7 +221,8 @@
       "category": "pump-seals",
       "subCategory": "pusher-seals",
       "images": [
-        { "name": "Type 852", "url": "/images/products/type-852.webp" }
+        { "name": "Type 852", "url": "/images/products/type-852.webp" },
+        { "name": "Type 852", "url": "/images/products/type-852-1.webp" }
       ],
       "industry": [
         "pharmaceuticals-industry",
@@ -211,7 +240,8 @@
       "category": "pump-seals",
       "subCategory": "pusher-seals",
       "images": [
-        { "name": "Type 850B", "url": "/images/products/type-850b.webp" }
+        { "name": "Type 850B", "url": "/images/products/type-850b.webp" },
+        { "name": "Type 850B", "url": "/images/products/type-850b-1.webp" }
       ],
       "industry": ["power-generation", "chemical", "pulp-and-paper"]
     },
@@ -223,7 +253,8 @@
       "category": "pump-seals",
       "subCategory": "pusher-seals",
       "images": [
-        { "name": "Type 850", "url": "/images/products/type-850.webp" }
+        { "name": "Type 850", "url": "/images/products/type-850.webp" },
+        { "name": "Type 850", "url": "/images/products/type-850-1.webp" }
       ],
       "industry": ["chemical", "agriculture"]
     },
@@ -235,7 +266,8 @@
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
       "images": [
-        { "name": "Type 202V", "url": "/images/products/type-202v.webp" }
+        { "name": "Type 202V", "url": "/images/products/type-202v.webp" },
+        { "name": "Type 202V", "url": "/images/products/type-202v-1.webp" }
       ],
       "industry": ["waste-water"]
     },
@@ -247,7 +279,8 @@
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
       "images": [
-        { "name": "Type 201E", "url": "/images/products/type-201e.webp" }
+        { "name": "Type 201E", "url": "/images/products/type-201e.webp" },
+        { "name": "Type 201E", "url": "/images/products/type-201e-1.webp" }
       ],
       "industry": [
         "power-generation",
@@ -264,7 +297,11 @@
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
       "images": [
-        { "name": "Type 16WM", "url": "/images/products/type-16wm.webp" }
+        { "name": "Type 16WM", "url": "/images/products/type-16wm.webp" },
+        {
+          "name": "Type 16WM",
+          "url": "/images/products/type-16wm-1.webp"
+        }
       ],
       "industry": ["power-generation", "mining", "food-and-beverage"]
     },
@@ -276,7 +313,11 @@
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
       "images": [
-        { "name": "Type 16EB", "url": "/images/products/type-16eb.webp" }
+        { "name": "Type 16EB", "url": "/images/products/type-16eb.webp" },
+        {
+          "name": "Type 16EB",
+          "url": "/images/products/type-16eb-1.webp"
+        }
       ],
       "industry": ["waste-water", "agriculture", "food-and-beverage"]
     },
@@ -288,7 +329,11 @@
       "category": "cartridge-seals",
       "subCategory": "all",
       "images": [
-        { "name": "Type AA03", "url": "/images/products/type-aa03.webp" }
+        { "name": "Type AA03", "url": "/images/products/type-aa03.webp" },
+        {
+          "name": "Type AA03",
+          "url": "/images/products/type-aa03-1.webp"
+        }
       ],
       "industry": []
     },
@@ -300,7 +345,11 @@
       "category": "cartridge-seals",
       "subCategory": "all",
       "images": [
-        { "name": "Type AA04", "url": "/images/products/type-aa04.webp" }
+        { "name": "Type AA04", "url": "/images/products/type-aa04.webp" },
+        {
+          "name": "Type AA04",
+          "url": "/images/products/type-aa04-1.webp"
+        }
       ],
       "industry": []
     },
@@ -312,7 +361,11 @@
       "category": "cartridge-seals",
       "subCategory": "all",
       "images": [
-        { "name": "Type AA09", "url": "/images/products/type-aa09.webp" }
+        { "name": "Type AA09", "url": "/images/products/type-aa09.webp" },
+        {
+          "name": "Type AA09",
+          "url": "/images/products/type-aa09-1.webp"
+        }
       ],
       "industry": []
     },

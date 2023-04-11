@@ -17,7 +17,11 @@ while (filteredData.length < 4) {
 ---
 
 <related-products class="flex items-center">
-  <button id="prev-btn" aria-label="Previous Button">
+  <button
+    id="prev-btn"
+    class="rounded-full duration-300 hover:bg-gray-300"
+    aria-label="Previous Button"
+  >
     <Icon name="mdi:chevron-left" class="w-8 h-8" />
   </button>
   <swiper-container class="flex overflow-hidden snap-x">
@@ -42,7 +46,11 @@ while (filteredData.length < 4) {
       })
     }
   </swiper-container>
-  <button id="next-btn" aria-label="Next Button">
+  <button
+    id="next-btn"
+    class="rounded-full duration-300 hover:bg-gray-300"
+    aria-label="Next Button"
+  >
     <Icon name="mdi:chevron-right" class="w-8 h-8" />
   </button>
 </related-products>
@@ -68,11 +76,17 @@ while (filteredData.length < 4) {
             slidesPerView: 4,
           },
         },
-        navigation: {
-          prevEl: prevBtn,
-          nextEl: nextBtn,
-        },
       };
+
+      prevBtn.addEventListener("click", () => {
+        swiperEl.swiper.slidePrev();
+        resetAutoSlider();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        swiperEl.swiper.slideNext();
+        resetAutoSlider();
+      });
 
       function resetAutoSlider() {
         if (autoSlider) {

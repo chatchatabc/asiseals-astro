@@ -1,9 +1,6 @@
 ---
 import industriesJson from "@data/industries.json";
-import { register } from "swiper/element/bundle";
 import { Icon } from "astro-icon";
-
-register();
 ---
 
 <industry-section>
@@ -31,11 +28,11 @@ register();
   <!-- Container -->
   <section class="swiper max-w-7xl mx-auto px-4 mt-6">
     <!-- Carousel -->
-    <swiper-container class="pb-16">
+    <ul id="carousel" class="pb-16 flex overflow-hidden">
       {
         industriesJson.contents.map((item) => {
           return (
-            <swiper-slide class="p-4">
+            <li class="slides flex-shrink-0 w-1/4 p-4">
               <figure class="relative group">
                 <div class="bg-white py-16 w-full h-56 px-8">
                   <a
@@ -56,11 +53,11 @@ register();
                   </p>
                 </figcaption>
               </figure>
-            </swiper-slide>
+            </li>
           );
         })
       }
-    </swiper-container>
+    </ul>
   </section>
 
   <!-- Action button -->
@@ -77,36 +74,96 @@ register();
     constructor() {
       super();
 
-      const swiperEl = this.querySelector<any>("swiper-container");
+      const carousel = this.querySelector<HTMLElement>("#carousel")!;
+      const prevBtn = this.querySelector("#prev-btn")!;
+      const nextBtn = this.querySelector("#next-btn")!;
+      const slides = this.querySelectorAll<HTMLElement>(".slides")!;
 
-      const swiperParams = {
-        speed: 500,
-        loop: true,
-        navigation: {
-          prevEl: "#prev-btn",
-          nextEl: "#next-btn",
-        },
-        slidesPerView: 1,
-        breakpoints: {
-          768: {
-            slidesPerView: 3,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
-        },
-        on: {
-          init() {
-            // ...
-          },
-        },
-      };
+      const slideWidth = slides[0].offsetWidth;
+      let isDragged = false;
+      let prevX = 0;
+      let prevScrollLeft = 0;
 
-      // now we need to assign all parameters to Swiper element
-      Object.assign(swiperEl, swiperParams);
+      prevBtn.addEventListener("click", () => {
+        nextSlide(false);
 
-      // and now initialize it
-      swiperEl.initialize();
+        setTimeout(() => {
+          autoAlignSlide();
+        }, 500);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        nextSlide();
+
+        setTimeout(() => {
+          autoAlignSlide();
+        }, 500);
+      });
+
+      carousel.addEventListener("mousedown", (e) => {
+        dragStart(e);
+      });
+
+      carousel.addEventListener("mouseup", () => {
+        dragStop();
+      });
+
+      carousel.addEventListener("mouseleave", () => {
+        dragStop();
+      });
+
+      carousel.addEventListener("mousemove", (e) => {
+        if (!isDragged) return;
+        e.preventDefault();
+        const x = e.pageX;
+        const walk = (x - prevX) * 2;
+        carousel.scrollLeft = prevScrollLeft - walk;
+      });
+
+      carousel.addEventListener("touchstart", (e) => {
+        dragStart(e.touches[0]);
+      });
+
+      carousel.addEventListener("touchend", () => {
+        dragStop();
+      });
+
+      carousel.addEventListener("touchmove", (e) => {
+        if (!isDragged) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX;
+        const walk = (x - prevX) * 2;
+        carousel.scrollLeft = prevScrollLeft - walk;
+      });
+
+      function dragStart(e: any) {
+        isDragged = true;
+        prevX = e.pageX;
+        prevScrollLeft = carousel.scrollLeft;
+      }
+
+      function dragStop() {
+        isDragged = false;
+        autoAlignSlide();
+      }
+
+      function nextSlide(move: boolean = true) {
+        carousel.scrollTo({
+          left: move
+            ? carousel.scrollLeft + slideWidth
+            : carousel.scrollLeft - slideWidth,
+          behavior: "smooth",
+        });
+      }
+
+      function autoAlignSlide() {
+        const scrollLeft = carousel.scrollLeft;
+        const currentSlide = Math.round(scrollLeft / slideWidth);
+        carousel.scrollTo({
+          left: currentSlide * slideWidth,
+          behavior: "smooth",
+        });
+      }
     }
   }
 

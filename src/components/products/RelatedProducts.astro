@@ -20,11 +20,11 @@ while (filteredData.length < 4) {
   <button id="prev-btn" aria-label="Previous Button">
     <Icon name="mdi:chevron-left" class="w-8 h-8" />
   </button>
-  <ul id="carousel" class="flex overflow-hidden snap-x">
+  <swiper-container class="flex overflow-hidden snap-x">
     {
       filteredData.map((entry) => {
         return (
-          <li class="snap-start flex-shrink-0 p-2 w-1/2 md:w-1/3 lg:w-1/4">
+          <swiper-slide class="snap-start flex-shrink-0 p-2 w-1/2 md:w-1/3 lg:w-1/4">
             <figure class="relative">
               <div>
                 <Img src={entry.imageUrl} alt={entry.name} />
@@ -37,11 +37,11 @@ while (filteredData.length < 4) {
                 />
               </figcaption>
             </figure>
-          </li>
+          </swiper-slide>
         );
       })
     }
-  </ul>
+  </swiper-container>
   <button id="next-btn" aria-label="Next Button">
     <Icon name="mdi:chevron-right" class="w-8 h-8" />
   </button>
@@ -52,53 +52,41 @@ while (filteredData.length < 4) {
     constructor() {
       super();
 
-      const carousel = this.querySelector<HTMLElement>("#carousel")!;
+      const swiperEl = this.querySelector<any>("swiper-container")!;
       const prevBtn = this.querySelector<HTMLElement>("#prev-btn")!;
       const nextBtn = this.querySelector<HTMLElement>("#next-btn")!;
-      let interval: any;
+      let autoSlider: any;
 
-      prevBtn.addEventListener("click", () => {
-        moveFirstItemToLast(false);
-        nextSlide(false);
-      });
+      const swiperParams = {
+        slidesPerView: 2,
+        loop: true,
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        },
+        navigation: {
+          prevEl: prevBtn,
+          nextEl: nextBtn,
+        },
+      };
 
-      nextBtn.addEventListener("click", () => {
-        moveFirstItemToLast();
-        nextSlide();
-      });
-
-      function resetInterval() {
-        if (interval) {
-          clearInterval(interval);
+      function resetAutoSlider() {
+        if (autoSlider) {
+          clearInterval(autoSlider);
         }
 
-        interval = setInterval(() => {
-          moveFirstItemToLast();
-          nextSlide();
-        }, 4000);
+        autoSlider = setInterval(() => {
+          swiperEl.swiper.slideNext();
+        }, 5000);
       }
 
-      function nextSlide(move: boolean = true) {
-        if (move) {
-          carousel.scrollBy({ left: 100, behavior: "smooth" });
-        } else {
-          carousel.scrollBy({ left: -100, behavior: "smooth" });
-        }
-        resetInterval();
-      }
+      resetAutoSlider();
 
-      function moveFirstItemToLast(move: boolean = true) {
-        if (move) {
-          const firstItem = carousel.firstElementChild!;
-          carousel.appendChild(firstItem);
-        } else {
-          const lastItem = carousel.lastElementChild!;
-          carousel.insertBefore(lastItem, carousel.firstElementChild);
-        }
-      }
-
-      resetInterval();
-      nextSlide();
+      Object.assign(swiperEl, swiperParams);
     }
   }
 

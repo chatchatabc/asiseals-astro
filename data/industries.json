@@ -7,6 +7,36 @@
       "slug": "automotive"
     },
     {
+      "name": "Mining",
+      "image": "/images/industries/mining.png",
+      "slug": "mining"
+    },
+    {
+      "name": "Power Generation",
+      "image": "/images/industries/power.png",
+      "slug": "power-generation"
+    },
+    {
+      "name": "Chemical",
+      "image": "/images/industries/chemicals.png",
+      "slug": "chemical"
+    },
+    {
+      "name": "Pharmaceuticals Industry",
+      "image": "/images/industries/pharmaceuticals.png",
+      "slug": "pharmaceuticals-industry"
+    },
+    {
+      "name": "Waste Water",
+      "image": "/images/industries/water.png",
+      "slug": "waste-water"
+    },
+    {
+      "name": "Pulp and Paper",
+      "image": "/images/industries/paper.png",
+      "slug": "pulp-and-paper"
+    },
+    {
       "name": "Agriculture",
       "image": "/images/industries/agriculture.png",
       "slug": "agriculture"
@@ -15,36 +45,6 @@
       "name": "Food and Beverage",
       "image": "/images/industries/food.png",
       "slug": "food-and-beverage"
-    },
-    {
-      "name": "Pulp and Paper",
-      "image": "/images/industries/paper.png",
-      "slug": "pulp-and-paper"
-    },
-    {
-      "name": "Mining",
-      "image": "/images/industries/mining.png",
-      "slug": "mining"
-    },
-    {
-      "name": "Chemical",
-      "image": "/images/industries/chemicals.png",
-      "slug": "chemical"
-    },
-    {
-      "name": "Power Generation",
-      "image": "/images/industries/power.png",
-      "slug": "power-generation"
-    },
-    {
-      "name": "Waste Water",
-      "image": "/images/industries/water.png",
-      "slug": "waste-water"
-    },
-    {
-      "name": "Pharmaceuticals Industry",
-      "image": "/images/industries/pharmaceuticals.png",
-      "slug": "pharmaceuticals-industry"
     }
   ]
 }

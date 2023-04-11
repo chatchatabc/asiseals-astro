@@ -32,6 +32,7 @@ import { Icon } from "astro-icon";
       navigation-next-el="#next-btn"
       navigation-prev-el="#prev-btn"
       class="pb-16 swiper-container"
+      loop="true"
     >
       {
         industriesJson.contents.map((item) => {
@@ -93,7 +94,6 @@ import { Icon } from "astro-icon";
       // swiper parameters
       const swiperParams = {
         slidesPerView: 1,
-        loop: true,
         breakpoints: {
           768: {
             slidesPerView: 3,

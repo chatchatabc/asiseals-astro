@@ -83,21 +83,16 @@ import { Icon } from "astro-icon";
       let isDragged = false;
       let prevX = 0;
       let prevScrollLeft = 0;
+      let autoScroll: any;
 
       prevBtn.addEventListener("click", () => {
         nextSlide(false);
-
-        setTimeout(() => {
-          autoAlignSlide();
-        }, 500);
+        resetAutoScroll();
       });
 
       nextBtn.addEventListener("click", () => {
         nextSlide();
-
-        setTimeout(() => {
-          autoAlignSlide();
-        }, 500);
+        resetAutoScroll();
       });
 
       carousel.addEventListener("mousedown", (e) => {
@@ -145,15 +140,35 @@ import { Icon } from "astro-icon";
       function dragStop() {
         isDragged = false;
         autoAlignSlide();
+        resetAutoScroll();
       }
 
       function nextSlide(move: boolean = true) {
-        carousel.scrollTo({
-          left: move
-            ? carousel.scrollLeft + slideWidth
-            : carousel.scrollLeft - slideWidth,
-          behavior: "smooth",
-        });
+        if (
+          carousel.scrollLeft + carousel.clientWidth === carousel.scrollWidth &&
+          move
+        ) {
+          carousel.scrollTo({
+            left: 0,
+            behavior: "smooth",
+          });
+        } else if (carousel.scrollLeft === 0 && !move) {
+          carousel.scrollTo({
+            left: carousel.scrollWidth,
+            behavior: "smooth",
+          });
+        } else {
+          carousel.scrollTo({
+            left: move
+              ? carousel.scrollLeft + slideWidth
+              : carousel.scrollLeft - slideWidth,
+            behavior: "smooth",
+          });
+
+          setTimeout(() => {
+            autoAlignSlide();
+          }, 500);
+        }
       }
 
       function autoAlignSlide() {
@@ -164,6 +179,16 @@ import { Icon } from "astro-icon";
           behavior: "smooth",
         });
       }
+
+      function resetAutoScroll() {
+        if (autoScroll) clearInterval(autoScroll);
+
+        autoScroll = setInterval(() => {
+          nextSlide();
+        }, 5000);
+      }
+
+      resetAutoScroll();
     }
   }
 

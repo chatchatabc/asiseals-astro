@@ -28,12 +28,7 @@ import { Icon } from "astro-icon";
   <!-- Container -->
   <section class="swiper max-w-7xl mx-auto px-4 mt-6">
     <!-- Carousel -->
-    <swiper-container
-      navigation-next-el="#next-btn"
-      navigation-prev-el="#prev-btn"
-      class="pb-16 swiper-container"
-      loop="true"
-    >
+    <swiper-container class="pb-16 swiper-container" loop="true">
       {
         industriesJson.contents.map((item) => {
           return (
@@ -79,16 +74,20 @@ import { Icon } from "astro-icon";
     constructor() {
       super();
 
-      const swiperEl = document.querySelector<any>("swiper-container");
-      const nextBtn = document.querySelector("#next-btn")!;
-      const prevBtn = document.querySelector("#prev-btn")!;
+      const swiperEl = this.querySelector<any>("swiper-container");
+      const nextBtn = this.querySelector("#next-btn")!;
+      const prevBtn = this.querySelector("#prev-btn")!;
+
+      let autoSlider: any;
 
       nextBtn.addEventListener("click", () => {
         swiperEl.swiper.slideNext();
+        resetAutoSlider();
       });
 
       prevBtn.addEventListener("click", () => {
         swiperEl.swiper.slidePrev();
+        resetAutoSlider();
       });
 
       // swiper parameters
@@ -103,6 +102,17 @@ import { Icon } from "astro-icon";
           },
         },
       };
+
+      function resetAutoSlider() {
+        if (autoSlider) {
+          clearInterval(autoSlider);
+        }
+        autoSlider = setInterval(() => {
+          swiperEl.swiper.slideNext();
+        }, 5000);
+      }
+
+      resetAutoSlider();
 
       // now we need to assign all parameters to Swiper element
       Object.assign(swiperEl, swiperParams);

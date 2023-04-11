@@ -9,7 +9,11 @@ const { hideTitle = false } = Astro.props as Props;
 ---
 
 <product-search class="flex justify-between flex-wrap items-center">
-  {!hideTitle && <p class="w-full text-4xl lg:w-1/4">Product Search:</p>}
+  {
+    !hideTitle && (
+      <p class="w-full text-4xl text-background lg:w-1/4">Product Search:</p>
+    )
+  }
   <form
     action="/products/search"
     class={`flex border-2 w-full border-background ${!hideTitle && "lg:w-3/4"}`}

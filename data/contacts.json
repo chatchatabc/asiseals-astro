@@ -10,14 +10,14 @@
     {
       "type": "phone",
       "name": "+86-18858080728",
-      "href": "tel:+8618858080728",
+      "href": null,
       "message": "Call Us",
       "icon": "ic:baseline-local-phone"
     },
     {
       "type": "wechat",
       "name": "riverliu01",
-      "href": "",
+      "href": null,
       "message": "WeChat",
       "icon": "ic:baseline-wechat"
     }

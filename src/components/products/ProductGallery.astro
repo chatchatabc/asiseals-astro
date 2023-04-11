@@ -1,0 +1,79 @@
+---
+import { Img } from "astro-imagetools/components";
+
+interface Props {
+  images: Record<string, any>[];
+}
+
+const { images } = Astro.props as Props;
+---
+
+<product-gallery class="flex">
+  <ul class="w-2/12 hidden lg:block">
+    {
+      images.map((image, index) => {
+        return (
+          <li class="p-2">
+            <button
+              class={`pagination-image border-black ${
+                index === 0 ? "border" : ""
+              }`}
+            >
+              <Img src={image.url} alt={image.name} />
+            </button>
+          </li>
+        );
+      })
+    }
+  </ul>
+  <swiper-container class="w-10/12">
+    {
+      images.map((image) => {
+        return (
+          <swiper-slide>
+            <div class="w-full mx-auto relative pb-[80%]">
+              <div class="w-full h-full top-0 left-0 absolute">
+                <Img src={image.url} alt={image.name} />
+              </div>
+            </div>
+          </swiper-slide>
+        );
+      })
+    }
+  </swiper-container>
+</product-gallery>
+
+<script>
+  class ProductGallery extends HTMLElement {
+    constructor() {
+      super();
+
+      const paginationBtns = this.querySelectorAll(".pagination-image");
+      const swiperEl = this.querySelector<any>("swiper-container");
+
+      const swiperParams = {
+        pagination: {
+          clickable: true,
+        },
+      };
+
+      paginationBtns.forEach((btn, index) => {
+        btn.addEventListener("click", (e) => {
+          swiperEl.swiper.slideTo(index);
+        });
+      });
+
+      swiperEl.swiper.on("slideChange", () => {
+        paginationBtns.forEach((btn) => {
+          btn.classList.remove("border");
+        });
+
+        paginationBtns[swiperEl.swiper.activeIndex].classList.add("border");
+      });
+
+      Object.assign(swiperEl, swiperParams);
+    }
+  }
+
+  customElements.define("product-gallery", ProductGallery);
+</script>

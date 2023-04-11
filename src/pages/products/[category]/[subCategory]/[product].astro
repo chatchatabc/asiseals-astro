@@ -5,7 +5,7 @@ import RelatedProducts from "@components/widgets/RelatedProducts.astro";
 import DetailsHeader from "@components/products/DetailsHeader.astro";
 import productsJson from "@data/products.json";
 import LayoutCategory from "@layouts/LayoutCategory.astro";
-import { Img } from "astro-imagetools/components";
+import ProductGallery from "@components/products/ProductGallery.astro";
 import { getCollection } from "astro:content";
 import { utilSlugToTitle, utilTextToUrl } from "src/helpers/commonUtils";
 
@@ -53,26 +53,12 @@ const { pathname } = Astro.url;
   image="/images/products/banner-inner.webp"
 >
   <!-- Product Summary -->
-  <section class="max-w-7xl mx-auto pt-16 px-4 lg:px-8">
+  <section class="max-w-7xl mx-auto px-4 pt-8 lg:pt-16 lg:px-8">
     <figure class="flex flex-wrap">
       <!-- Product Image -->
-      <div class="flex flex-row-reverse flex-wrap w-full mx-auto md:w-1/2">
-        <!-- Carousel -->
-        <div class="w-full relative pb-[80%] h-fit lg:w-4/5">
-          <div class="absolute left-0 top-0 w-full h-full">
-            <Img src={product.imageUrl} alt={product.name} />
-          </div>
-        </div>
-
-        <!-- Image Gallery Selection -->
-        <ul class="w-full hidden lg:block lg:w-1/5">
-          <li>
-            <div class="mx-auto w-1/5 lg:w-1/2">
-              <Img src={product.imageUrl} alt={product.name} />
-            </div>
-          </li>
-        </ul>
-      </div>
+      <section class="w-full mx-auto md:w-1/2">
+        <ProductGallery images={product.images} />
+      </section>
 
       <!-- Product Info -->
       <figcaption class="flex flex-col w-full pt-4 lg:p-8 lg:w-1/2">

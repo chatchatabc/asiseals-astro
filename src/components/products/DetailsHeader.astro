@@ -10,16 +10,22 @@ const { productSpecs } = Astro.props as Props;
 
 <details-header
   id="container"
-  class="duration-500 bg-white border hidden lg:block"
+  class="duration-500 bg-white border hidden relative lg:block"
 >
-  <ul class="flex divide-x">
+  <div class="absolute border border-dashed w-full bottom-4 translate-y-1/2">
+  </div>
+  <ul class="flex">
     {
       productSpecs.map((item) => {
         return (
-          <li data-id={item.data.name} class="relative flex-1">
-            <div class="absolute scale-y-0 transition h-full w-full bg-blue-500" />
-            <button class="px-2 py-1 text-lg block w-full">
-              <span class="text-center relative">{item.data.name}</span>
+          <li data-id={item.data.name} class="flex-1">
+            <button class="px-2 pt-1 pb-2 text-lg block w-full group">
+              <span class="indicator-name text-center font-bold group-hover:text-background">
+                {item.data.name}
+              </span>
+              <div class="indicator-step mx-auto rotate-45 p-1 w-fit rounded-t-full rounded-l-full bg-transparent">
+                <div class="indicator-step-inner mx-auto h-2 w-2 rounded-full" />
+              </div>
             </button>
           </li>
         );
@@ -43,20 +49,27 @@ const { productSpecs } = Astro.props as Props;
         const detail = document.querySelector<HTMLElement>(`#${dataId}`)!;
         const offsetTop = detail.offsetTop;
         const offsetHeight = detail.offsetHeight;
-        const loading = element.querySelector("div")!;
-        const span = element.querySelector("span")!;
+        const name = element.querySelector(".indicator-name")!;
         const button = element.querySelector("button")!;
+        const step = element.querySelector(".indicator-step")!;
+        const stepInner = element.querySelector(".indicator-step-inner")!;
 
         document.addEventListener("scroll", () => {
           if (
             window.scrollY >= offsetTop - 115 &&
             window.scrollY < offsetTop + offsetHeight - 115
           ) {
-            loading.classList.remove("scale-y-0");
-            span.classList.add("text-white");
+            step.classList.add("bg-blue-500");
+            step.classList.remove("bg-transparent");
+            stepInner.classList.add("bg-white");
+            stepInner.classList.remove("bg-gray-500");
+            name.classList.add("text-blue-500");
           } else {
-            loading.classList.add("scale-y-0");
-            span.classList.remove("text-white");
+            step.classList.remove("bg-blue-500");
+            step.classList.add("bg-transparent");
+            stepInner.classList.remove("bg-white");
+            stepInner.classList.add("bg-gray-500");
+            name.classList.remove("text-blue-500");
           }
         });
 

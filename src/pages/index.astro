@@ -22,7 +22,7 @@ const blog = newsCollection.filter((item) => item.data.type === "blogs");
   <section class="max-w-7xl mx-auto px-4 lg:px-8">
     <!-- Section Header -->
     <header class="pb-24 md:pb-40 lg:pb-56">
-      <h1 class="text-center text-[#E14753] text-3xl md:text-4xl lg:text-5xl">
+      <h1 class="text-center text-primary text-3xl md:text-4xl lg:text-5xl">
         <span class="relative inline-block translate-x-[5%]">
           <span class="bg-[#DCECF9] absolute w-full h-4 left-0 -bottom-1 z-[-1]"
           ></span>
@@ -61,7 +61,7 @@ const blog = newsCollection.filter((item) => item.data.type === "blogs");
           </p>
           <a
             href="/about"
-            class="px-6 inline-block py-2 mt-12 text-white bg-[#E14753]"
+            class="px-6 inline-block py-2 mt-12 text-white bg-primary transition hover:bg-background"
           >
             View our seal line &gt;
           </a>
@@ -70,7 +70,7 @@ const blog = newsCollection.filter((item) => item.data.type === "blogs");
     </section>
   </section>
 
-  <!-- Industry Section -->
+  <!-- Industry Section Mobile -->
   <section class="mt-24 text-white bg-[#4176A4] py-16">
     <IndustrySection />
     <section class="mt-16 max-w-7xl mx-auto px-4 md:hidden">
@@ -88,7 +88,7 @@ const blog = newsCollection.filter((item) => item.data.type === "blogs");
       <!-- Action button -->
       <a
         href="/industries"
-        class="block w-fit py-4 px-6 mx-auto text-xl bg-primary"
+        class="block w-fit py-4 px-6 mx-auto text-xl bg-primary transition hover:bg-opacity-80"
       >
         View More Industries &gt;
       </a>
@@ -110,7 +110,7 @@ const blog = newsCollection.filter((item) => item.data.type === "blogs");
       <h1 class="text-5xl">Recent News</h1>
       <a
         href="/news"
-        class="inline-block text-xl px-4 py-2 bg-primary text-onPrimary"
+        class="inline-block text-xl px-4 py-2 bg-primary text-onPrimary transition hover:bg-background"
       >
         View more
       </a>

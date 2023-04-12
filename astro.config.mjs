@@ -4,8 +4,16 @@ import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
 import { astroImageTools } from "astro-imagetools";
+import robotsTxt from "astro-robots-txt";
 
 export default defineConfig({
   site: "https://www.asiseal.com",
-  integrations: [tailwind(), sitemap(), svelte(), mdx(), astroImageTools],
+  integrations: [
+    tailwind(),
+    sitemap(),
+    svelte(),
+    mdx(),
+    astroImageTools,
+    robotsTxt(),
+  ],
 });

@@ -2,10 +2,21 @@
 import ProductSearch from "@components/widgets/ProductSearch.astro";
 import LayoutCategory from "@layouts/LayoutCategory.astro";
 import productsCategoriesJson from "@data/product-categories.json";
-import { Img } from "astro-imagetools/components";
+import { Img, Picture } from "astro-imagetools/components";
 ---
 
-<LayoutCategory pageTitle="Products" image="./images/products/banner.png">
+<LayoutCategory
+  pageTitle="Products"
+  image="./images/products/banner-inner.webp"
+>
+  <div slot="banner">
+    <div class="w-32 mx-auto">
+      <Picture sizes="320px" src="/images/logo/icon.png" alt="icon" />
+    </div>
+    <h1 class="text-4xl text-white text-center italic mt-4">
+      Professional Design. Efficient. Durable
+    </h1>
+  </div>
   <!-- Search section -->
   <section class="py-8 max-w-7xl mx-auto px-4 lg:px-8">
     <ProductSearch />

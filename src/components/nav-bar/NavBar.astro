@@ -124,7 +124,7 @@ const { pathname } = Astro.url;
       <input name="key" class="flex-1" placeholder="Search..." />
     </form>
     <nav>
-      <ul class="divide-y-2">
+      <ul class="overflow-auto pb-16 divide-y-2">
         {
           links.map((link) => {
             return <NavDropMobile link={link} />;

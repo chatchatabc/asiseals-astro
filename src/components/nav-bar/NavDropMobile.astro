@@ -24,12 +24,14 @@ const { link } = Astro.props as Props;
   <button id="btn" class="px-2">
     <Icon id="chevron" class="transition h-4 w-4" name="mdi:chevron-down" />
   </button>
-  <ul class="hidden w-full divide-y-2 border-t-2">
+  <ul
+    class="max-h-[0px] overflow-hidden transition-all duration-300 origin-top w-full divide-y-2"
+  >
     {
       link.categories.map((category) => {
         return (
           <li>
-            <a class="block pl-4 py-4" href={`${link.href}${category.href}`}>
+            <a class="block pl-8 py-4" href={`${link.href}${category.href}`}>
               {category.name}
             </a>
           </li>
@@ -52,10 +54,14 @@ const { link } = Astro.props as Props;
       btn.addEventListener("click", () => {
         open = !open;
         if (open) {
-          ul.classList.remove("hidden");
+          ul.classList.remove("max-h-0");
+          ul.classList.add("max-h-[6000px]");
+          ul.classList.add("border-t-2");
           chevron.classList.add("rotate-180");
         } else {
-          ul.classList.add("hidden");
+          ul.classList.add("max-h-0");
+          ul.classList.remove("max-h-[6000px]");
+          ul.classList.remove("border-t-2");
           chevron.classList.remove("rotate-180");
         }
       });

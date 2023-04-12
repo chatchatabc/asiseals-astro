@@ -2,8 +2,10 @@
 import CompanyHistory from "@components/landing-page/CompanyHistory.astro";
 import HeroSection from "@components/landing-page/HeroSection.astro";
 import IndustrySection from "@components/landing-page/IndustrySection.astro";
+import industriesJson from "@data/industries.json";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import { Picture } from "astro-imagetools/components";
 
 const newsCollection = await getCollection("news");
 const companyNews = newsCollection.filter(
@@ -71,6 +73,30 @@ const blog = newsCollection.filter((item) => item.data.type === "blogs");
   <!-- Industry Section -->
   <section class="mt-24 text-white bg-[#4176A4] py-16">
     <IndustrySection />
+    <section class="mt-16 max-w-7xl mx-auto px-4 md:hidden">
+      <header>
+        <h1 class="text-5xl">Industry</h1>
+      </header>
+      <ul class="space-y-2 py-4 pl-4 list-disc">
+        {
+          industriesJson.contents.map((industry) => {
+            return <li class="text-lg">{industry.name}</li>;
+          })
+        }
+      </ul>
+
+      <!-- Action button -->
+      <a
+        href="/industries"
+        class="block w-fit py-4 px-6 mx-auto text-xl bg-primary"
+      >
+        View More Industries &gt;
+      </a>
+
+      <div class="w-1/2">
+        <Picture src="/images/arrow.webp" alt="arrow" />
+      </div>
+    </section>
   </section>
 
   <!-- Company History -->

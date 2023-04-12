@@ -1,5 +1,6 @@
 ---
 import { Img } from "astro-imagetools/components";
+import { Icon } from "astro-icon";
 
 interface Props {
   images: Record<string, any>[];
@@ -26,21 +27,35 @@ const { images } = Astro.props as Props;
       })
     }
   </ul>
-  <swiper-container class="w-10/12">
-    {
-      images.map((image) => {
-        return (
-          <swiper-slide>
-            <div class="w-full mx-auto relative pb-[80%]">
-              <div class="w-full h-full top-0 left-0 absolute">
-                <Img src={image.url} alt={image.name} />
+  <div class="w-10/12 relative group">
+    <swiper-container>
+      {
+        images.map((image) => {
+          return (
+            <swiper-slide>
+              <div class="w-full mx-auto relative pb-[80%]">
+                <div class="w-full h-full top-0 left-0 absolute">
+                  <Img src={image.url} alt={image.name} />
+                </div>
               </div>
-            </div>
-          </swiper-slide>
-        );
-      })
-    }
-  </swiper-container>
+            </swiper-slide>
+          );
+        })
+      }
+    </swiper-container>
+    <button
+      id="prev-btn"
+      class="opacity-0 absolute top-1/2 -translate-y-1/2 z-[1] transition left-0 group-hover:opacity-100"
+    >
+      <Icon class="w-16 h-16 text-primary" name="ic:round-chevron-left" />
+    </button>
+    <button
+      id="next-btn"
+      class="opacity-0 absolute top-1/2 -translate-y-1/2 z-[1] transition right-0 group-hover:opacity-100"
+    >
+      <Icon class="w-16 h-16 text-primary" name="ic:round-chevron-right" />
+    </button>
+  </div>
 </product-gallery>
 
 <script>
@@ -50,6 +65,16 @@ const { images } = Astro.props as Props;
 
       const paginationBtns = this.querySelectorAll(".pagination-image");
       const swiperEl = this.querySelector<any>("swiper-container");
+      const prevBtn = this.querySelector("#prev-btn")!;
+      const nextBtn = this.querySelector("#next-btn")!;
+
+      prevBtn.addEventListener("click", () => {
+        swiperEl.swiper.slidePrev();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        swiperEl.swiper.slideNext();
+      });
 
       const swiperParams = {
         pagination: {

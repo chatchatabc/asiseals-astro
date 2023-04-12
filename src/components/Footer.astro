@@ -45,6 +45,7 @@ const { links, title, message, socialLinks } = footerJson;
                     target="_blank"
                     class="inline-block text-background bg-background1 p-1"
                     href={link.href}
+                    aria-label={`Open our ${link.name} page in a new tab`}
                   >
                     <Icon class="h-6 w-6" name={link.icon} />
                   </a>

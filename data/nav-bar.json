@@ -82,8 +82,8 @@
       "name": "Contact",
       "href": "/contact-us",
       "categories": [
-        { "name": "Information", "href": "#information" },
-        { "name": "Sales", "href": "#sales" },
+        { "name": "Contact Us", "href": "#information" },
+        { "name": "Contact Sales", "href": "#sales" },
         { "name": "Get a Quote", "href": "#get-a-quote" }
       ]
     }

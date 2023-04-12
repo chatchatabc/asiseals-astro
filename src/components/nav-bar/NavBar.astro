@@ -79,15 +79,27 @@ const { pathname } = Astro.url;
           class="flex-1 bg-gray-200 focus:outline-none"
           placeholder="Search..."
         />
-        <button class="relative mr-6" id="search-btn">
+        <button
+          class="relative mr-6"
+          id="search-btn"
+          aria-label="Search Button"
+        >
           <Icon class="w-6 h-6 text-[#F52B3F]" name="mdi:magnify" />
         </button>
       </form>
 
-      <button class="relative" id="open-search-btn">
+      <button
+        class="relative"
+        id="open-search-btn"
+        aria-label="Open Search Field"
+      >
         <Icon class="w-6 h-6 text-[#F52B3F]" name="mdi:magnify" />
       </button>
-      <button class="hidden relative" id="close-search-btn">
+      <button
+        class="hidden relative"
+        id="close-search-btn"
+        aria-label="Close Search Field"
+      >
         <Icon class="w-6 h-6 text-[#F52B3F]" name="mdi:close" />
       </button>
     </div>
@@ -118,7 +130,7 @@ const { pathname } = Astro.url;
     class="transition pb-8 -translate-y-full pointer-events-none opacity-0 bg-white overflow-auto fixed w-full h-full left-0 px-4 lg:hidden"
   >
     <form action="/products/search" class="flex py-4 border-b-2">
-      <button type="submit" class="pr-4">
+      <button type="submit" class="pr-4" aria-label="Search Button">
         <Icon name="mdi:magnify" class="w-6 h-6" />
       </button>
       <input name="key" class="flex-1" placeholder="Search..." />

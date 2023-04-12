@@ -39,7 +39,6 @@ const { slug } = Astro.props as Props;
       placeholder="*Message"></textarea>
 
     <button
-      id="btn"
       type="submit"
       class="px-16 relative text-white text-xl py-4 bg-primary transition hover:bg-background"
     >
@@ -60,7 +59,7 @@ const { slug } = Astro.props as Props;
       super();
 
       const form = this.querySelector("form")!;
-      const btn = this.querySelector<HTMLButtonElement>("#btn")!;
+      const btn = this.querySelector<HTMLButtonElement>("btn")!;
       const loader = this.querySelector("#loader")!;
 
       form.addEventListener("submit", async (e) => {

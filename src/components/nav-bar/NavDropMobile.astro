@@ -21,7 +21,7 @@ const { link } = Astro.props as Props;
   <a class="py-4 flex-1" href={link.href}>
     {link.name}
   </a>
-  <button id="btn" class="px-2">
+  <button id="btn" class="px-2" aria-label="Open Collapsable">
     <Icon id="chevron" class="transition h-4 w-4" name="mdi:chevron-down" />
   </button>
   <ul

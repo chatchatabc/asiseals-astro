@@ -1,6 +1,7 @@
 ---
 import industriesJson from "@data/industries.json";
 import { Icon } from "astro-icon";
+import { Picture } from "astro-imagetools/components";
 ---
 
 <industry-section>
@@ -10,13 +11,13 @@ import { Icon } from "astro-icon";
   >
     <h1 class="text-5xl">Industry</h1>
     <div class="flex items-center divide-x">
-      <button id="prev-btn" class="px-2">
+      <button id="industry-prev-btn" class="px-2" aria-label="Previous Button">
         <Icon
           name="mdi:chevron-left"
           class="h-8 w-8 transition hover:text-primary"
         />
       </button>
-      <button id="next-btn" class="px-2">
+      <button id="industry-next-btn" class="px-2" aria-label="Next Button">
         <Icon
           name="mdi:chevron-right"
           class="h-8 w-8 transition hover:text-primary"
@@ -33,26 +34,29 @@ import { Icon } from "astro-icon";
         industriesJson.contents.map((item) => {
           return (
             <swiper-slide class="p-4">
-              <figure class="relative group">
-                <div class="bg-white py-16 w-full h-56 px-8">
-                  <a
-                    href={`/industries/${item.slug}`}
-                    class="absolute w-full left-0 top-0 h-full z-[1]"
-                  />
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    class="duration-500 w-full h-full object-contain group-hover:opacity-0"
-                  />
-                </div>
-                <figcaption class="duration-500 absolute w-full h-fit left-0 bottom-0 translate-y-full pointer-events-none group-hover:pointer-events-auto group-hover:bottom-1/2 group-hover:translate-y-1/2">
-                  <p class="text-center duration-500 text-xl tracking-widest px-8 group-hover:tracking-[0.5rem]">
-                    <span class="transition group-hover:text-primary">
-                      {item.name}
-                    </span>
-                  </p>
-                </figcaption>
-              </figure>
+              <a href={`/industries/${item.slug}`}>
+                <figure class="relative group">
+                  <div class="bg-white w-full py-16 px-8">
+                    <div class="duration-500 relative pb-[75%] group-hover:opacity-0">
+                      <div class="absolute left-0 top-0 w-full h-full">
+                        <Picture
+                          sizes="144px"
+                          src={item.image}
+                          alt={item.name}
+                          objectFit="contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <figcaption class="duration-500 absolute w-full h-fit left-0 bottom-0 translate-y-full pointer-events-none group-hover:pointer-events-auto group-hover:bottom-1/2 group-hover:translate-y-1/2">
+                    <p class="text-center duration-500 text-xl tracking-widest px-8 group-hover:tracking-[0.5rem]">
+                      <span class="transition group-hover:text-primary">
+                        {item.name}
+                      </span>
+                    </p>
+                  </figcaption>
+                </figure>
+              </a>
             </swiper-slide>
           );
         })
@@ -75,8 +79,8 @@ import { Icon } from "astro-icon";
       super();
 
       const swiperEl = this.querySelector<any>("swiper-container");
-      const nextBtn = this.querySelector("#next-btn")!;
-      const prevBtn = this.querySelector("#prev-btn")!;
+      const nextBtn = this.querySelector("#industry-next-btn")!;
+      const prevBtn = this.querySelector("#industry-prev-btn")!;
 
       let autoSlider: any;
 

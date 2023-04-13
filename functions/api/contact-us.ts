@@ -5,32 +5,31 @@ export async function onRequest(context: any) {
   const { request } = context;
 
   if (request.method === "POST") {
-    const data = await request.json();
-    const date = new Date();
-    const timeFormatted = new Intl.DateTimeFormat("en-US", {
-      timeStyle: "short",
-    }).format(date);
-    const dateFormatted = new Intl.DateTimeFormat("en-US", {
-      dateStyle: "short",
-    }).format(date);
-
     try {
+      // Clean request body data
+      const data = await request.json();
       Object.keys(data).forEach((key) => {
         if (data[key] === "") delete data[key];
       });
-
       // Set default values
       if (!data.companyName) data.companyName = "Anonymous Company";
       if (!data.telephone) data.telephone = "Anonymous Telephone";
-
       // Validate the data
       ContactUsFormSchema.parse(data);
 
+      // Format date and time
+      const date = new Date();
+      const dateFormatted = new Intl.DateTimeFormat("en-US", {
+        dateStyle: "short",
+      }).format(date);
+
+      // Find product
       const product = productsJson.contents.find(
         (product) => product.slug === data.slug
       );
 
-      if (!product)
+      // Return error if product not found
+      if (!product) {
         return new Response(
           JSON.stringify({
             message: `No product found for ${data.slug}`,
@@ -40,6 +39,7 @@ export async function onRequest(context: any) {
             status: 404,
           }
         );
+      }
 
       // Create email body
       const body = {
@@ -47,36 +47,30 @@ export async function onRequest(context: any) {
           {
             to: [
               {
-                email: "lucious.greenfelder97@ethereal.email",
+                email: "clifton82@ethereal.email",
                 name: "Advantage Seal Inquiry",
+              },
+              {
+                email: "bonjomontes@gmail.com",
+                name: "Bonjo Montes",
+              },
+              {
+                email: "raphaeldalangin@chatchatabc.com",
+                name: "Raphael Dalangin",
+              },
+              {
+                email: "bon@chatchatabc.com",
+                name: "Bonjo Montes",
               },
             ],
           },
         ],
         from: {
-          email: "contact_us_form@asiseal.com",
+          email: "bon@chatchatabc.com",
           name: "Asiseal Contact Us Form",
         },
         subject: "Contact Us Form Submission - " + dateFormatted,
         content: [
-          {
-            type: "text/plain",
-            value: `
-            Contact Us Form Submission - ${dateFormatted} ${timeFormatted}
-            Name: ${data.name}
-            Email: ${data.email}
-            Company Name: ${data.companyName}
-            Telephone: ${data.telephone}
-            Message: ${data.message}
-            ${product ? "Product: " + product.name : ""}
-            ${
-              product
-                ? "Product Link: " +
-                  `https://asiseals.pages.dev/products/${product.category}/${product.subCategory}/${product.slug}`
-                : ""
-            }
-          `,
-          },
           {
             type: "text/html",
             value: `
@@ -87,32 +81,26 @@ export async function onRequest(context: any) {
                 line-height: 1.4;
                 color: #333;
               }
-
               h1 {
                 font-size: 28px;
                 margin-bottom: 20px;
               }
-
               p {
                 margin-bottom: 10px;
               }
-
               strong {
                 font-weight: bold;
               }
-
               a {
                 color: #0078ae;
                 text-decoration: none;
               }
-
               img {
                 display: block;
                 margin-top: 20px;
                 max-width: 100%;
                 height: auto;
               }
-
               /* Responsive styles */
               @media screen and (max-width: 600px) {
               body {
@@ -155,7 +143,7 @@ export async function onRequest(context: any) {
       };
 
       // Sending of email
-      await fetch("https://api.mailchannels.net/tx/v1/send", {
+      const response = await fetch("https://api.mailchannels.net/tx/v1/send", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -163,10 +151,12 @@ export async function onRequest(context: any) {
         body: JSON.stringify(body),
       });
 
-      return new Response(JSON.stringify({ success: true }), { status: 200 });
-    } catch (e) {
-      console.log(e);
+      const mailChannelsData = await response.json();
 
+      return new Response(JSON.stringify({ success: true, mailChannelsData }), {
+        status: 200,
+      });
+    } catch (e) {
       return new Response(JSON.stringify(e), { status: 500 });
     }
   }

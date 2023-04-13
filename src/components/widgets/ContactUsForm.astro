@@ -59,7 +59,7 @@ const { slug } = Astro.props as Props;
       super();
 
       const form = this.querySelector("form")!;
-      const btn = this.querySelector<HTMLButtonElement>("btn")!;
+      const btn = this.querySelector<HTMLButtonElement>("button")!;
       const loader = this.querySelector("#loader")!;
 
       form.addEventListener("submit", async (e) => {
@@ -75,15 +75,13 @@ const { slug } = Astro.props as Props;
 
         try {
           const response = await fetch(
-            "https://asiseals.pages.dev/api/contact-us",
+            "https://asiseals-email-workers.bonjomontes.workers.dev/",
             {
               method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
               body: JSON.stringify(body),
             }
           );
+
           const data = await response.json();
 
           if (data.success) {

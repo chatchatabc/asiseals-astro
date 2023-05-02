@@ -12,3 +12,7 @@ export function utilSlugToText(slug: string): string {
 export function utilTextToUrl(text: string): string {
   return text.split(" ").join("-");
 }
+
+export function utilRemoveLastSlash(url: string): string {
+  return url.replace(/\/$/, "");
+}

@@ -1,7 +1,7 @@
 ---
 import ContactUsForm from "@components/widgets/ContactUsForm.astro";
 import LayoutCategory from "@layouts/LayoutCategory.astro";
-import { utilSlugToTitle } from "src/helpers/commonUtils";
+import { utilSlugToTitle, utilRemoveLastSlash } from "src/helpers/commonUtils";
 import productsJson from "@data/products.json";
 import { Img } from "astro-imagetools/components";
 
@@ -19,7 +19,8 @@ export function getStaticPaths() {
 
 const { pathname } = Astro.url;
 
-const splitPathname = pathname.split("/");
+const processedPathname = utilRemoveLastSlash(pathname);
+const splitPathname = processedPathname.split("/");
 const slug = splitPathname[splitPathname.length - 2];
 const pageTitle = utilSlugToTitle(slug);
 

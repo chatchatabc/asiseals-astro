@@ -6,13 +6,16 @@ import { Img } from "astro-imagetools/components";
 type Props = {
   title?: string;
   pageTitle: string;
+  pageDescription?: string;
+  pageKeywords?: string;
   image: string;
 };
 
-const { title, pageTitle, image } = Astro.props as Props;
+const { title, pageTitle, image, pageDescription, pageKeywords } =
+  Astro.props as Props;
 ---
 
-<Layout title={pageTitle}>
+<Layout title={pageTitle} keywords={pageKeywords} description={pageDescription}>
   <header class="relative max-w-[1920px] mx-auto" title={pageTitle}>
     <div class="h-56">
       <Img src={image} alt={pageTitle} />

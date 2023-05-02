@@ -49,8 +49,10 @@ const { pathname } = Astro.url;
 
 <LayoutCategory
   title={product.name}
-  pageTitle={product.name}
+  pageTitle={product.pageTitle ?? product.name}
   image="/images/products/banner-inner.webp"
+  pageDescription={product.pageDescription ?? product.summary}
+  pageKeywords={product.pageKeywords ?? undefined}
 >
   <!-- Product Summary -->
   <section class="max-w-7xl mx-auto px-4 pt-8 lg:pt-16 lg:px-8">

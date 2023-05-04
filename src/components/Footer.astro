@@ -12,7 +12,7 @@ const { links, title, message, socialLinks } = footerJson;
     <!-- Company Info -->
     <section class="p-4 space-y-6 w-full md:w-1/2 lg:w-1/4">
       <header>
-        <h1 class="text-white text-xl">{title}</h1>
+        <h2 class="text-white text-xl">{title}</h2>
       </header>
       <p class="text-lg">{message}</p>
 
@@ -23,10 +23,17 @@ const { links, title, message, socialLinks } = footerJson;
             contactsJson.contents.map((link) => {
               return (
                 <li>
-                  <a class="flex items-center w-fit" href={link.href}>
-                    <Icon class="h-6 w-6" name={link.icon} />
-                    <span class="px-1">{link.name}</span>
-                  </a>
+                  {link.href ? (
+                    <a class="flex items-center w-fit" href={link.href}>
+                      <Icon class="h-6 w-6" name={link.icon} />
+                      <span class="px-1">{link.name}</span>
+                    </a>
+                  ) : (
+                    <span class="flex items-center w-fit">
+                      <Icon class="h-6 w-6" name={link.icon} />
+                      <span class="px-1">{link.name}</span>
+                    </span>
+                  )}
                 </li>
               );
             })
@@ -64,7 +71,7 @@ const { links, title, message, socialLinks } = footerJson;
           return (
             <section class="p-4 w-full md:w-1/2 lg:w-1/4">
               <header>
-                <h1 class="text-white font-bold text-xl">{link.name}</h1>
+                <h2 class="text-white font-bold text-xl">{link.name}</h2>
               </header>
               <nav class="mt-2">
                 <ul>

@@ -17,16 +17,14 @@ import resourcesJson from "@data/resources.json";
         resourcesJson.contents.map((item) => {
           return (
             <li class="border transition group">
-              <figure class="pt-12 pb-8 relative group-hover:bg-gray-100 group-hover:shadow-xl group-hover:z-[1]">
-                <img class="mx-auto" src={item.imageUrl} alt={item.name} />
-                <figcaption class="mt-4">
-                  <h1 class="text-center text-xl font-bold">{item.name}</h1>
-                  <a
-                    class="absolute top-0 left-0 h-full w-full z-[1]"
-                    href={item.slug ? `/resources/${item.slug}` : item.href}
-                  />
-                </figcaption>
-              </figure>
+              <a href={item.slug ? `/resources/${item.slug}` : item.href}>
+                <figure class="pt-12 pb-8 relative group-hover:bg-gray-100 group-hover:shadow-xl group-hover:z-[1]">
+                  <img class="mx-auto" src={item.imageUrl} alt={item.name} />
+                  <figcaption class="mt-4">
+                    <p class="text-center text-xl font-bold">{item.name}</p>
+                  </figcaption>
+                </figure>
+              </a>
             </li>
           );
         })

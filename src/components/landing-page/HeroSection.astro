@@ -58,7 +58,7 @@ const productCategories = await getCollection(
                   </a>
                 </figcaption>
                 <div class="images delay-300 duration-500 opacity-0 absolute right-0 bottom-1/2 z-[-1] h-1/3 translate-y-full md:translate-y-1/2 md:h-2/3">
-                  <Picture sizes="320px" src={imageUrl} alt={name} />
+                  <Picture breakpoints={[320, 480]} src={imageUrl} alt={name} />
                 </div>
               </figure>
             </li>

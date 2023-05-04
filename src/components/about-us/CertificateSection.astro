@@ -20,7 +20,7 @@ import { Icon } from "astro-icon";
               <div>
                 <a href={certificate.imageUrl} target="_blank">
                   <Img
-                    sizes="320px"
+                    breakpoints={[320]}
                     src={certificate.imageUrl}
                     alt={certificate.name}
                   />

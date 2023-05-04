@@ -40,7 +40,7 @@ import { Picture } from "astro-imagetools/components";
                     <div class="duration-500 relative pb-[75%] group-hover:opacity-0">
                       <div class="absolute left-0 top-0 w-full h-full">
                         <Picture
-                          sizes="144px"
+                          breakpoints={[320]}
                           src={item.image}
                           alt={item.name}
                           objectFit="contain"

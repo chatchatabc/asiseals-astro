@@ -20,8 +20,12 @@ import { Img } from "astro-imagetools/components";
             return (
               <li class="slides duration-1000 snap-start w-full flex flex-col flex-shrink-0 px-8 md:pl-16">
                 <figure class="flex flex-wrap h-full flex-row-reverse">
-                  <div class="w-full md:p-8 md:w-1/2">
-                    <Img src={history.image} alt={history.name} />
+                  <div class="w-full pt-8 md:p-8 md:w-1/2">
+                    <Img
+                      breakpoints={[320, 480]}
+                      src={history.image}
+                      alt={history.name}
+                    />
                   </div>
                   <figcaption class="py-8 md:w-1/2 lg:pt-16">
                     <header class="flex items-center">

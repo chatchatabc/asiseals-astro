@@ -8,7 +8,9 @@ import { Icon } from "astro-icon";
 
 <LayoutCategory
   image="/images/contact-us/banner.webp"
-  pageTitle="Contact Us"
+  pageTitle={contactsJson.pageTitle ?? undefined}
+  pageDescription={contactsJson.pageDescription ?? undefined}
+  pageKeywords={contactsJson.pageKeywords ?? undefined}
   title="Contact Us"
 >
   <!-- Container -->

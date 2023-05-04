@@ -66,13 +66,13 @@ const { pathname } = Astro.url;
       <figcaption class="flex flex-col w-full pt-4 md:w-1/2 lg:p-8 lg:w-2/5">
         <!-- Product Title -->
         <header>
-          <h1 class="text-4xl">{product.name}</h1>
+          <h2 class="text-4xl">{product.name}</h2>
         </header>
 
         <!-- ShareThis section -->
         <section class="my-4">
           <header>
-            <h2 class="text-xl">Share to:</h2>
+            <h3 class="text-xl">Share to:</h3>
           </header>
           <div class="sharethis-inline-share-buttons"></div>
         </section>
@@ -132,7 +132,7 @@ const { pathname } = Astro.url;
           return (
             <article id={utilTextToUrl(entry.data.name)}>
               <header class="border-y bg-gray-200 p-2">
-                <h2 class="font-bold">{name}</h2>
+                <h3 class="font-bold">{name}</h3>
               </header>
               <section class="p-2 markdown">
                 <Content />
@@ -147,7 +147,7 @@ const { pathname } = Astro.url;
   <!-- Products Search section -->
   <section class="max-w-7xl mx-auto pt-8 px-4 lg:px-8">
     <header class="bg-gray-200 border-l-4 border-background p-2">
-      <h1 class="text-2xl font-bold">Product Search</h1>
+      <h2 class="text-2xl font-bold">Product Search</h2>
     </header>
     <section class="p-4">
       <ProductSearch hideTitle={true} />
@@ -157,7 +157,7 @@ const { pathname } = Astro.url;
   <!-- Related Products Section -->
   <section class="max-w-7xl mx-auto pt-8 px-4 lg:px-8">
     <header class="bg-gray-200 border-l-4 border-background p-2">
-      <h1 class="text-2xl font-bold">Related Products</h1>
+      <h2 class="text-2xl font-bold">Related Products</h2>
     </header>
     <section class="p-4">
       <RelatedProducts
@@ -172,7 +172,7 @@ const { pathname } = Astro.url;
   <!-- Contact Us Section -->
   <section class="max-w-7xl mx-auto pt-8 pb-16 px-4 lg:px-8">
     <header class="bg-gray-200 border-l-4 border-background p-2">
-      <h1 class="text-2xl font-bold">Contact Us Now</h1>
+      <h2 class="text-2xl font-bold">Contact Us Now</h2>
     </header>
     <section class="p-4">
       <ContactUsForm slug={product.slug} />

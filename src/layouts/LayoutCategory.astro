@@ -24,9 +24,7 @@ const { title, pageTitle, image, pageDescription, pageKeywords } =
       class="absolute w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
     >
       <slot name="banner" />
-      <h1 class="text-5xl text-white text-center">
-        {title}
-      </h1>
+      {title && <h1 class="text-5xl text-white text-center">{title}</h1>}
     </div>
   </header>
 

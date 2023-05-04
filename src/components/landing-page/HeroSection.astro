@@ -31,7 +31,7 @@ const productCategories = await getCollection(
 
     <!-- Carousel -->
     <ul
-      class="flex-1 relative max-h-[600px] h-[60vh] overflow-visible md:h-[70vh] md:px-32"
+      class="flex-1 relative max-h-[600px] h-[70vh] overflow-visible md:h-[70vh] md:px-32"
     >
       {
         productCategories.map(async (product) => {
@@ -40,14 +40,14 @@ const productCategories = await getCollection(
           const { Content } = await product.render();
           return (
             <li>
-              <figure class="items px-8 duration-300 opacity-0 pointer-events-none translate-x-1/2 absolute left-0 top-0 right-0 h-full w-full flex flex-col justify-center">
+              <figure class="items px-4 duration-300 opacity-0 pointer-events-none translate-x-1/2 absolute left-0 top-0 right-0 h-full w-full flex flex-col justify-center md:px-8">
                 <figcaption class="-translate-y-1/4 md:w-2/3">
                   <header>
-                    <h3 class="-mb-4 py-2 text-2xl lg:mb-0 lg:text-4xl">
+                    <h3 class="-mb-4 py-2 text-3xl lg:mb-0 lg:text-4xl">
                       {name}
                     </h3>
                   </header>
-                  <section class="text-sm markdown lg:text-lg">
+                  <section class="markdown text-base lg:text-lg">
                     <Content />
                   </section>
                   <a
@@ -58,7 +58,12 @@ const productCategories = await getCollection(
                   </a>
                 </figcaption>
                 <div class="images delay-300 duration-500 opacity-0 absolute right-0 bottom-1/2 z-[-1] h-1/3 translate-y-full md:translate-y-1/2 md:h-2/3">
-                  <Picture breakpoints={[320, 480]} src={imageUrl} alt={name} />
+                  <Picture
+                    preload={"webp"}
+                    breakpoints={[320, 480]}
+                    src={imageUrl}
+                    alt={name}
+                  />
                 </div>
               </figure>
             </li>

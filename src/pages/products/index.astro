@@ -11,7 +11,12 @@ import { Img, Picture } from "astro-imagetools/components";
 >
   <div slot="banner">
     <div class="w-32 mx-auto">
-      <Picture breakpoints={[320]} src="/images/logo/icon.png" alt="icon" />
+      <Picture
+        preload={"webp"}
+        breakpoints={[320]}
+        src="/images/logo/icon.png"
+        alt="icon"
+      />
     </div>
     <h1 class="text-4xl text-white text-center italic mt-4">
       Professional Design. Efficient. Durable

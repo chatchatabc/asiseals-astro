@@ -18,7 +18,7 @@ const { title, pageTitle, image, pageDescription, pageKeywords } =
 <Layout title={pageTitle} keywords={pageKeywords} description={pageDescription}>
   <header class="relative max-w-[1920px] mx-auto" title={pageTitle}>
     <div class="h-56">
-      <Img src={image} alt={pageTitle} />
+      <Img preload="webp" src={image} alt={pageTitle} />
     </div>
     <div
       class="absolute w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"

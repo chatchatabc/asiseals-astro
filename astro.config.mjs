@@ -5,15 +5,19 @@ import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
 import { astroImageTools } from "astro-imagetools";
 import robotsTxt from "astro-robots-txt";
+import compress from "astro-compress";
 
 export default defineConfig({
-  site: "https://www.asiseal.com",
+  site: "https://www.asiseal.com", // for sitemap and robots.txt (change to your own domain)
   integrations: [
     tailwind(),
-    sitemap(),
     svelte(),
     mdx(),
-    astroImageTools,
-    robotsTxt(),
+    astroImageTools, // image optimization
+    robotsTxt(), // generate robots.txt
+    sitemap(), // generate sitemap.xml
+    compress({
+      img: false, // disable image compression, we use astro-imagetools instead
+    }),
   ],
 });

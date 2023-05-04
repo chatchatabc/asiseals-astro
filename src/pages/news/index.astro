@@ -1,11 +1,16 @@
 ---
 import NewsList from "@components/news/NewsList.astro";
 import LayoutCategory from "@layouts/LayoutCategory.astro";
-import { Img } from "astro-imagetools/components";
-import { getCollection } from "astro:content";
+import newsJson from "@data/news.json";
 ---
 
-<LayoutCategory image="/images/news/banner.webp" pageTitle="News" title="News">
+<LayoutCategory
+  image="/images/news/banner.webp"
+  title="News"
+  pageTitle={newsJson.pageTitle ?? undefined}
+  pageDescription={newsJson.pageDescription ?? undefined}
+  pageKeywords={newsJson.pageKeywords ?? undefined}
+>
   <!-- Container -->
   <section class="mx-auto max-w-7xl mb-16 px-4 lg:px-8">
     <NewsList />

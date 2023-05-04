@@ -1,0 +1,21 @@
+{
+  "pageTitle": "News Page",
+  "pageDescription": "This is the news page",
+  "pageKeywords": "news, page, keywords",
+  "contents": [
+    {
+      "name": "Company News",
+      "slug": "company-news",
+      "pageTitle": "Company News Page",
+      "pageDescription": "This is the company news page",
+      "pageKeywords": "company, news, page, keywords"
+    },
+    {
+      "name": "Blogs",
+      "slug": "blogs",
+      "pageTitle": "Blogs Page",
+      "pageDescription": "This is the blogs page",
+      "pageKeywords": "blogs, page, keywords"
+    }
+  ]
+}

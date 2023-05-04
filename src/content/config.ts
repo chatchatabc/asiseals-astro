@@ -24,6 +24,9 @@ const newsSchema = defineCollection({
     author: z.string(),
     date: z.date(),
     origin: z.string(),
+    pageTitle: z.string().optional(),
+    pageDescription: z.string().optional(),
+    pageKeywords: z.string().optional(),
   }),
 });
 

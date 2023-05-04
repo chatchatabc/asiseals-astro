@@ -105,7 +105,7 @@ const { pathname } = Astro.url;
     </div>
 
     <!-- Mobile Menu Btn -->
-    <button id="nav-menu-btn" class="lg:hidden">
+    <button aria-label="menu button" id="nav-menu-btn" class="lg:hidden">
       <!-- burger -->
       <div id="burger" class="space-y-1">
         <div
@@ -139,7 +139,11 @@ const { pathname } = Astro.url;
       <ul class="overflow-auto pb-16 divide-y-2">
         {
           links.map((link) => {
-            return <NavDropMobile link={link} />;
+            return (
+              <li>
+                <NavDropMobile link={link} />
+              </li>
+            );
           })
         }
       </ul>

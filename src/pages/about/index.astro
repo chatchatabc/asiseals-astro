@@ -2,11 +2,12 @@
 import LayoutCategory from "@layouts/LayoutCategory.astro";
 import CertificateSection from "@components/about-us/CertificateSection.astro";
 import aboutUsJson from "@data/about-us.json";
-import { Img } from "astro-imagetools/components";
 ---
 
 <LayoutCategory
-  pageTitle="About Us"
+  pageTitle={aboutUsJson.pageTitle ?? undefined}
+  pageDescription={aboutUsJson.pageDescription ?? undefined}
+  pageKeywords={aboutUsJson.pageKeywords ?? undefined}
   title="About Us"
   image="/images/about-us/banner.webp"
 >

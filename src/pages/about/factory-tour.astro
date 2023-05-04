@@ -1,12 +1,15 @@
 ---
 import LayoutCategory from "@layouts/LayoutCategory.astro";
 import FactoryTour from "@components/about-us/FactoryTour.svelte";
+import factoryTourJson from "@data/factory-tour.json";
 ---
 
 <LayoutCategory
   image="/images/about-us/banner.webp"
   title="Factory Tour"
-  pageTitle="Factory Tour"
+  pageTitle={factoryTourJson.pageTitle ?? undefined}
+  pageDescription={factoryTourJson.pageDescription ?? undefined}
+  pageKeywords={factoryTourJson.pageKeywords ?? undefined}
 >
   <FactoryTour client:load />
 </LayoutCategory>

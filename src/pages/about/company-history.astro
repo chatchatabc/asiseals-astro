@@ -7,7 +7,9 @@ import { Img } from "astro-imagetools/components";
 <LayoutCategory
   image="/images/about-us/banner.webp"
   title="Company History"
-  pageTitle="Company History"
+  pageTitle={companyHistoryJson.pageTitle ?? undefined}
+  pageDescription={companyHistoryJson.pageDescription ?? undefined}
+  pageKeywords={companyHistoryJson.pageKeywords ?? undefined}
 >
   <section class="mx-auto max-w-7xl py-16 px-4 lg:px-8">
     <ul class="flex-col flex relative">

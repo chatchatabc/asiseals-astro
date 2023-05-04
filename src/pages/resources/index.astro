@@ -4,9 +4,11 @@ import resourcesJson from "@data/resources.json";
 ---
 
 <LayoutCategory
-  pageTitle="Resources"
   title="Resources"
   image="/images/resources/banner.webp"
+  pageTitle={resourcesJson.pageTitle ?? undefined}
+  pageDescription={resourcesJson.pageDescription ?? undefined}
+  pageKeywords={resourcesJson.pageKeywords ?? undefined}
 >
   <!-- Container -->
   <section class="my-16 max-w-7xl mx-auto px-4 lg:px-8">

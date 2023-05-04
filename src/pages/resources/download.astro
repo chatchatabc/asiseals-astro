@@ -6,7 +6,9 @@ import downloadsJson from "@data/downloads.json";
 <LayoutCategory
   image="/images/resources/banner.webp"
   title="Download"
-  pageTitle="Download"
+  pageTitle={downloadsJson.pageTitle ?? undefined}
+  pageDescription={downloadsJson.pageDescription ?? undefined}
+  pageKeywords={downloadsJson.pageKeywords ?? undefined}
 >
   <section class="max-w-7xl mx-auto py-16 px-4 lg:px-8">
     <div class="overflow-x-auto">

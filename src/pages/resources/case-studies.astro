@@ -1,25 +1,15 @@
 ---
 import LayoutCategory from "@layouts/LayoutCategory.astro";
 import { Icon } from "astro-icon";
-
-const quoteList = [
-  "The two sealing surfaces are stuck in the startup process, which leads to failure or difficulty in startup.",
-  "After running, the motor current exceeds the rated allowable current value, leading to an increase in the motor current loss and a waste of electrical energy.",
-  "Due to the particularity of the medium, the silicon carbide moving ring is prone to heat and cracking, which leads to seal failure or leakage.",
-  "The mechanical seal has a short service life and can only be used for about 12 months, greatly increasing the maintenance cost.",
-];
-
-const objectives = [
-  "Upgrade the end face material and replace it with special formula silicon carbide material, because this material has very good self-lubrication and greatly reduces the starting resistance, so as to solve the problem of the motor being sucked during starting.",
-  "Re-adjust the specific pressure of the end face of seals to further control the amount of wear of materials in the process of operation, so as to extend the service life of mechanical seals.",
-  "The surface roughness of the two sealing faces is treated with mist surface. On the premise of ensuring the flatness, the roughness is changed and the smoothness is not changed. At the same time, the current is reduced from the original 5A to the current 3.7a, which can well control the current loss of the motor and save the electric energy.",
-];
+import caseStudiesJson from "@data/case-studies.json";
 ---
 
 <LayoutCategory
   image="/images/resources/banner.webp"
   title="Case Studies"
-  pageTitle="Case Studies"
+  pageTitle={caseStudiesJson.pageTitle ?? undefined}
+  pageDescription={caseStudiesJson.pageDescription ?? undefined}
+  pageKeywords={caseStudiesJson.pageKeywords ?? undefined}
 >
   <!-- Introduction -->
   <section class="max-w-7xl mx-auto px-4 pt-4 lg:pt-16 lg:px-8">
@@ -46,7 +36,7 @@ const objectives = [
       </p>
       <ul class="pt-4">
         {
-          quoteList.map((quote, index) => {
+          caseStudiesJson.quotes.map((quote, index) => {
             return (
               <li>
                 <p>
@@ -75,7 +65,7 @@ const objectives = [
       </header>
       <ul class="text-lg py-4">
         {
-          objectives.map((objective, index) => {
+          caseStudiesJson.objectives.map((objective, index) => {
             return (
               <li>
                 <p>

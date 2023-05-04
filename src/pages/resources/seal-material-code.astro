@@ -15,7 +15,9 @@ const { Content } = await introduction.render();
 <LayoutCategory
   image="/images/resources/banner.webp"
   title="Seal Material Code"
-  pageTitle="Seal Material Code"
+  pageTitle={sealMaterialCodeJson.pageTitle ?? undefined}
+  pageDescription={sealMaterialCodeJson.pageDescription ?? undefined}
+  pageKeywords={sealMaterialCodeJson.pageKeywords ?? undefined}
 >
   <section class="max-w-7xl mx-auto px-4 lg:px-8">
     <figure class="flex flex-wrap items-center">

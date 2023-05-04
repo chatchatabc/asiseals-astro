@@ -24,7 +24,11 @@ const { hideTitle = false } = Astro.props as Props;
       class="flex-1 p-2 text-lg"
       placeholder="Enter product name or model"
     />
-    <button type="submit" class="px-3 block bg-background">
+    <button
+      aria-label="search button"
+      type="submit"
+      class="px-3 block bg-background"
+    >
       <Icon class="h-6 w-6 text-white" name="mdi:magnify" />
     </button>
   </form>

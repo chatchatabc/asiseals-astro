@@ -75,11 +75,11 @@
                 class="block"
                 href="/products/{product.category}/{product.subCategory}/{product.slug}"
               >
-                <h3
+                <h2
                   class="text-center font-bold text-[#3B71A1] text-lg md:text-xl lg:text-2xl"
                 >
                   {product.name}
-                </h3>
+                </h2>
               </a>
             </header>
             <p class="mt-4 text-center line-clamp-4 md:text-lg">

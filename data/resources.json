@@ -1,6 +1,6 @@
 {
-  "pageTitle": "Resources",
-  "pageDescription": null,
+  "pageTitle": "Resources | Advantage Seal",
+  "pageDescription": "Advantage Seal Brochures, Videos, Download, Case Studies, Seal Material, FAQ, Coss-Reference Chart, More Help all in one place. Click one to see more.",
   "pageKeywords": null,
   "contents": [
     {
@@ -8,12 +8,6 @@
       "imageUrl": "/images/resources/brochures.webp",
       "href": "",
       "slug": "brochures"
-    },
-    {
-      "name": "Videos",
-      "imageUrl": "/images/resources/videos.webp",
-      "href": "",
-      "slug": "videos"
     },
     {
       "name": "Download",

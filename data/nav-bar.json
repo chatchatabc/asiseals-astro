@@ -53,7 +53,6 @@
       "href": "/resources",
       "categories": [
         { "name": "Brochures", "href": "/brochures" },
-        { "name": "Videos", "href": "/videos" },
         { "name": "Download", "href": "/download" },
         { "name": "Case Studies", "href": "/case-studies" },
         { "name": "Seal Material Code", "href": "/seal-material-code" },

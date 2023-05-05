@@ -1,21 +1,21 @@
 {
-  "pageTitle": "News Page",
-  "pageDescription": "This is the news page",
-  "pageKeywords": "news, page, keywords",
+  "pageTitle": "News | Advantage Seals",
+  "pageDescription": null,
+  "pageKeywords": null,
   "contents": [
     {
       "name": "Company News",
       "slug": "company-news",
-      "pageTitle": "Company News Page",
-      "pageDescription": "This is the company news page",
-      "pageKeywords": "company, news, page, keywords"
+      "pageTitle": "Company News | Advantage Seals",
+      "pageDescription": "Company News published by Advantage Seals.",
+      "pageKeywords": null
     },
     {
       "name": "Blogs",
       "slug": "blogs",
-      "pageTitle": "Blogs Page",
-      "pageDescription": "This is the blogs page",
-      "pageKeywords": "blogs, page, keywords"
+      "pageTitle": "Blogs | Advantage Seals",
+      "pageDescription": "Blogs published by Advantage Seals.",
+      "pageKeywords": null
     }
   ]
 }

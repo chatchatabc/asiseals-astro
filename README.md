@@ -64,9 +64,9 @@ The rest of the files inside the data folder also has these properties. Check if
 
 ```note
 some files are excluded:
-   1. footer.json
-   2. nav-bar.json
-   3. removedVideoResourceTemp.json (video page has been temporarily removed since it would decrease it's relevance if search engine sees this blank)
+  1. footer.json
+  2. nav-bar.json
+  3. removedVideoResourceTemp.json (video page has been temporarily removed since it would decrease it's relevance if search engine sees this blank)
 special mention:
-   1. site-info.json (these would be the default values for the SEO tags pages that would require them is currently set blank)
+  1. site-info.json (these would be the default values for the SEO tags pages that would require them is currently set blank)
 ```

@@ -2,12 +2,15 @@
 import ProductSearch from "@components/widgets/ProductSearch.astro";
 import LayoutCategory from "@layouts/LayoutCategory.astro";
 import productsCategoriesJson from "@data/product-categories.json";
+import productsJson from "@data/products.json";
 import { Img, Picture } from "astro-imagetools/components";
 ---
 
 <LayoutCategory
-  pageTitle="Products"
   image="./images/products/banner-inner.webp"
+  pageTitle={productsJson.pageTitle ?? undefined}
+  pageDescription={productsJson.pageDescription ?? undefined}
+  pageKeywords={productsJson.pageKeywords ?? undefined}
 >
   <div slot="banner">
     <div class="w-32 mx-auto">

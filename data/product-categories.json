@@ -1,13 +1,14 @@
 {
   "contents": [
     {
-      "name": "Pump Seals | Quality Seals by Advantage Seal",
+      "name": "Pump Seals",
       "slug": "pump-seals",
       "pageDescription": "Advantage Seal manufactures Pusher Seals and Elastomer Bellow Seals and more.",
       "pageKeywords": null,
       "categories": [
         {
           "name": "Pusher Seals",
+          "pageTitle": "Pusher Seals | Advantage Seals",
           "slug": "pusher-seals",
           "imageUrl": "/images/product-categories/pusher-seals.webp",
           "pageDescription": "A quality Pusher Seal designed and made from high-grade components and best possible processes. Highly recommended by customers for its construction, toughness and longer service life.",
@@ -25,7 +26,7 @@
       ]
     },
     {
-      "name": "Cartridge Seals | Quality Seals by Advantage Seal",
+      "name": "Cartridge Seals",
       "slug": "cartridge-seals",
       "pageDescription": "Advantage Seal manufactures Pusher Seals and Elastomer Bellow Seals and more.",
       "pageKeywords": null,
@@ -41,7 +42,7 @@
       ]
     },
     {
-      "name": "Customized Seals | Quality Seals by Advantage Seal",
+      "name": "Customized Seals",
       "slug": "customized-seals",
       "pageDescription": "Advantage Seal manufactures Customized Seals.",
       "pageKeywords": null,

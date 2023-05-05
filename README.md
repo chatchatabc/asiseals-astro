@@ -56,10 +56,11 @@ the first three lines are for the page itself. The ones seen within "contents" a
 "pageKeywords": "Products, Advantage Seal, Item Catalogue",
 ```
 
-"pageTitle" is just a string of text. Note that this is visible to the user on their Tab Menu.
-"pageDescription" a string of text. Short(preferably) description of: (1) what the page is about or (2) what the page wants to convey. [Search engine visible only]
-"pageKeywords" a string of short texts separated by a comma for each item. Short words that would describe the content. Don't put too much [search engine visibility only]
+"pageTitle" is just a string of text. Note that this is visible to the user on their Tab Menu. <br/>
+"pageDescription" a string of text. Short(preferably) description of: (1) what the page is about or (2) what the page wants to convey. [Search engine visible only]<br/>
+"pageKeywords" a string of short texts separated by a comma for each item. Short words that would describe the content. Don't put too much [search engine visibility only]<br/>
 
+<hr/>
 The rest of the files inside the data folder also has these properties. Check if it is in to your liking especially the pageTitle since it's visible to the user. SEO is marketing effort, maybe ask marketing team for approval.
 
 ```note

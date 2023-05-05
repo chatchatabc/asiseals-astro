@@ -41,3 +41,32 @@ console.log(pathname); // "/products/.../inquire/inquire"
 // npm run dev
 console.log(pathname); // "/products/.../inquire"
 ```
+
+## SEO
+
+Need some filling up some of the details as some of the products are too technical.
+
+On 'products.json file'
+
+the first three lines are for the page itself. The ones seen within "contents" are for each individual product.
+
+```
+"pageTitle": "Products | Advantage Seal"
+"pageDescription": "Products - Quality seals by Advantage Seal",
+"pageKeywords": "Products, Advantage Seal, Item Catalogue",
+```
+
+"pageTitle" is just a string of text. Note that this is visible to the user on their Tab Menu.
+"pageDescription" a string of text. Short(preferably) description of: (1) what the page is about or (2) what the page wants to convey. [Search engine visible only]
+"pageKeywords" a string of short texts separated by a comma for each item. Short words that would describe the content. Don't put too much [search engine visibility only]
+
+The rest of the files inside the data folder also has these properties. Check if it is in to your liking especially the pageTitle since it's visible to the user. SEO is marketing effort, maybe ask marketing team for approval.
+
+```note
+some files are excluded:
+   1. footer.json
+   2. nav-bar.json
+   3. removedVideoResourceTemp.json (video page has been temporarily removed since it would decrease it's relevance if search engine sees this blank)
+special mention:
+   1. site-info.json (these would be the default values for the SEO tags pages that would require them is currently set blank)
+```

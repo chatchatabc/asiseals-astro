@@ -2,13 +2,14 @@
   "contents": [
     {
       "name": "Pump Seals",
+      "pageTitle": "Pump Seals | Advantage Seal",
       "slug": "pump-seals",
       "pageDescription": "Advantage Seal manufactures Pusher Seals and Elastomer Bellow Seals and more.",
       "pageKeywords": null,
       "categories": [
         {
           "name": "Pusher Seals",
-          "pageTitle": "Pusher Seals | Advantage Seals",
+          "pageTitle": "Pusher Seals | Advantage Seal",
           "slug": "pusher-seals",
           "imageUrl": "/images/product-categories/pusher-seals.webp",
           "pageDescription": "A quality Pusher Seal designed and made from high-grade components and best possible processes. Highly recommended by customers for its construction, toughness and longer service life.",
@@ -17,6 +18,7 @@
         },
         {
           "name": "Elastomer Bellow Seals",
+          "pageTitle": "Elastomer Bellow Seals | Advantage Seal",
           "slug": "elastomer-bellow-seals",
           "imageUrl": "/images/product-categories/elastomer-bellow-seals.webp",
           "pageDescription": "Quality Elastomer Bellow Seals ensured by our highly qualified and committed personnel. Both standard and custom configurations available for your needs.",
@@ -27,12 +29,14 @@
     },
     {
       "name": "Cartridge Seals",
+      "pageTitle": "Cartridge Seals | Advantage Seal",
       "slug": "cartridge-seals",
       "pageDescription": "Advantage Seal manufactures Pusher Seals and Elastomer Bellow Seals and more.",
       "pageKeywords": null,
       "categories": [
         {
           "name": "Cartridge Seals",
+          "pageTitle": "Cartridge Seals | Advantage Seal",
           "slug": "all",
           "imageUrl": "/images/product-categories/cartridge-seals.webp",
           "pageDescription": "Wide range of cartridge seals designed to fit standard ANSI, DIN and ISO seal chambers. Offers reduced installation times, lower maintenance costs and optimal equipment performance.",
@@ -43,12 +47,14 @@
     },
     {
       "name": "Customized Seals",
+      "pageTitle": "Customized Seals | Advantage Seal",
       "slug": "customized-seals",
       "pageDescription": "Advantage Seal manufactures Customized Seals.",
       "pageKeywords": null,
       "categories": [
         {
           "name": "Flygt",
+          "pageTitle": "Flygt Customized Seals | Advantage Seal",
           "slug": "flygt",
           "imageUrl": "/images/product-categories/special-pump-seals.webp",
           "pageDescription": null,
@@ -61,6 +67,7 @@
         },
         {
           "name": "Groundfos",
+          "pageTitle": "Groundfos Customized Seals | Advantage Seal",
           "slug": "groundfos",
           "imageUrl": "/images/product-categories/groundfos.webp",
           "pageDescription": null,

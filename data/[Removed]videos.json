@@ -1,0 +1,14 @@
+{
+  "page":{
+    "pageTitle": "Videos | Advantage Seal",
+    "pageDescription": null,
+    "pageKeywords": "Videos, Advantage Seal"
+  },
+  "resources":{
+    "name": "Videos",
+    "imageUrl": "/images/resources/videos.webp",
+    "href": "",
+    "slug": "videos"
+  }
+
+}

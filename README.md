@@ -1,41 +1,45 @@
-# [Asiseals Website](https://asiseals.pages.dev)
+# **[Asiseals Website](https://asiseals.pages.dev)**
 
 Welcome to this project repository of Asiseals! Here lies the documentation and definitions that you'll need to understand the project development.
 
 ## **Table of Contents**
 
 - [Tech Stack](#tech-stack)
-- [Project Structure](#🚀-project-structure)
+- [Project Structure](#🚀-project-directories)
+- [Content Management](#📦-content-management)
+  - [Product List](#product-list)
+  - [Product Information](#product-information)
+- [SEO Configuration](#seo-configuration)
 - [Commands](#🧞-commands)
-- [SEO](#seo)
+- [More Help](#👀-want-to-learn-more)
 
-## **Tech Stack**
+# **Tech Stack**
 
 The project utilizes various technologies that would make the development process much easier and faster to developed! These technologies are deemed to be important in order to achieve the goals and best results for this website.
 
-### Main
+### **Main**
 
 - Astro: https://docs.astro.build/en/getting-started/
 - TailwindCSS: https://docs.astro.build/en/guides/integrations-guide/tailwind/ | https://tailwindcss.com/docs/installation
 - Svelte: https://docs.astro.build/en/guides/integrations-guide/svelte/ | https://svelte.dev/docs
 
-### Other
+### **Other**
 
 - FuseJS: https://fusejs.io/
 - SwiperJS: https://swiperjs.com/swiper-api
 
-### Content Management
+### **Content Management**
 
 - Astro Content Collections: https://docs.astro.build/en/guides/content-collections/
 - MDX: https://docs.astro.build/en/guides/integrations-guide/mdx/ | https://mdxjs.com/docs/
 - Zod: https://zod.dev/
 
-### Optimization
+### **Optimization**
 
 - Astro-compress: https://github.com/astro-community/astro-compress#readme
 - Astro-imagetools: https://github.com/RafidMuhymin/astro-imagetools#readme
 
-### SEO
+### **SEO Technologies**
 
 - Astro-robots-txt: https://github.com/alextim/astro-lib/tree/main/packages/astro-robots-txt#readme
 - Sitemap: https://docs.astro.build/en/guides/integrations-guide/sitemap/
@@ -69,7 +73,7 @@ The development project consists a lot of files in order to make the whole websi
 └── ...
 ```
 
-### Directory Definitions
+### **Directory Definitions**
 
 - data/
   - This directory holds all JSON data that are useful to store information for the website.
@@ -90,7 +94,50 @@ The development project consists a lot of files in order to make the whole websi
 - src/styles/
   - This directory holds all files that are related to the styling of the website.
 
-## 🧞 Commands
+## 📦 **Content Management**
+
+This section will show how would you be able to add or manage the contents of the website.
+
+### **Product List**
+
+If you want to add a product to the product list, just [open](./data/products.json) `./data/products.json` and add an entry in the `contents` array.
+
+```json
+{
+  "pageTitle": "Products | Advantage Seal",
+  "pageDescription": "Products - Quality seals by Advantage Seal",
+  "pageKeywords": "Products, Advantage Seal, Item Catalogue",
+  "contents": [
+    {
+      "name": "Type 202",
+      "pageDescription": null,
+      "pageTitle": "Pump Seals Elastomer Bellows Seal Type 202",
+      "pageKeywords": null,
+      "summary": "Pump Seals Elastomer Bellows Seal Advantage Seal Type 202 Replaces: John crane type 1,21,2100, sealol type 43CE Short, Pac-Seal type 51,21, US Seal type D, Burgmann type M3,M2,M377",
+      "imageUrl": "/images/products/type-202.webp",
+      "slug": "type-202",
+      "category": "pump-seals",
+      "subCategory": "elastomer-bellow-seals",
+      "images": [
+        { "name": "Type 202", "url": "/images/products/type-202.webp" },
+        { "name": "Type 202", "url": "/images/products/type-202-1.webp" }
+      ],
+      "industry": []
+    },
+    ...
+  ]
+}
+```
+
+Make sure that the `slug` property in the data entry should be unique, so that there would be no overlapping in other product web pages. **(IMPORTANT!)**
+
+### **Product Information**
+
+After adding the product in the product list, the product's page will be generated, but it still lack some information. So, in order to add some information about the product, go to the `/src/content/product-information` [directory](./src/content/product-information/) and create a directory and named it based from the product's slug.
+
+`details.md` or `details.mdx` are reserved for the product details information, so if you want to add the details of the product, you should name the markdown file as `details`. Aside from `details` file, any other files will be used in another section of the product's details. **(IMPORTANT!)**
+
+## 🧞 **Commands**
 
 All commands are run from the root of the project, from a terminal:
 
@@ -103,7 +150,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## SEO
+## SEO Configuration
 
 Need some filling up some of the details as some of the products are too technical or some of them don't have details that I could use as basis for SEO.
 

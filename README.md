@@ -141,13 +141,13 @@ If you want to add a product to the product list, just [open](./data/products.js
 }
 ```
 
-Make sure that the `slug` property in the data entry should be unique, so that there would be no overlapping in other product web pages. **(IMPORTANT!)**
+> Make sure that the `slug` property in the data entry should be unique, so that there would be no overlapping in other product web pages. **(IMPORTANT!)**
 
 ## **Product Information**
 
 After adding the product in the product list, the product's page will be generated, but it still lack some information. So, in order to add some information about the product, go to the `/src/content/product-information` [directory](./src/content/product-information/) and create a directory and named it based from the product's slug.
 
-`details.md` or `details.mdx` are reserved for the product details information, so if you want to add the details of the product, you should name the markdown file as `details`. Aside from `details` file, any other files will be used in another section of the product's details. **(IMPORTANT!)**
+> `details.md` or `details.mdx` are reserved for the product details information, so if you want to add the details of the product, you should name the markdown file as `details`. Aside from `details` file, any other files will be used in another section of the product's details. **(IMPORTANT!)**
 
 # 🧞 **Commands**
 

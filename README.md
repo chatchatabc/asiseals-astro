@@ -17,13 +17,13 @@ Welcome to this project repository of Asiseals! Here lies the documentation and 
 - [📦 **Content Management**](#-content-management)
   - [**Product List**](#product-list)
   - [**Product Information**](#product-information)
-- [🧞 **Commands**](#-commands)
 - [SEO Configuration](#seo-configuration)
   - [Things to look out for](#things-to-look-out-for)
   - [Products](#products)
   - [File Structure](#file-structure)
   - [Default Values](#default-values)
   - [Page properties of other pages](#page-properties-of-other-pages)
+- [🧞 **Commands**](#-commands)
 - [👀 Want to learn more?](#-want-to-learn-more)
 
 # **Tech Stack**
@@ -150,19 +150,6 @@ After adding the product in the product list, the product's page will be generat
 
 > `details.md` or `details.mdx` are reserved for the product details information, so if you want to add the details of the product, you should name the markdown file as `details`. Aside from `details` file, any other files will be used in another section of the product's details. **(IMPORTANT!)**
 
-# 🧞 **Commands**
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
 # SEO Configuration
 
 Need some filling up some of the details as some of the products are too technical or some of them don't have details that I could use as basis for SEO.
@@ -263,6 +250,19 @@ Pages such as `About us` or `Company History` also have `pageTitle`, `pageDescri
 ```
 
 > Videos page has been temporarily removed temporarily and all the details has been transferred to a temporary file `[Removed]videos.json`.
+
+# 🧞 **Commands**
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `npm install`          | Installs dependencies                            |
+| `npm run dev`          | Starts local dev server at `localhost:3000`      |
+| `npm run build`        | Build your production site to `./dist/`          |
+| `npm run preview`      | Preview your build locally, before deploying     |
+| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro --help` | Get help using the Astro CLI                     |
 
 # 👀 Want to learn more?
 

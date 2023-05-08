@@ -1,50 +1,62 @@
-# **[Asiseals Website](https://asiseals.pages.dev)**
+**[Asiseals Website](https://asiseals.pages.dev)**
 
 Welcome to this project repository of Asiseals! Here lies the documentation and definitions that you'll need to understand the project development.
 
-## **Table of Contents**
+# **Table of Contents**
 
-- [Tech Stack](#tech-stack)
-- [Project Structure](#🚀-project-directories)
-- [Content Management](#📦-content-management)
-  - [Product List](#product-list)
-  - [Product Information](#product-information)
+- [**Table of Contents**](#table-of-contents)
+- [**Tech Stack**](#tech-stack)
+  - [**Main**](#main)
+  - [**Other**](#other)
+  - [**Content Management**](#content-management)
+  - [**Optimization**](#optimization)
+  - [**SEO Technologies**](#seo-technologies)
+- [**🚀 Project Directories**](#-project-directories)
+  - [**Directory Definitions**](#directory-definitions)
+- [📦 **Content Management**](#-content-management)
+  - [**Product List**](#product-list)
+  - [**Product Information**](#product-information)
+- [🧞 **Commands**](#-commands)
 - [SEO Configuration](#seo-configuration)
-- [Commands](#🧞-commands)
-- [More Help](#👀-want-to-learn-more)
+  - [Things to look out for](#things-to-look-out-for)
+  - [Products](#products)
+  - [File Structure](#file-structure)
+  - [Default Values](#default-values)
+  - [Page properties of other pages](#page-properties-of-other-pages)
+- [👀 Want to learn more?](#-want-to-learn-more)
 
 # **Tech Stack**
 
 The project utilizes various technologies that would make the development process much easier and faster to developed! These technologies are deemed to be important in order to achieve the goals and best results for this website.
 
-### **Main**
+## **Main**
 
 - Astro: https://docs.astro.build/en/getting-started/
 - TailwindCSS: https://docs.astro.build/en/guides/integrations-guide/tailwind/ | https://tailwindcss.com/docs/installation
 - Svelte: https://docs.astro.build/en/guides/integrations-guide/svelte/ | https://svelte.dev/docs
 
-### **Other**
+## **Other**
 
 - FuseJS: https://fusejs.io/
 - SwiperJS: https://swiperjs.com/swiper-api
 
-### **Content Management**
+## **Content Management**
 
 - Astro Content Collections: https://docs.astro.build/en/guides/content-collections/
 - MDX: https://docs.astro.build/en/guides/integrations-guide/mdx/ | https://mdxjs.com/docs/
 - Zod: https://zod.dev/
 
-### **Optimization**
+## **Optimization**
 
 - Astro-compress: https://github.com/astro-community/astro-compress#readme
 - Astro-imagetools: https://github.com/RafidMuhymin/astro-imagetools#readme
 
-### **SEO Technologies**
+## **SEO Technologies**
 
 - Astro-robots-txt: https://github.com/alextim/astro-lib/tree/main/packages/astro-robots-txt#readme
 - Sitemap: https://docs.astro.build/en/guides/integrations-guide/sitemap/
 
-## **🚀 Project Directories**
+# **🚀 Project Directories**
 
 The development project consists a lot of files in order to make the whole website. Each files are been stored appropriately in different directories, so that it would be easily understand the purpose of the file based on the directories name. Therefore, understanding the directory names would make it easier to browse through in this project.
 
@@ -73,7 +85,7 @@ The development project consists a lot of files in order to make the whole websi
 └── ...
 ```
 
-### **Directory Definitions**
+## **Directory Definitions**
 
 - data/
   - This directory holds all JSON data that are useful to store information for the website.
@@ -94,11 +106,11 @@ The development project consists a lot of files in order to make the whole websi
 - src/styles/
   - This directory holds all files that are related to the styling of the website.
 
-## 📦 **Content Management**
+# 📦 **Content Management**
 
 This section will show how would you be able to add or manage the contents of the website.
 
-### **Product List**
+## **Product List**
 
 If you want to add a product to the product list, just [open](./data/products.json) `./data/products.json` and add an entry in the `contents` array.
 
@@ -131,13 +143,13 @@ If you want to add a product to the product list, just [open](./data/products.js
 
 Make sure that the `slug` property in the data entry should be unique, so that there would be no overlapping in other product web pages. **(IMPORTANT!)**
 
-### **Product Information**
+## **Product Information**
 
 After adding the product in the product list, the product's page will be generated, but it still lack some information. So, in order to add some information about the product, go to the `/src/content/product-information` [directory](./src/content/product-information/) and create a directory and named it based from the product's slug.
 
 `details.md` or `details.mdx` are reserved for the product details information, so if you want to add the details of the product, you should name the markdown file as `details`. Aside from `details` file, any other files will be used in another section of the product's details. **(IMPORTANT!)**
 
-## 🧞 **Commands**
+# 🧞 **Commands**
 
 All commands are run from the root of the project, from a terminal:
 
@@ -150,11 +162,11 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## SEO Configuration
+# SEO Configuration
 
 Need some filling up some of the details as some of the products are too technical or some of them don't have details that I could use as basis for SEO.
 
-### Things to look out for
+## Things to look out for
 
 We are mainly going to look for 3 specific things on most of the files we're going to be working on
 
@@ -171,7 +183,7 @@ We are mainly going to look for 3 specific things on most of the files we're goi
 2. Page Description - A string of text but only visible to the search engine. A short description of the current page is all about.
 3. Page Keywords - A string of multiple texts separated by a comma only visible to web crawlers. Keywords of the content on the page. Don't put too much.
 
-### Products
+## Products
 
 The products page details and the list of all the items are contained inside `products.json`. File is found at :
 
@@ -183,7 +195,7 @@ The products page details and the list of all the items are contained inside `pr
 └── ...
 ```
 
-#### File Structure
+## File Structure
 
 `pageTitle`, `pageDescription` and `pageKeywords` (the first 3 properties) is being used by the `products page` for it's own SEO. `contents` on the other hand is where the rest of the individual products are listed with their own properties include `pageTitle`, `pageDescription` and `pageKeywords`.
 
@@ -198,7 +210,7 @@ The products page details and the list of all the items are contained inside `pr
 
 > Product categories are not listed on this file for their respective properties. Go to `product-categories.json` to edit them as each category has their own respective page and properties before displaying respective items to the users.
 
-#### Default Values
+## Default Values
 
 When `pageTitle`, `pageDescription` and `pageKeywords` are left as `null` it's going to use the default properties set on `site-info.json` still within the data folder.
 
@@ -215,7 +227,7 @@ When `pageTitle`, `pageDescription` and `pageKeywords` are left as `null` it's g
 
 <hr/>
 
-### Page properties of other pages
+## Page properties of other pages
 
 Pages such as `About us` or `Company History` also have `pageTitle`, `pageDescription` and `pageKeywords` properties. Here are the names of the files you can edit:
 
@@ -251,6 +263,6 @@ Pages such as `About us` or `Company History` also have `pageTitle`, `pageDescri
 
 > Videos page has been temporarily removed temporarily and all the details has been transferred to a temporary file `[Removed]videos.json`.
 
-## 👀 Want to learn more?
+# 👀 Want to learn more?
 
 Feel free to contact [BoJoNVi](https://github.com/BoJoNVi) or [IceCloud12](https://github.com/icecloud12) if you have any questions and clarifications about this project.

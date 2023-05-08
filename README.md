@@ -1,9 +1,10 @@
-**[Asiseals Website](https://asiseals.pages.dev)**
+# **[Asiseals Website](https://asiseals.pages.dev)**
 
 Welcome to this project repository of Asiseals! Here lies the documentation and definitions that you'll need to understand the project development.
 
 # **Table of Contents**
 
+- [**Asiseals Website**](#asiseals-website)
 - [**Table of Contents**](#table-of-contents)
 - [**Tech Stack**](#tech-stack)
   - [**Main**](#main)

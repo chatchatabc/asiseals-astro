@@ -17,6 +17,9 @@ Welcome to this project repository of Asiseals! Here lies the documentation and 
 - [📦 **Content Management**](#-content-management)
   - [**Product List**](#product-list)
   - [**Product Information**](#product-information)
+  - [**FAQs**](#faqs)
+  - [**News**](#news)
+  - [**Company History**](#company-history)
 - [SEO Configuration](#seo-configuration)
   - [Things to look out for](#things-to-look-out-for)
   - [Products](#products)
@@ -116,28 +119,32 @@ This section will show how would you be able to add or manage the contents of th
 If you want to add a product to the product list, just [open](./data/products.json) `./data/products.json` and add an entry in the `contents` array.
 
 ```json
+// ./data/products.json
 {
-  "pageTitle": "Products | Advantage Seal",
-  "pageDescription": "Products - Quality seals by Advantage Seal",
-  "pageKeywords": "Products, Advantage Seal, Item Catalogue",
   "contents": [
     {
       "name": "Type 202",
       "pageDescription": null,
       "pageTitle": "Pump Seals Elastomer Bellows Seal Type 202",
       "pageKeywords": null,
-      "summary": "Pump Seals Elastomer Bellows Seal Advantage Seal Type 202 Replaces: John crane type 1,21,2100, sealol type 43CE Short, Pac-Seal type 51,21, US Seal type D, Burgmann type M3,M2,M377",
+      "summary": "Lorem Ipsum",
       "imageUrl": "/images/products/type-202.webp",
       "slug": "type-202",
       "category": "pump-seals",
       "subCategory": "elastomer-bellow-seals",
       "images": [
-        { "name": "Type 202", "url": "/images/products/type-202.webp" },
-        { "name": "Type 202", "url": "/images/products/type-202-1.webp" }
+        {
+          "name": "Type 202",
+          "url": "/images/products/type-202.webp"
+        },
+        {
+          "name": "Type 202",
+          "url": "/images/products/type-202-1.webp"
+        }
       ],
       "industry": []
-    },
-    ...
+    }
+    // And so on ...
   ]
 }
 ```
@@ -149,6 +156,46 @@ If you want to add a product to the product list, just [open](./data/products.js
 After adding the product in the product list, the product's page will be generated, but it still lack some information. So, in order to add some information about the product, go to the `/src/content/product-information` [directory](./src/content/product-information/) and create a directory and named it based from the product's slug.
 
 > `details.md` or `details.mdx` are reserved for the product details information, so if you want to add the details of the product, you should name the markdown file as `details`. Aside from `details` file, any other files will be used in another section of the product's details. **(IMPORTANT!)**
+
+## **FAQs**
+
+If you want to add more questions for the FAQs page, you can go to `./src/content/faqs/` [directory](./src/content/faqs/) and just make another markdown file with a formatter of `name` and `order`.
+
+- `name`: The question itself (ex. What is life?).
+- `order`: The order of showing the question in the webpage. (ex. 1)
+
+## **News**
+
+If you want to add more news to the website, you can go to `./src/content/news/` [directory](./src/content/news/) and make another markdown file with a formatter of `name`, `type`, `imageUrl`, `summary`, `author`, `date`, `origin`, `pageTitle`, `pageDescription`, and `pageKeywords`.
+
+- `name`: Title of the news (ex. Best Products).
+- `type`: Type of the news (ex. blogs).
+- `imageUrl`: Path/URL of the image banner (ex. /images/news/1.jpg).
+- `summary`: A brief summary for the news (ex. Lorem Ipsum).
+- `author`: Name of the author (ex. Juan Dela Cruz).
+- `date`: Date when the post is published (ex. 2023-05-08).
+- `origin`: Where the news originated (ex. site)
+- `pageTitle`: Page title of the news website.
+- `pageDescription`: Page description of the news website.
+- `pageKeywords`: Page keywords of the news website.
+
+## **Company History**
+
+If you want to add more company histories to the website, you can [open](./data/company-history.json) `./data/company-history.json` and add more entry in the `contents` property. The entry is structured like an `object` data, and have three properties called `name`, `image`, and `summary`.
+
+```json
+// ./data/company-history.json
+{
+  "contents": [
+    {
+      "name": "Test",
+      "image": "/images/company-history/1.jpg",
+      "summary": "Lorem Ipsum"
+    }
+    // And so on ...
+  ]
+}
+```
 
 # SEO Configuration
 

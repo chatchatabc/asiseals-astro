@@ -1,4 +1,6 @@
 ---
+import siteInfoJson from "@data/site-info.json";
+
 interface Props {
   slug?: string;
 }
@@ -6,7 +8,7 @@ interface Props {
 const { slug } = Astro.props as Props;
 ---
 
-<contact-us-form class="relative">
+<contact-us-form class="relative" data-email={siteInfoJson.emailUrl}>
   <form id="form" class="space-y-4">
     {slug && <input name="slug" type="hidden" value={slug} />}
     <input
@@ -58,6 +60,7 @@ const { slug } = Astro.props as Props;
     constructor() {
       super();
 
+      const emailUrl = this.dataset.emailUrl;
       const form = this.querySelector("form")!;
       const btn = this.querySelector<HTMLButtonElement>("button")!;
       const loader = this.querySelector("#loader")!;
@@ -74,13 +77,10 @@ const { slug } = Astro.props as Props;
         const body = Object.fromEntries(formData);
 
         try {
-          const response = await fetch(
-            "https://asiseals-email-worker.linux-china.workers.dev/",
-            {
-              method: "POST",
-              body: JSON.stringify(body),
-            }
-          );
+          const response = await fetch(emailUrl ?? "", {
+            method: "POST",
+            body: JSON.stringify(body),
+          });
 
           const data = await response.json();
 

@@ -60,7 +60,7 @@ const { slug } = Astro.props as Props;
     constructor() {
       super();
 
-      const emailUrl = this.dataset.emailUrl;
+      const emailUrl = this.dataset.email;
       const form = this.querySelector("form")!;
       const btn = this.querySelector<HTMLButtonElement>("button")!;
       const loader = this.querySelector("#loader")!;

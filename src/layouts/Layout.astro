@@ -13,6 +13,7 @@ type Props = {
   ogTitle?: string;
   ogType?: string;
   ogImage?: string;
+  ogDescription?: string;
 };
 
 const {
@@ -23,6 +24,7 @@ const {
   ogTitle = siteInfoJson.ogTitle,
   ogType = siteInfoJson.ogType,
   ogImage = siteInfoJson.ogImage,
+  ogDescription = siteInfoJson.ogDescription,
 } = Astro.props as Props;
 ---
 
@@ -42,6 +44,10 @@ const {
           title: ogTitle,
           type: ogType,
           image: ogImage,
+        },
+        optional: {
+          siteName: title,
+          description: ogDescription,
         },
       }}
       extend={{

@@ -10,7 +10,7 @@ import compress from "astro-compress";
 export default defineConfig({
   site: "https://asiseals.pages.dev", // for sitemap and robots.txt (change to your own domain)
   build: {
-    format: "file",
+    // format: "file",
   },
   integrations: [
     tailwind(),
@@ -18,7 +18,10 @@ export default defineConfig({
     mdx(),
     astroImageTools, // image optimization
     robotsTxt(), // generate robots.txt
-    sitemap(), // generate sitemap.xml
+    sitemap({
+      changefreq: "daily",
+      lastmod: new Date(),
+    }), // generate sitemap.xml
     compress({
       img: false, // disable image compression, we use astro-imagetools instead
     }),

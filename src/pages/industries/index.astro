@@ -7,11 +7,15 @@ const industries = [...industriesJson.contents];
 ---
 
 <LayoutCategory
-  pageTitle={industriesJson.pageTitle}
   image="/images/industries/banner.webp"
   title="Industries"
-  pageDescription={industriesJson.pageDescription ?? undefined}
-  pageKeywords={industriesJson.pageKeywords ?? undefined}
+  pageTitle={industriesJson.pageTitle}
+  pageDescription={industriesJson.pageDescription}
+  pageKeywords={industriesJson.pageKeywords}
+  ogTitle={industriesJson.ogTitle ?? industriesJson.pageTitle}
+  ogDescription={industriesJson.ogDescription ?? industriesJson.pageDescription}
+  ogImage={industriesJson.ogImage}
+  ogType={industriesJson.ogType}
 >
   <!-- Container -->
   <section class="max-w-7xl mx-auto px-4 lg:px-8">

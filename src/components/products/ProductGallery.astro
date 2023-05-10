@@ -44,13 +44,15 @@ const { images } = Astro.props as Props;
       }
     </swiper-container>
     <button
-      id="prev-btn"
+      aria-label="Previous"
+      data-button-prev
       class="opacity-0 absolute top-1/2 -translate-y-1/2 z-[1] transition left-0 group-hover:opacity-100"
     >
       <Icon class="w-16 h-16 text-primary" name="ic:round-chevron-left" />
     </button>
     <button
-      id="next-btn"
+      aria-label="Next"
+      data-button-next
       class="opacity-0 absolute top-1/2 -translate-y-1/2 z-[1] transition right-0 group-hover:opacity-100"
     >
       <Icon class="w-16 h-16 text-primary" name="ic:round-chevron-right" />
@@ -65,8 +67,8 @@ const { images } = Astro.props as Props;
 
       const paginationBtns = this.querySelectorAll(".pagination-image");
       const swiperEl = this.querySelector<any>("swiper-container");
-      const prevBtn = this.querySelector("#prev-btn")!;
-      const nextBtn = this.querySelector("#next-btn")!;
+      const prevBtn = this.querySelector("[data-button-prev]")!;
+      const nextBtn = this.querySelector("[data-button-next]")!;
 
       prevBtn.addEventListener("click", () => {
         swiperEl.swiper.slidePrev();

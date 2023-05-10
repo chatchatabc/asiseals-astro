@@ -8,7 +8,7 @@ import robotsTxt from "astro-robots-txt";
 import compress from "astro-compress";
 
 export default defineConfig({
-  site: "https://www.asiseals.pages.dev", // for sitemap and robots.txt (change to your own domain)
+  site: "https://asiseals.pages.dev", // for sitemap and robots.txt (change to your own domain)
   integrations: [
     tailwind(),
     svelte(),

@@ -2,6 +2,7 @@
 import NavBar from "@components/nav-bar/NavBar.astro";
 import Footer from "@components/Footer.astro";
 import siteInfoJson from "@data/site-info.json";
+import { SEO } from "astro-seo";
 import "@styles/markdown.scss";
 
 type Props = {
@@ -9,6 +10,9 @@ type Props = {
   description?: string;
   author?: string;
   keywords?: string;
+  ogTitle?: string;
+  ogType?: string;
+  ogImage?: string;
 };
 
 const {
@@ -16,6 +20,9 @@ const {
   description = siteInfoJson.description,
   author = siteInfoJson.author,
   keywords = siteInfoJson.keywords,
+  ogTitle = siteInfoJson.ogTitle,
+  ogType = siteInfoJson.ogType,
+  ogImage = siteInfoJson.ogImage,
 } = Astro.props as Props;
 ---
 
@@ -26,12 +33,24 @@ const {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Fonts Abel -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
-      rel="stylesheet"
+    <!-- Astro SEO -->
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title: ogTitle,
+          type: ogType,
+          image: ogImage,
+        },
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          { name: "author", content: author },
+          { name: "keywords", content: keywords },
+        ],
+      }}
     />
 
     <!-- Website Icon -->
@@ -54,17 +73,16 @@ const {
     />
     <link rel="manifest" href="/site.webmanifest" />
 
+    <!-- Google Fonts Abel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
-
-    <!-- Robots.txt -->
-    <link rel="robots" href="/robots.txt" />
-
-    <!-- Site Information -->
-    <meta name="description" content={description} />
-    <meta name="author" content={author} />
-    <meta name="keywords" content={keywords} />
-    <title>{title}</title>
   </head>
   <body class="flex flex-col min-h-screen font-abel">
     <NavBar />
@@ -72,26 +90,25 @@ const {
       <slot />
     </main>
     <Footer />
+    <style is:global>
+      .loader {
+        border: 10px solid #f3f3f3; /* Light grey */
+        border-top: 10px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 2s linear infinite;
+        margin: 0 auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </body>
 </html>
-
-<style is:global>
-  .loader {
-    border: 10px solid #f3f3f3; /* Light grey */
-    border-top: 10px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
-    margin: 0 auto;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-</style>

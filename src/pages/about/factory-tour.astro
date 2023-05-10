@@ -7,9 +7,14 @@ import factoryTourJson from "@data/factory-tour.json";
 <LayoutCategory
   image="/images/about-us/banner.webp"
   title="Factory Tour"
-  pageTitle={factoryTourJson.pageTitle ?? undefined}
-  pageDescription={factoryTourJson.pageDescription ?? undefined}
-  pageKeywords={factoryTourJson.pageKeywords ?? undefined}
+  pageTitle={factoryTourJson.pageTitle}
+  pageDescription={factoryTourJson.pageDescription}
+  pageKeywords={factoryTourJson.pageKeywords}
+  ogTitle={factoryTourJson.ogTitle ?? factoryTourJson.pageTitle}
+  ogDescription={factoryTourJson.ogDescription ??
+    factoryTourJson.pageDescription}
+  ogImage={factoryTourJson.ogImage}
+  ogType={factoryTourJson.ogType}
 >
   <FactoryTour client:load />
 </LayoutCategory>

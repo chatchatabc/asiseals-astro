@@ -5,11 +5,15 @@ import aboutUsJson from "@data/about-us.json";
 ---
 
 <LayoutCategory
-  pageTitle={aboutUsJson.pageTitle ?? undefined}
-  pageDescription={aboutUsJson.pageDescription ?? undefined}
-  pageKeywords={aboutUsJson.pageKeywords ?? undefined}
   title="About Us"
   image="/images/about-us/banner.webp"
+  pageTitle={aboutUsJson.pageTitle}
+  pageDescription={aboutUsJson.pageDescription}
+  pageKeywords={aboutUsJson.pageKeywords}
+  ogTitle={aboutUsJson.ogTitle ?? aboutUsJson.pageTitle}
+  ogDescription={aboutUsJson.ogDescription ?? aboutUsJson.pageDescription}
+  ogImage={aboutUsJson.ogImage}
+  ogType={aboutUsJson.ogType}
 >
   <!-- Introduction -->
   <section class="max-w-7xl mx-auto mt-16 px-4 lg:px-8">

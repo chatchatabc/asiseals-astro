@@ -53,41 +53,40 @@
     <div class="loader" />
     <p class="text-2xl text-center mt-8">Searching...</p>
   </div>
-{:else}
-  <ul class="flex flex-wrap">
-    {#each filteredProducts as product}
-      <li class="p-2 flex w-1/2 md:w-1/3 lg:w-1/4">
-        <figure class="group bg-gray-200">
-          <div class="relative p-1">
+{/if}
+<ul class={`flex flex-wrap ${loading ? "hidden" : ""}`}>
+  {#each filteredProducts as product}
+    <li class="p-2 flex w-1/2 md:w-1/3 lg:w-1/4">
+      <figure class="group bg-gray-200">
+        <div class="relative p-1">
+          <a
+            href="/products/{product.category}/{product.subCategory}/{product.slug}"
+          >
+            <img src={product.imageUrl} alt={product.name} />
+          </a>
+          <div
+            class="h-[0.1rem] w-full bg-[#3B71A1] absolute top-0 duration-300 left-0 scale-x-0 group-hover:scale-x-100"
+          />
+        </div>
+
+        <figcaption class="p-2">
+          <header>
             <a
+              class="block"
               href="/products/{product.category}/{product.subCategory}/{product.slug}"
             >
-              <img src={product.imageUrl} alt={product.name} />
-            </a>
-            <div
-              class="h-[0.1rem] w-full bg-[#3B71A1] absolute top-0 duration-300 left-0 scale-x-0 group-hover:scale-x-100"
-            />
-          </div>
-
-          <figcaption class="p-2">
-            <header>
-              <a
-                class="block"
-                href="/products/{product.category}/{product.subCategory}/{product.slug}"
+              <h2
+                class="text-center font-bold text-[#3B71A1] text-lg md:text-xl lg:text-2xl"
               >
-                <h2
-                  class="text-center font-bold text-[#3B71A1] text-lg md:text-xl lg:text-2xl"
-                >
-                  {product.name}
-                </h2>
-              </a>
-            </header>
-            <p class="mt-4 text-center line-clamp-4 md:text-lg">
-              {product.summary}
-            </p>
-          </figcaption>
-        </figure>
-      </li>
-    {/each}
-  </ul>
-{/if}
+                {product.name}
+              </h2>
+            </a>
+          </header>
+          <p class="mt-4 text-center line-clamp-4 md:text-lg">
+            {product.summary}
+          </p>
+        </figcaption>
+      </figure>
+    </li>
+  {/each}
+</ul>

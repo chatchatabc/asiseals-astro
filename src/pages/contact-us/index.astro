@@ -8,10 +8,14 @@ import { Icon } from "astro-icon";
 
 <LayoutCategory
   image="/images/contact-us/banner.webp"
-  pageTitle={contactsJson.pageTitle ?? undefined}
-  pageDescription={contactsJson.pageDescription ?? undefined}
-  pageKeywords={contactsJson.pageKeywords ?? undefined}
   title="Contact Us"
+  pageTitle={contactsJson.pageTitle}
+  pageDescription={contactsJson.pageDescription}
+  pageKeywords={contactsJson.pageKeywords}
+  ogTitle={contactsJson.ogTitle ?? contactsJson.pageTitle}
+  ogDescription={contactsJson.ogDescription ?? contactsJson.pageDescription}
+  ogImage={contactsJson.ogImage}
+  ogType={contactsJson.ogType}
 >
   <!-- Container -->
   <section class="mx-auto max-w-7xl px-4 lg:px-8">

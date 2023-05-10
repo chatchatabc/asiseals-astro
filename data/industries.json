@@ -2,6 +2,10 @@
   "pageTitle": "Industries | Advantage Seal",
   "pageDescription": "Advantage Seal has extensive experience in the food and beverage industries. We understand the industry's diverse sealing requirements and are committed to assisting our clients.",
   "pageKeywords": "Automotive, Mining, Power Generation, Chemical, Pharmaceuticals Industry, Waste Water, Pulp and Paper, Agriculture, Food and Beverage",
+  "ogTitle": null,
+  "ogImage": null,
+  "ogType": null,
+  "ogDescription": null,
   "summary": "Advantage Seal has extensive experience in the food and beverage industries. We understand the industry's diverse sealing requirements and are committed to assisting our clients in remaining economically competitive while maintaining product integrity.",
   "contents": [
     {
@@ -10,7 +14,11 @@
       "slug": "automotive",
       "pageTitle": "Automotive Industries | Advantage Seal",
       "pageDescription": "Advantage Seal's field of application reaches the Automotive industry, for which appropriate ranges of mechanical seals are planned and designed",
-      "pageKeywords": null
+      "pageKeywords": null,
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "ogDescription": null
     },
     {
       "name": "Mining",
@@ -18,7 +26,11 @@
       "slug": "mining",
       "pageTitle": "Mining Industries | Advantage Seal",
       "pageDescription": "Advantage Seal recognizes these concerns and offers efficient and cost-effective solutions.",
-      "pageKeywords": null
+      "pageKeywords": null,
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "ogDescription": null
     },
     {
       "name": "Power Generation",
@@ -26,7 +38,11 @@
       "slug": "power-generation",
       "pageTitle": "Power Generation Industries | Advantage Seal",
       "pageDescription": "Advantage Seal has the experience and resources to assist power plants in meeting these challenges.",
-      "pageKeywords": null
+      "pageKeywords": null,
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "ogDescription": null
     },
     {
       "name": "Chemical",
@@ -34,7 +50,11 @@
       "slug": "chemical",
       "pageTitle": "Chemical Industries | Advantage Seal",
       "pageDescription": "Advantage Seal provides a range of metallurgies and faces combinations to successfully seal some of the most demanding chemical applications.",
-      "pageKeywords": null
+      "pageKeywords": null,
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "ogDescription": null
     },
     {
       "name": "Pharmaceuticals Industry",
@@ -42,7 +62,11 @@
       "slug": "pharmaceuticals-industry",
       "pageTitle": "Pharmaceuticals Industry | Advantage Seal",
       "pageDescription": "Advantage Seal understands the issues facing the pharmaceutical and biotechnical industries in today’s market. We offer cost-effective options to meet these as well as other sealing challenges.",
-      "pageKeywords": null
+      "pageKeywords": null,
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "ogDescription": null
     },
     {
       "name": "Waste Water",
@@ -50,7 +74,11 @@
       "slug": "waste-water",
       "pageTitle": "Waste Water Industries | Advantage Seal",
       "pageDescription": "Advantage Seal offers economical, easy-to-install, easy-to-repair sealing options making them the ideal solution to your wastewater problems.",
-      "pageKeywords": null
+      "pageKeywords": null,
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "ogDescription": null
     },
     {
       "name": "Pulp and Paper",
@@ -58,7 +86,11 @@
       "slug": "pulp-and-paper",
       "pageTitle": "Pulp and Paper Industries | Advantage Seal",
       "pageDescription": "Advantage Seal provides engineered solutions for every pulp and paper manufacturing stage.",
-      "pageKeywords": null
+      "pageKeywords": null,
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "ogDescription": null
     },
     {
       "name": "Agriculture",
@@ -66,7 +98,11 @@
       "slug": "agriculture",
       "pageTitle": "Agriculture Industries | Advantage Seal",
       "pageDescription": "Advantage Seal has the knowledge and experience required to design and manufacture high-quality sealing solutions for agriculture",
-      "pageKeywords": null
+      "pageKeywords": null,
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "ogDescription": null
     },
     {
       "name": "Food and Beverage",
@@ -74,7 +110,11 @@
       "slug": "food-and-beverage",
       "pageTitle": "Food and Beverage Industries | Advantage Seal",
       "pageDescription": "Advantage Seal having extensive experience in the industry understands the diverse sealing requirements and is committed to assisting our clients in remaining economically competitive while maintaining product integrity.",
-      "pageKeywords": null
+      "pageKeywords": null,
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "ogDescription": null
     }
   ]
 }

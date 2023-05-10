@@ -9,6 +9,9 @@ import compress from "astro-compress";
 
 export default defineConfig({
   site: "https://asiseals.pages.dev", // for sitemap and robots.txt (change to your own domain)
+  build: {
+    format: "file",
+  },
   integrations: [
     tailwind(),
     svelte(),

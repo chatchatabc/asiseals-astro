@@ -21,8 +21,12 @@ const { type } = Astro.props;
   image="/images/news/banner.webp"
   title={type.name}
   pageTitle={type.pageTitle ?? type.name}
-  pageDescription={type.pageDescription ?? undefined}
-  pageKeywords={type.pageKeywords ?? undefined}
+  pageDescription={type.pageDescription}
+  pageKeywords={type.pageKeywords}
+  ogTitle={type.ogTitle ?? type.name ?? type.pageTitle}
+  ogDescription={type.ogDescription ?? type.pageDescription}
+  ogImage={type.ogImage}
+  ogType={type.ogType}
 >
   <!-- Container -->
   <section class="mx-auto max-w-7xl mb-16 px-4 lg:px-8">

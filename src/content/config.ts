@@ -27,6 +27,10 @@ const newsSchema = defineCollection({
     pageTitle: z.string().optional(),
     pageDescription: z.string().optional(),
     pageKeywords: z.string().optional(),
+    ogTitle: z.string().optional(),
+    ogDescription: z.string().optional(),
+    ogImage: z.string().optional(),
+    ogType: z.string().optional(),
   }),
 });
 

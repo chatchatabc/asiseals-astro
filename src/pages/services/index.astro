@@ -5,11 +5,15 @@ import { Picture } from "astro-imagetools/components";
 ---
 
 <LayoutCategory
-  pageTitle={servicesJson.pageTitle ?? undefined}
+  pageTitle={servicesJson.pageTitle}
   title="Services"
   image="/images/services/banner.webp"
-  pageDescription={servicesJson.pageDescription ?? undefined}
-  pageKeywords={servicesJson.pageKeywords ?? undefined}
+  pageDescription={servicesJson.pageDescription}
+  pageKeywords={servicesJson.pageKeywords}
+  ogTitle={servicesJson.ogTitle ?? servicesJson.pageTitle}
+  ogDescription={servicesJson.ogDescription ?? servicesJson.pageDescription}
+  ogImage={servicesJson.ogImage}
+  ogType={servicesJson.ogType}
 >
   <!--  max-w-7xl -->
   <section class="mx-auto py-16 space-y-16 max-w-7xl px-4 lg:px-8">

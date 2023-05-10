@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "wrangler pages publish --project-name www-asiseal-com dist",
-    "unlighthouse": "unlighthouse"
+    "lh": "unlighthouse"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.18.2",

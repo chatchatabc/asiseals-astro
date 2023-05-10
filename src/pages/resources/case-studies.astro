@@ -7,9 +7,14 @@ import caseStudiesJson from "@data/case-studies.json";
 <LayoutCategory
   image="/images/resources/banner.webp"
   title="Case Studies"
-  pageTitle={caseStudiesJson.pageTitle ?? undefined}
-  pageDescription={caseStudiesJson.pageDescription ?? undefined}
-  pageKeywords={caseStudiesJson.pageKeywords ?? undefined}
+  pageTitle={caseStudiesJson.pageTitle}
+  pageDescription={caseStudiesJson.pageDescription}
+  pageKeywords={caseStudiesJson.pageKeywords}
+  ogTitle={caseStudiesJson.ogTitle ?? caseStudiesJson.pageTitle}
+  ogDescription={caseStudiesJson.ogDescription ??
+    caseStudiesJson.pageDescription}
+  ogImage={caseStudiesJson.ogImage}
+  ogType={caseStudiesJson.ogType}
 >
   <!-- Introduction -->
   <section class="max-w-7xl mx-auto px-4 pt-4 lg:pt-16 lg:px-8">

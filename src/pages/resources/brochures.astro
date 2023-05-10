@@ -6,9 +6,13 @@ import brochuresJson from "@data/brochures.json";
 <LayoutCategory
   image="/images/resources/banner.webp"
   title="Brochures"
-  pageTitle={brochuresJson.pageTitle ?? undefined}
-  pageDescription={brochuresJson.pageDescription ?? undefined}
-  pageKeywords={brochuresJson.pageKeywords ?? undefined}
+  pageTitle={brochuresJson.pageTitle}
+  pageDescription={brochuresJson.pageDescription}
+  pageKeywords={brochuresJson.pageKeywords}
+  ogTitle={brochuresJson.ogTitle ?? brochuresJson.pageTitle}
+  ogDescription={brochuresJson.ogDescription ?? brochuresJson.pageDescription}
+  ogImage={brochuresJson.ogImage}
+  ogType={brochuresJson.ogType}
 >
   <section class="max-w-7xl mx-auto py-16 px-4 lg:px-8">
     <div class="overflow-x-auto">

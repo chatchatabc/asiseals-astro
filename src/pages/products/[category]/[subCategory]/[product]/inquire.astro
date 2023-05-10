@@ -22,7 +22,6 @@ const { pathname } = Astro.url;
 const processedPathname = utilRemoveLastSlash(pathname);
 const splitPathname = processedPathname.split("/");
 const slug = splitPathname[splitPathname.length - 2];
-const pageTitle = utilSlugToTitle(slug);
 
 const product = productsJson.contents.find((product) => {
   return product.slug === slug;
@@ -31,7 +30,15 @@ const product = productsJson.contents.find((product) => {
 
 <LayoutCategory
   image="/images/products/banner-inner.webp"
-  pageTitle={pageTitle}
+  pageTitle={product?.pageTitle ?? product?.name}
+  pageDescription={product?.pageDescription ?? product?.summary}
+  pageKeywords={product?.pageKeywords}
+  ogImage={product?.ogImage ?? product?.imageUrl}
+  ogTitle={product?.ogTitle ?? product?.name ?? product?.pageTitle}
+  ogDescription={product?.ogDescription ??
+    product?.pageDescription ??
+    product?.summary}
+  ogType={product?.ogType}
 >
   <div slot="banner">
     <div class="w-32 mx-auto">

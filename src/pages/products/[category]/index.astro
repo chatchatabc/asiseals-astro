@@ -21,10 +21,14 @@ const { category } = Astro.props as Props;
 
 <LayoutCategory
   image="/images/products/banner-inner.webp"
-  pageTitle={category.name}
+  pageTitle={category.pageTitle ?? category.name}
   title={category.name}
-  pageDescription={category.pageDescription ?? undefined}
-  pageKeywords={category.pageKeywords ?? undefined}
+  pageDescription={category.pageDescription}
+  pageKeywords={category.pageKeywords}
+  ogDescription={category.ogDescription ?? category.pageDescription}
+  ogImage={category.ogImage}
+  ogTitle={category.ogTitle ?? category.name ?? category.pageTitle}
+  ogType={category.ogType}
 >
   <!-- Container -->
   <section class="max-w-7xl mx-auto px-4 lg:px-8">

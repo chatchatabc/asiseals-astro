@@ -4,18 +4,39 @@ import Layout from "./Layout.astro";
 import { Img } from "astro-imagetools/components";
 
 type Props = {
-  title?: string;
-  pageTitle?: string;
-  pageDescription?: string;
-  pageKeywords?: string;
-  image: string;
+  title?: string | null;
+  pageTitle?: string | null;
+  pageDescription?: string | null;
+  pageKeywords?: string | null;
+  image: string | null;
+  ogImage?: string | null;
+  ogTitle?: string | null;
+  ogDescription?: string | null;
+  ogType?: string | null;
 };
 
-const { title, pageTitle, image, pageDescription, pageKeywords } =
-  Astro.props as Props;
+const {
+  title,
+  pageTitle,
+  image,
+  pageDescription,
+  pageKeywords,
+  ogImage,
+  ogTitle,
+  ogDescription,
+  ogType,
+} = Astro.props as Props;
 ---
 
-<Layout title={pageTitle} keywords={pageKeywords} description={pageDescription}>
+<Layout
+  title={pageTitle ?? undefined}
+  keywords={pageKeywords ?? undefined}
+  description={pageDescription ?? undefined}
+  ogImage={ogImage ?? undefined}
+  ogTitle={ogTitle ?? undefined}
+  ogDescription={ogDescription ?? undefined}
+  ogType={ogType ?? undefined}
+>
   <header class="relative max-w-[1920px] mx-auto" title={pageTitle}>
     <div class="h-56">
       <Img

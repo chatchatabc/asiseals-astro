@@ -12,20 +12,24 @@ Welcome to this project repository of Asiseals! Here lies the documentation and 
   - [**Content Management**](#content-management)
   - [**Optimization**](#optimization)
   - [**SEO Technologies**](#seo-technologies)
+  - [**Testing**](#testing)
 - [**🚀 Project Directories**](#-project-directories)
   - [**Directory Definitions**](#directory-definitions)
 - [📦 **Content Management**](#-content-management)
   - [**Product List**](#product-list)
   - [**Product Information**](#product-information)
+  - [**Product Categories**](#product-categories)
   - [**FAQs**](#faqs)
   - [**News**](#news)
   - [**Company History**](#company-history)
-- [SEO Configuration](#seo-configuration)
-  - [Things to look out for](#things-to-look-out-for)
-  - [Products](#products)
-  - [File Structure](#file-structure)
-  - [Default Values](#default-values)
-  - [Page properties of other pages](#page-properties-of-other-pages)
+- [**SEO Configuration**](#seo-configuration)
+  - [**Things to look out for**](#things-to-look-out-for)
+  - [**Default Values**](#default-values)
+  - [**Page properties of other pages**](#page-properties-of-other-pages)
+  - [**Sitemap and Web Crawler**](#sitemap-and-web-crawler)
+- [**Web / Project Benchmark**](#web--project-benchmark)
+  - [**Configurations**](#configurations)
+    - [**Device Type**](#device-type)
 - [🧞 **Commands**](#-commands)
 - [👀 Want to learn more?](#-want-to-learn-more)
 
@@ -59,6 +63,10 @@ The project utilizes various technologies that would make the development proces
 
 - Astro-robots-txt: https://github.com/alextim/astro-lib/tree/main/packages/astro-robots-txt#readme
 - Sitemap: https://docs.astro.build/en/guides/integrations-guide/sitemap/
+
+## **Testing**
+
+- Unlighthouse: https://unlighthouse.dev/
 
 # **🚀 Project Directories**
 
@@ -149,13 +157,32 @@ If you want to add a product to the product list, just [open](./data/products.js
 }
 ```
 
-> Make sure that the `slug` property in the data entry should be unique, so that there would be no overlapping in other product web pages. **(IMPORTANT!)**
+> **(IMPORTANT!)**
+>
+> Make sure that the `slug` property in the data entry should be unique, so that there would be no overlapping in other product web pages.
 
 ## **Product Information**
 
 After adding the product in the product list, the product's page will be generated, but it still lack some information. So, in order to add some information about the product, go to the `/src/content/product-information` [directory](./src/content/product-information/) and create a directory and named it based from the product's slug.
 
-> `details.md` or `details.mdx` are reserved for the product details information, so if you want to add the details of the product, you should name the markdown file as `details`. Aside from `details` file, any other files will be used in another section of the product's details. **(IMPORTANT!)**
+> **(IMPORTANT!)**
+>
+> `details.md` or `details.mdx` are reserved for the product details information, so if you want to add the details of the product, you should name the markdown file as `details`. Aside from `details` file, any other files will be used in another section of the product's details.
+
+## **Product Categories**
+
+`pageTitle`, `pageDescription` and `pageKeywords` (the first 3 properties) is being used by the `products page` for it's own SEO. `contents` on the other hand is where the rest of the individual products are listed with their own properties include `pageTitle`, `pageDescription` and `pageKeywords`.
+
+```
+{
+  "pageTitle": "Products | Advantage Seal",
+  "pageDescription": "Products - Quality seals by Advantage Seal",
+  "pageKeywords": "Products, Advantage Seal, Item Catalogue",
+  "contents":[...]
+}
+```
+
+> Product categories are not listed on this file for their respective properties. Go to `product-categories.json` to edit them as each category has their own respective page and properties before displaying respective items to the users.
 
 ## **FAQs**
 
@@ -197,11 +224,11 @@ If you want to add more company histories to the website, you can [open](./data/
 }
 ```
 
-# SEO Configuration
+# **SEO Configuration**
 
 Need some filling up some of the details as some of the products are too technical or some of them don't have details that I could use as basis for SEO.
 
-## Things to look out for
+## **Things to look out for**
 
 We are mainly going to look for 3 specific things on most of the files we're going to be working on
 
@@ -218,34 +245,7 @@ We are mainly going to look for 3 specific things on most of the files we're goi
 2. Page Description - A string of text but only visible to the search engine. A short description of the current page is all about.
 3. Page Keywords - A string of multiple texts separated by a comma only visible to web crawlers. Keywords of the content on the page. Don't put too much.
 
-## Products
-
-The products page details and the list of all the items are contained inside `products.json`. File is found at :
-
-```
-[Project Folder]
-├──...
-├── data/
-|   └─ products.json
-└── ...
-```
-
-## File Structure
-
-`pageTitle`, `pageDescription` and `pageKeywords` (the first 3 properties) is being used by the `products page` for it's own SEO. `contents` on the other hand is where the rest of the individual products are listed with their own properties include `pageTitle`, `pageDescription` and `pageKeywords`.
-
-```
-{
-  "pageTitle": "Products | Advantage Seal",
-  "pageDescription": "Products - Quality seals by Advantage Seal",
-  "pageKeywords": "Products, Advantage Seal, Item Catalogue",
-  "contents":[...]
-}
-```
-
-> Product categories are not listed on this file for their respective properties. Go to `product-categories.json` to edit them as each category has their own respective page and properties before displaying respective items to the users.
-
-## Default Values
+## **Default Values**
 
 When `pageTitle`, `pageDescription` and `pageKeywords` are left as `null` it's going to use the default properties set on `site-info.json` still within the data folder.
 
@@ -260,9 +260,7 @@ When `pageTitle`, `pageDescription` and `pageKeywords` are left as `null` it's g
 
 > site-info.json is being used as a default for not only for the products and each individual items but for the entire project. Mindful with the edits.
 
-<hr/>
-
-## Page properties of other pages
+## **Page properties of other pages**
 
 Pages such as `About us` or `Company History` also have `pageTitle`, `pageDescription` and `pageKeywords` properties. Here are the names of the files you can edit:
 
@@ -284,7 +282,6 @@ Pages such as `About us` or `Company History` also have `pageTitle`, `pageDescri
 7. factory-tour.json
 8. faqs.json
 9. industries.json
-
 ```
 
 `blacklist` List of files that does not contain mentioned properties
@@ -293,10 +290,52 @@ Pages such as `About us` or `Company History` also have `pageTitle`, `pageDescri
 1. footer.json
 2. headquarters.json
 3. navbar.json
-
 ```
 
 > Videos page has been temporarily removed temporarily and all the details has been transferred to a temporary file `[Removed]videos.json`.
+
+## **Sitemap and Web Crawler**
+
+The `sitemap.xml` and `robots.txt` are both automatically generated during build time. The only thing you should be concerned about is the build configuration that is found in `./astro.config.mjs` [file](./astro.config.mjs).
+
+You need to make sure that the value of the `site` object property is set to the website's url, if not then the generated `sitemap.xml` and `robots.txt` will be incorrect.
+
+```ts
+export default defineConfig({
+  site: "https://asiseal.com",
+  // ... other configs
+});
+```
+
+# **Web / Project Benchmark**
+
+If you need to test out the project's overall benchmark, you can run `npm run lh` to start the Unlighthouse to test your website with Google's Lighthouse system.
+
+## **Configurations**
+
+Before executing `npm run lh` in your project's terminal, you should first need to check the configurations saved in `./unlighthouse.config.ts` [file](./unlighthouse.config.ts). Make sure that the value of the `site` object property should be the project website's domain url.
+
+```ts
+// ... imports
+export default defineConfig({
+  site: "asiseal.com", // can also be https://asiseal.com
+  // ... other configs
+});
+```
+
+### **Device Type**
+
+You can also change what kind of device will be used during the benchmarking, you can only choose between `mobile` or `desktop`.
+
+```ts
+// ... imports
+export default defineConfig({
+  scanner: {
+    device: "desktop",
+  },
+  // ... other configs
+});
+```
 
 # 🧞 **Commands**
 
@@ -310,6 +349,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`      | Preview your build locally, before deploying     |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
+| `npm run lh`           | Run Unlighthouse to benchmark the project        |
 
 # 👀 Want to learn more?
 

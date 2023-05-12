@@ -294,6 +294,12 @@ Pages such as `About us` or `Company History` also have `pageTitle`, `pageDescri
 
 > Videos page has been temporarily removed temporarily and all the details has been transferred to a temporary file `[Removed]videos.json`.
 
+## **Rich Preview/Link Preview**
+
+> `Rich Preview/Link Preview` is for when users share a page link to direct/private messages in messaging apps it would preview a small snippet. Refer samples in `linkPreview` folder on what it would look like.
+
+lookout for `ogTitle`, `ogImage` and `ogDescription` in each of the pages page-properties(the same activity like in SEO) to modify them. The default property-values are set in `site-info.json`
+
 ## **Sitemap and Web Crawler**
 
 The `sitemap.xml` and `robots.txt` are both automatically generated during build time. The only thing you should be concerned about is the build configuration that is found in `./astro.config.mjs` [file](./astro.config.mjs).

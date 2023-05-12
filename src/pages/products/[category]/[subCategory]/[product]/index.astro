@@ -53,12 +53,12 @@ const { pathname } = Astro.url;
   image="/images/products/banner-inner.webp"
   pageDescription={product.pageDescription ?? product.summary}
   pageKeywords={product.pageKeywords}
-  ogType={product.ogType}
   ogImage={product.ogImage ?? product.imageUrl}
   ogTitle={product.ogTitle ?? product.name ?? product.pageTitle}
   ogDescription={product.ogDescription ??
     product.summary ??
     product.pageDescription}
+  ogType={product.ogType}
 >
   <!-- Product Summary -->
   <section class="max-w-7xl mx-auto px-4 pt-8 lg:pt-16 lg:px-8">

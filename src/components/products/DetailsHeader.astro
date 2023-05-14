@@ -9,6 +9,7 @@ const { productSpecs } = Astro.props as Props;
 ---
 
 <details-header
+  data-details-header
   class="sticky top-24 duration-500 bg-white border hidden lg:block"
 >
   <div class="absolute border border-dashed w-full bottom-4 translate-y-1/2">
@@ -42,7 +43,14 @@ const { productSpecs } = Astro.props as Props;
 
       const details = this.querySelectorAll("li");
       const navbar = document.querySelector<HTMLElement>("[data-navbar]")!;
+      const detailsHeader = document.querySelector<HTMLElement>(
+        "[data-details-header]"
+      )!;
+      detailsHeader.style.top = `${navbar.offsetHeight}px`;
+
       const navbarHeight = navbar.offsetHeight;
+      const detailsHeaderHeight = detailsHeader.offsetHeight;
+      const totalDisplacement = navbarHeight + detailsHeaderHeight;
 
       details.forEach((element) => {
         const dataId = utilTextToUrl(element.dataset.id!);
@@ -57,8 +65,8 @@ const { productSpecs } = Astro.props as Props;
 
         document.addEventListener("scroll", () => {
           if (
-            window.scrollY >= offsetTop - navbarHeight &&
-            window.scrollY <= offsetTop + offsetHeight - navbarHeight
+            window.scrollY >= offsetTop - totalDisplacement &&
+            window.scrollY < offsetTop + offsetHeight - totalDisplacement
           ) {
             step.classList.add("bg-blue-500");
             step.classList.remove("bg-transparent");
@@ -76,7 +84,7 @@ const { productSpecs } = Astro.props as Props;
 
         button.addEventListener("click", () => {
           window.scrollTo({
-            top: offsetTop - navbarHeight,
+            top: offsetTop - totalDisplacement,
             behavior: "smooth",
           });
         });

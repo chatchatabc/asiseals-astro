@@ -30,10 +30,11 @@ const {
   ogImage = siteInfoJson.ogImage,
   ogDescription = siteInfoJson.ogDescription,
   twitterCardType = siteInfoJson.twitterCardType,
-  twitterTitle = siteInfoJson.twitterTitle,
-  twitterDescription = siteInfoJson.twitterDescription,
-  twitterImage = siteInfoJson.twitterImage,
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
 } = Astro.props as Props;
+//do not set defaults on twitter properties except for cardType so that og-image can be used as default. setting default here will prevent that
 ---
 
 <!DOCTYPE html>
@@ -64,11 +65,20 @@ const {
           { name: "author", content: author },
           { name: "keywords", content: keywords },
           { name: "twitter:card", content: twitterCardType },
-          { name: "twitter:title", content: twitterTitle },
-          { name: "twitter:description", content: twitterDescription },
+          {
+            name: "twitter:title",
+            content: twitterTitle ?? ogTitle ?? siteInfoJson.title,
+          },
+          {
+            name: "twitter:description",
+            content:
+              twitterDescription ?? ogDescription ?? siteInfoJson.description,
+          },
           {
             name: "twitter:image",
-            content: siteInfoJson.domain + twitterImage,
+            content:
+              siteInfoJson.domain +
+              (twitterImage ?? ogImage ?? siteInfoJson.ogImage),
           },
         ],
       }}

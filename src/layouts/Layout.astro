@@ -66,7 +66,10 @@ const {
           { name: "twitter:card", content: twitterCardType },
           { name: "twitter:title", content: twitterTitle },
           { name: "twitter:description", content: twitterDescription },
-          { name: "twitter:image", content: twitterImage },
+          {
+            name: "twitter:image",
+            content: siteInfoJson.domain + twitterImage,
+          },
         ],
       }}
     />

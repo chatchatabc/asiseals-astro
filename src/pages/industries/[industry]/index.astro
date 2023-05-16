@@ -36,7 +36,7 @@ const { Content } = (await industryFile?.render()) ?? {};
   pageKeywords={industry.pageKeywords}
   ogTitle={industry.ogTitle ?? industry.name ?? industry.pageTitle}
   ogDescription={industry.ogDescription ?? industry.pageDescription}
-  ogImage={industry.ogImage}
+  ogImage={industry.ogImage?? industry.image}
   ogType={industry.ogType}
 >
   <!-- Container -->

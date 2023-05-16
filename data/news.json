@@ -8,8 +8,8 @@
   "ogDescription": null,
   "twitterCardType": null,
   "twitterTitle": null,
-  "twitter:description": null,
-  "twitter:image": null,
+  "twitterDescription": null,
+  "twitterImage": null,
   "contents": [
     {
       "name": "Company News",
@@ -23,8 +23,8 @@
       "ogDescription": null,
       "twitterCardType": null,
       "twitterTitle": null,
-      "twitter:description": null,
-      "twitter:image": null
+      "twitterDescription": null,
+      "twitterImage": null
     },
     {
       "name": "Blogs",
@@ -38,8 +38,8 @@
       "ogDescription": null,
       "twitterCardType": null,
       "twitterTitle": null,
-      "twitter:description": null,
-      "twitter:image": null
+      "twitterDescription": null,
+      "twitterImage": null
     }
   ]
 }

@@ -6,6 +6,10 @@
   "ogImage": null,
   "ogType": null,
   "ogDescription": null,
+  "twitterCardType": null,
+  "twitterTitle": null,
+  "twitter:description": null,
+  "twitter:image": null,
   "quotes": [
     "The two sealing surfaces are stuck in the startup process, which leads to failure or difficulty in startup.",
     "After running, the motor current exceeds the rated allowable current value, leading to an increase in the motor current loss and a waste of electrical energy.",

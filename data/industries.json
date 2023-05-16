@@ -6,6 +6,10 @@
   "ogImage": null,
   "ogType": null,
   "ogDescription": null,
+  "twitterCardType": null,
+  "twitterTitle": null,
+  "twitter:description": null,
+  "twitter:image": null,
   "summary": "Advantage Seal has extensive experience in the food and beverage industries. We understand the industry's diverse sealing requirements and are committed to assisting our clients in remaining economically competitive while maintaining product integrity.",
   "contents": [
     {
@@ -18,7 +22,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     },
     {
       "name": "Mining",
@@ -30,7 +38,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     },
     {
       "name": "Power Generation",
@@ -42,7 +54,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     },
     {
       "name": "Chemical",
@@ -54,7 +70,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     },
     {
       "name": "Pharmaceuticals Industry",
@@ -66,7 +86,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     },
     {
       "name": "Waste Water",
@@ -78,7 +102,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     },
     {
       "name": "Pulp and Paper",
@@ -90,7 +118,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     },
     {
       "name": "Agriculture",
@@ -102,7 +134,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     },
     {
       "name": "Food and Beverage",
@@ -114,7 +150,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     }
   ]
 }

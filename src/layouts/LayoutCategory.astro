@@ -13,6 +13,10 @@ type Props = {
   ogTitle?: string | null;
   ogDescription?: string | null;
   ogType?: string | null;
+  twitterCardType?: string | null;
+  twitterTitle?: string | null;
+  twitterDescription?: string | null;
+  twitterImage?: string | null;
 };
 
 const {
@@ -25,7 +29,12 @@ const {
   ogTitle,
   ogDescription,
   ogType,
+  twitterCardType,
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
 } = Astro.props as Props;
+//use twitter image, if not use og image, if not set twitter image undefined
 ---
 
 <Layout
@@ -36,6 +45,10 @@ const {
   ogTitle={ogTitle ?? undefined}
   ogDescription={ogDescription ?? undefined}
   ogType={ogType ?? undefined}
+  twitterCardType={twitterCardType ?? undefined}
+  twitterTitle={twitterTitle ?? ogTitle ?? undefined}
+  twitterDescription={twitterDescription ?? ogDescription ?? undefined}
+  twitterImage={twitterImage ?? ogTitle ?? undefined}
 >
   <header class="relative max-w-[1920px] mx-auto" title={pageTitle}>
     <div class="h-56">

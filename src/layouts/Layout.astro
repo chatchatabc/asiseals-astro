@@ -14,6 +14,10 @@ type Props = {
   ogType?: string;
   ogImage?: string;
   ogDescription?: string;
+  twitterCardType?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
 };
 
 const {
@@ -25,6 +29,10 @@ const {
   ogType = siteInfoJson.ogType,
   ogImage = siteInfoJson.ogImage,
   ogDescription = siteInfoJson.ogDescription,
+  twitterCardType = siteInfoJson.twitterCardType,
+  twitterTitle = siteInfoJson.twitterTitle,
+  twitterDescription = siteInfoJson.twitterDescription,
+  twitterImage = siteInfoJson.twitterImage,
 } = Astro.props as Props;
 ---
 
@@ -55,6 +63,10 @@ const {
         meta: [
           { name: "author", content: author },
           { name: "keywords", content: keywords },
+          { name: "twitter:card", content: twitterCardType },
+          { name: "twitter:title", content: twitterTitle },
+          { name: "twitter:description", content: twitterDescription },
+          { name: "twitter:image", content: twitterImage },
         ],
       }}
     />

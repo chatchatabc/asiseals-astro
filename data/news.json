@@ -6,6 +6,10 @@
   "ogImage": null,
   "ogType": null,
   "ogDescription": null,
+  "twitterCardType": null,
+  "twitterTitle": null,
+  "twitter:description": null,
+  "twitter:image": null,
   "contents": [
     {
       "name": "Company News",
@@ -16,7 +20,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     },
     {
       "name": "Blogs",
@@ -27,7 +35,11 @@
       "ogTitle": null,
       "ogImage": null,
       "ogType": null,
-      "ogDescription": null
+      "ogDescription": null,
+      "twitterCardType": null,
+      "twitterTitle": null,
+      "twitter:description": null,
+      "twitter:image": null
     }
   ]
 }

@@ -6,6 +6,10 @@
   "ogImage": null,
   "ogType": null,
   "ogDescription": null,
+  "twitterCardType": null,
+  "twitterTitle": null,
+  "twitter:description": null,
+  "twitter:image": null,
   "contents": [
     {
       "slug": "engineering-design-services",

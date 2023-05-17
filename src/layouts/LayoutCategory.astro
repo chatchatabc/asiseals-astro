@@ -46,9 +46,9 @@ const {
   ogDescription={ogDescription ?? undefined}
   ogType={ogType ?? undefined}
   twitterCardType={twitterCardType ?? undefined}
-  twitterTitle={twitterTitle ?? undefined}
-  twitterDescription={twitterDescription ?? undefined}
-  twitterImage={twitterImage ?? undefined}
+  twitterTitle={twitterTitle ?? ogTitle ?? undefined}
+  twitterDescription={twitterDescription ?? ogDescription ?? undefined}
+  twitterImage={twitterImage ?? ogImage ?? undefined}
 >
   <header class="relative max-w-[1920px] mx-auto" title={pageTitle}>
     <div class="h-56">

@@ -36,8 +36,12 @@ const { Content } = (await industryFile?.render()) ?? {};
   pageKeywords={industry.pageKeywords}
   ogTitle={industry.ogTitle ?? industry.name ?? industry.pageTitle}
   ogDescription={industry.ogDescription ?? industry.pageDescription}
-  ogImage={industry.ogImage?? industry.image}
+  ogImage={industry.ogImage ?? industry.image}
   ogType={industry.ogType}
+  twitterCardType={industry.twitterCardType}
+  twitterTitle={industry.twitterTitle}
+  twitterDescription={industry.twitterDescription}
+  twitterImage={industry.twitterImage}
 >
   <!-- Container -->
   <section class="max-w-7xl mx-auto px-4 lg:px-8">

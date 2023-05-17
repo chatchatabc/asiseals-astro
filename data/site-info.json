@@ -5,7 +5,12 @@
   "author": "ChatChatABC Philippines Inc.",
   "emailUrl": "https://asiseals-email-worker.linux-china.workers.dev/",
   "ogTitle": "Advantage Seal | The Seal of Quality",
-  "ogImage": "https://asiseals-astro.pages.dev/images/openGraph/logoOptimized.webp",
+  "ogImage": "/images/logo/og-logo-title-optimized.webp",
   "ogType": "website",
-  "ogDescription": "Quality seals by Advantage Seal"
+  "ogDescription": "Quality seals by Advantage Seal",
+  "domain": "https://www-asiseal-com.pages.dev",
+  "twitterCardType": "summary_large_image",
+  "twitterTitle": "Advantage Seal | The Seal of Quality",
+  "twitterDescription": "Quality seals by Advantage Seal",
+  "twitterImage": "/images/logo/og-logo-title-optimized.webp"
 }

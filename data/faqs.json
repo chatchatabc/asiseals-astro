@@ -5,5 +5,9 @@
   "ogTitle": null,
   "ogImage": null,
   "ogType": null,
-  "ogDescription": null
+  "ogDescription": null,
+  "twitterCardType": null,
+  "twitterTitle": null,
+  "twitterDescription": null,
+  "twitterImage": null
 }

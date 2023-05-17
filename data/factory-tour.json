@@ -6,6 +6,10 @@
   "ogImage": "/images/about-us/factory/test-center.webp",
   "ogType": null,
   "ogDescription": null,
+  "twitterCardType": null,
+  "twitterTitle": null,
+  "twitterDescription": null,
+  "twitterImage": null,
   "contents": [
     {
       "name": "Test Center",

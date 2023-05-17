@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - "*"
+      - "!master"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Check Build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Use Bun latest
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - run: bun install
+      - run: bun run build

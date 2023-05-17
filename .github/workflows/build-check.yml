@@ -5,17 +5,17 @@ on:
       - "!main"
 
 jobs:
-  setup-bun:
+  setup-build:
     runs-on: ubuntu-latest
     name: Check Build
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          bun-version: latest
+          node-version: 18.x
       - name: Install Dependencies
-        run: bun install
+        run: npm install
       - name: Build Project
-        run: bun run build
+        run: npm run build

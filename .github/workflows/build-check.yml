@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - "*"
+      - "!main"
+
+jobs:
+  setup-bun:
+    runs-on: ubuntu-latest
+    name: Check Build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - name: Install Dependencies
+        run: bun install
+      - name: Build Project
+        run: bun run build

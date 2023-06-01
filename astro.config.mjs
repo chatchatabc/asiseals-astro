@@ -16,22 +16,29 @@ export default defineConfig({
     tailwind(),
     svelte(),
     mdx(),
-    astroImageTools,
-    // image optimization
-    robotsTxt(),
-    // generate robots.txt
-    sitemap({
-      changefreq: "daily",
-      lastmod: new Date(),
-    }),
-    // generate sitemap.xml
-    compress({
-      img: false, // disable image compression, we use astro-imagetools instead
-    }),
+
+    // analytics
     partytown({
       config: {
         forward: ["dataLayer.push"],
       },
+    }),
+
+    // image optimization
+    astroImageTools,
+
+    // generate robots.txt
+    robotsTxt(),
+
+    // generate sitemap.xml
+    sitemap({
+      changefreq: "daily",
+      lastmod: new Date(),
+    }),
+
+    // compress html, css, js
+    compress({
+      img: false, // disable image compression, we use astro-imagetools instead
     }),
   ],
 });

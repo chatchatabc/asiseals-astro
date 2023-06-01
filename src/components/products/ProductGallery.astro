@@ -85,7 +85,7 @@ const { images } = Astro.props as Props;
       };
 
       paginationBtns.forEach((btn, index) => {
-        btn.addEventListener("click", (e) => {
+        btn.addEventListener("click", () => {
           swiperEl.swiper.slideTo(index);
         });
       });

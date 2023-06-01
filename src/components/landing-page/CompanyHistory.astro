@@ -135,7 +135,7 @@ import { Img } from "astro-imagetools/components";
       });
 
       circles.forEach((circle, i) => {
-        circle.addEventListener("click", (e) => {
+        circle.addEventListener("click", () => {
           index = i;
           handleSlide();
           nextIndicator();

@@ -13,24 +13,17 @@
   "contents": [
     {
       "type": "email",
-      "name": "river@asiseal.com",
-      "href": "mailto:river@asiseal.com",
+      "name": "sales@advantageseal.com",
+      "href": "mailto:sales@advantageseal.com",
       "message": "Send Email",
       "icon": "ic:round-mail-outline"
     },
     {
       "type": "phone",
-      "name": "+86-18858080728",
-      "href": null,
+      "name": "+1 630-226-0200",
+      "href": "tel:+16302260200",
       "message": "Call Us",
       "icon": "ic:baseline-local-phone"
-    },
-    {
-      "type": "wechat",
-      "name": "riverliu01",
-      "href": null,
-      "message": "WeChat",
-      "icon": "ic:baseline-wechat"
     }
   ]
 }

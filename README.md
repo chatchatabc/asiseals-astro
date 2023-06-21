@@ -13,6 +13,7 @@ Welcome to this project repository of Asiseals! Here lies the documentation and 
   - [**Optimization**](#optimization)
   - [**SEO Technologies**](#seo-technologies)
   - [**Testing**](#testing)
+  - [**WARNING**](#warning)
 - [**🚀 Project Directories**](#-project-directories)
   - [**Directory Definitions**](#directory-definitions)
 - [📦 **Content Management**](#-content-management)
@@ -26,6 +27,7 @@ Welcome to this project repository of Asiseals! Here lies the documentation and 
   - [**Things to look out for**](#things-to-look-out-for)
   - [**Default Values**](#default-values)
   - [**Page properties of other pages**](#page-properties-of-other-pages)
+  - [**Rich Preview/Link Preview**](#rich-previewlink-preview)
   - [**Sitemap and Web Crawler**](#sitemap-and-web-crawler)
 - [**Web / Project Benchmark**](#web--project-benchmark)
   - [**Configurations**](#configurations)
@@ -67,6 +69,10 @@ The project utilizes various technologies that would make the development proces
 ## **Testing**
 
 - Unlighthouse: https://unlighthouse.dev/
+
+## **WARNING**
+
+Do not update the SVGO package, it will break the build process of the project. The current version of SVGO is `^2.8.0`.
 
 # **🚀 Project Directories**
 

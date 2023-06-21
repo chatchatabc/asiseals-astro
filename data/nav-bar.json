@@ -54,7 +54,6 @@
       "categories": [
         { "name": "Brochures", "href": "/brochures" },
         { "name": "Download", "href": "/download" },
-        { "name": "Case Studies", "href": "/case-studies" },
         { "name": "Seal Material Code", "href": "/seal-material-code" },
         { "name": "FAQ", "href": "/faq" },
         { "name": "Cross-Reference Chart", "href": "/cross-reference-chart" }

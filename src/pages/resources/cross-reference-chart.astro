@@ -20,8 +20,37 @@ import crossReferenceChartJson from "@data/cross-reference-chart.json";
   twitterImage={crossReferenceChartJson.twitterImage}
 >
   <section class="max-w-7xl mx-auto px-4 lg:px-8">
-    <section class="py-8 overflow-x-auto">
-      <table
+    <section class="py-8 flex flex-wrap justify-center">
+      {
+        crossReferenceChartJson.newContents.map((table) => {
+          // header is the first array, body is the rest
+          const [header, ...body] = table;
+
+          return (
+            <section class="p-1 w-1/2 md:p-2 md:w-1/3 lg:p-4">
+              <table class="w-full border-2 border-black text-center divide-y-2 divide-black">
+                <thead>
+                  <tr class="divide-x-2 divide-black text-lg">
+                    <th class="bg-red-400">{header[0]}</th>
+                    <th class="bg-blue-200">{header[1]}</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y-2 divide-black">
+                  {body.map((row) => {
+                    return (
+                      <tr class="divide-x-2 divide-black">
+                        <td>{row[0]}</td>
+                        <td class="bg-blue-200">{row[1]}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </section>
+          );
+        })
+      }
+      <!-- <table
         class="w-full text-center min-w-[900px] border-gray-500 border-y border-r"
       >
         <thead>
@@ -66,7 +95,7 @@ import crossReferenceChartJson from "@data/cross-reference-chart.json";
             })
           }
         </tbody>
-      </table>
+      </table> -->
     </section>
   </section>
 </LayoutCategory>

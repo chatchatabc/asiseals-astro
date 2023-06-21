@@ -9,60 +9,71 @@ type Props = {
 };
 
 const { type } = Astro.props as Props;
+const filteredCollection = newsCollection.filter((news) => {
+  if (news.data.draft) {
+    return false;
+  }
+  if (type) {
+    return news.data.type === type;
+  }
+  return true;
+});
 ---
 
 <ul class="flex flex-wrap">
   {
-    newsCollection
-      .filter((news) => {
-        if (type) {
-          return news.data.type === type;
-        }
-        return true;
-      })
-      .map((news) => {
-        const { name, summary, imageUrl, type } = news.data;
-        const { slug } = news;
-        return (
-          <li class="p-8 w-full md:w-1/2 lg:w-1/3">
-            <figure>
-              <a class="relative group" href={`/news/${type}/${slug}`}>
-                <div>
-                  <Img src={imageUrl} alt={name} />
-                </div>
-                <div class="absolute top-0 left-0 w-full h-full pointer-events-none duration-300 bg-opacity-50 opacity-0 bg-white group-hover:opacity-100">
-                  <div class="w-24 h-24 p-8 rounded-full scale-75 bg-black bg-opacity-50 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -rotate-12 transition group-hover:rotate-0 group-hover:scale-100">
-                    <svg
-                      class="w-full h-full text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 14 14"
+    filteredCollection.map((news) => {
+      const { name, summary, imageUrl, type } = news.data;
+      const { slug } = news;
+      return (
+        <li class="p-8 w-full md:w-1/2 lg:w-1/3">
+          <figure>
+            <a class="relative group" href={`/news/${type}/${slug}`}>
+              <div>
+                <Img src={imageUrl} alt={name} />
+              </div>
+              <div class="absolute top-0 left-0 w-full h-full pointer-events-none duration-300 bg-opacity-50 opacity-0 bg-white group-hover:opacity-100">
+                <div class="w-24 h-24 p-8 rounded-full scale-75 bg-black bg-opacity-50 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -rotate-12 transition group-hover:rotate-0 group-hover:scale-100">
+                  <svg
+                    class="w-full h-full text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 14 14"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
                     >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <>
-                          <path d="m10.5 2.5l3 3l-3 3" />
-                          <path d="M.5 11.5v-2a4 4 0 0 1 4-4h9" />
-                        </>
-                      </g>
-                    </svg>
-                  </div>
+                      <>
+                        <path d="m10.5 2.5l3 3l-3 3" />
+                        <path d="M.5 11.5v-2a4 4 0 0 1 4-4h9" />
+                      </>
+                    </g>
+                  </svg>
                 </div>
-              </a>
-              <figcaption>
-                <header>
-                  <h1 class="text-3xl pt-2 text-background font-bold">
-                    <a href={`/news/${type}/${slug}`}>{name}</a>
-                  </h1>
-                </header>
-                <p class="text-lg">{summary}</p>
-              </figcaption>
-            </figure>
-          </li>
-        );
-      })
+              </div>
+            </a>
+            <figcaption>
+              <header>
+                <h1 class="text-3xl pt-2 text-background font-bold">
+                  <a href={`/news/${type}/${slug}`}>{name}</a>
+                </h1>
+              </header>
+              <p class="text-lg">{summary}</p>
+            </figcaption>
+          </figure>
+        </li>
+      );
+    })
+  }
+  {
+    filteredCollection.length === 0 && (
+      <li class="w-full">
+        <p class="text-center py-16 text-3xl">
+          No news available at the moment.
+        </p>
+      </li>
+    )
   }
 </ul>

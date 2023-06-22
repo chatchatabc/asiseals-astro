@@ -7,8 +7,11 @@ import ContactUsForm from "@components/widgets/ContactUsForm.astro";
 
 export async function getStaticPaths() {
   const newsCollection = await getCollection("news");
+  const filterCollection = newsCollection.filter(
+    (news) => news.data.draft !== true
+  );
 
-  return newsCollection.map((news) => ({
+  return filterCollection.map((news) => ({
     params: {
       type: news.data.type,
       news: news.slug,
@@ -47,6 +50,9 @@ const {
 const newsCollection = await getCollection(
   "news",
   (news) => news.data.type === type
+);
+const filterCollection = newsCollection.filter(
+  (news) => news.data.draft !== true
 );
 
 const { Content } = await news.render();
@@ -110,7 +116,7 @@ const { Content } = await news.render();
         </header>
         <ul class="py-4 px-8 list-disc">
           {
-            [...newsCollection].splice(0, 5).map((news) => {
+            [...filterCollection].splice(0, 5).map((news) => {
               return (
                 <li>
                   <a

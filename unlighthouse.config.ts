@@ -1,7 +1,7 @@
 /// <reference types="unlighthouse" />
 import { defineConfig } from "unlighthouse";
 export default defineConfig({
-  site: "asiseals.pages.dev",
+  site: "asiseal.com",
   scanner: {
     device: "mobile",
     sitemap: true,

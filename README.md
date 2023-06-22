@@ -1,4 +1,4 @@
-# **[Asiseals Website](https://asiseals.pages.dev)**
+# **[Asiseals Website](https://asiseal.com)**
 
 Welcome to this project repository of Asiseals! Here lies the documentation and definitions that you'll need to understand the project development.
 

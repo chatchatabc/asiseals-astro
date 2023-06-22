@@ -9,7 +9,7 @@ import compress from "astro-compress";
 import partytown from "@astrojs/partytown";
 
 export default defineConfig({
-  site: "https://asiseals.pages.dev",
+  site: "https://asiseal.com",
   // for sitemap and robots.txt (change to your own domain)
 
   integrations: [

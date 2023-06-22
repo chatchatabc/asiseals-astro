@@ -8,11 +8,11 @@ import { getCollection } from "astro:content";
 import { Picture } from "astro-imagetools/components";
 
 const newsCollection = await getCollection("news");
-const filteredNews = newsCollection.filter((item) => item.data.draft === false);
-const companyNews = filteredNews.filter(
+// const newsCollection = newsCollection.filter((item) => item.data.draft === false);
+const companyNews = newsCollection.filter(
   (item) => item.data.type === "company-news"
 );
-const blog = filteredNews.filter((item) => item.data.type === "blogs");
+const blog = newsCollection.filter((item) => item.data.type === "blogs");
 ---
 
 <Layout>

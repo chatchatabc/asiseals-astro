@@ -19,7 +19,7 @@ const { links, title, message, socialLinks } = footerJson;
       <!-- Contact Information -->
       <nav>
         <ul>
-          <!-- {
+          {
             contactsJson.contents.map((link) => {
               return (
                 <li>
@@ -37,28 +37,7 @@ const { links, title, message, socialLinks } = footerJson;
                 </li>
               );
             })
-          } -->
-          <li>
-            <a
-              class="flex items-center w-fit"
-              href={"mailto:river@asiseal.com"}
-            >
-              <Icon class="h-6 w-6" name={"ic:round-mail-outline"} />
-              <span class="px-1">river@asiseal.com</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center w-fit" href={"tel:+8618858080728"}>
-              <Icon class="h-6 w-6" name={"ic:baseline-local-phone"} />
-              <span class="px-1">+86-18858080728</span>
-            </a>
-          </li>
-          <li>
-            <p class="flex items-center w-fit">
-              <Icon class="h-6 w-6" name={"ic:baseline-wechat"} />
-              <span class="px-1">riverliu01</span>
-            </p>
-          </li>
+          }
         </ul>
       </nav>
 

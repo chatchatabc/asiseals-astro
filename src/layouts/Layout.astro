@@ -128,11 +128,22 @@ const {
   </script>
 
   <body class="flex flex-col min-h-screen font-abel">
-    <NavBar />
+    <div class="flex-1 flex flex-col justify-center items-center">
+      <header>
+        <h1 class="text-5xl">404 - Page Not Found</h1>
+      </header>
+      <section class="mx-auto max-w-4xl">
+        <p class="text-center mt-4 text-lg">
+          Currently, the website is not available at the moment.<br />
+          Please wait and try again next time.
+        </p>
+      </section>
+    </div>
+    <!-- <NavBar />
     <main class="flex-1">
       <slot />
     </main>
-    <Footer />
+    <Footer /> -->
     <style is:global>
       .loader {
         border: 10px solid #f3f3f3; /* Light grey */

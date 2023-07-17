@@ -128,7 +128,7 @@ const {
   </script>
 
   <body class="flex flex-col min-h-screen font-abel">
-    <div class="flex-1 flex flex-col justify-center items-center">
+    <!-- <div class="flex-1 flex flex-col justify-center items-center">
       <header>
         <h1 class="text-5xl">404 - Page Not Found</h1>
       </header>
@@ -138,31 +138,32 @@ const {
           Please wait and try again next time.
         </p>
       </section>
-    </div>
-    <!-- <NavBar />
+    </div> -->
+    <NavBar />
     <main class="flex-1">
       <slot />
     </main>
-    <Footer /> -->
-    <style is:global>
-      .loader {
-        border: 10px solid #f3f3f3; /* Light grey */
-        border-top: 10px solid #3498db; /* Blue */
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: spin 2s linear infinite;
-        margin: 0 auto;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+    <Footer />
   </body>
 </html>
+
+<style is:global>
+  .loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>

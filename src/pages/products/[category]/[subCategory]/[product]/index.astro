@@ -7,7 +7,8 @@ import productsJson from "@data/products.json";
 import LayoutCategory from "@layouts/LayoutCategory.astro";
 import ProductGallery from "@components/products/ProductGallery.astro";
 import { getCollection } from "astro:content";
-import { utilSlugToTitle, utilTextToUrl } from "src/helpers/commonUtils";
+import { utilTextToUrl } from "src/helpers/commonUtils";
+import productCategoriesJson from "@data/product-categories.json";
 
 export function getStaticPaths() {
   return productsJson.contents.map((product) => {
@@ -45,6 +46,14 @@ const fileDetails =
 const details = fileDetails ? await fileDetails.render() : null;
 
 const { pathname } = Astro.url;
+
+const category = productCategoriesJson.contents.find(
+  (entry) => entry.slug === product.category
+)!;
+const subCategories = category.categories as Record<string, any>[];
+const subCategory = subCategories.find(
+  (entry) => entry.slug === product.subCategory
+)!;
 ---
 
 <LayoutCategory
@@ -89,8 +98,8 @@ const { pathname } = Astro.url;
 
         <!-- Product Category Section -->
         <section class="text-2xl mb-4">
-          {utilSlugToTitle(product.category)}
-          {utilSlugToTitle(product.subCategory)}
+          {category.name}
+          {subCategory.name}
         </section>
 
         <!-- Product Content section -->

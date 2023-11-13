@@ -37,7 +37,7 @@ const {
 //do not set defaults on twitter properties except for cardType so that og-image can be used as default. setting default here will prevent that
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -112,30 +112,22 @@ const {
 
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11401737686">
-    </script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'AW-11401737686');
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11401737686"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-11401737686");
     </script>
   </head>
-
-  <!-- Google tag (gtag.js) -->
-  <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-VRXZBL8YMQ"
-  ></script>
-  <script type="text/partytown">
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-VRXZBL8YMQ");
-  </script>
 
   <body class="flex flex-col min-h-screen font-abel">
     <!-- <div class="flex-1 flex flex-col justify-center items-center">

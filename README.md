@@ -39,7 +39,7 @@ Welcome to this project repository of Asiseals! Here lies the documentation and 
 
 The project utilizes various technologies that would make the development process much easier and faster to developed! These technologies are deemed to be important in order to achieve the goals and best results for this website.
 
-## **Main**
+## Main
 
 - Astro: https://docs.astro.build/en/getting-started/
 - TailwindCSS: https://docs.astro.build/en/guides/integrations-guide/tailwind/ | https://tailwindcss.com/docs/installation

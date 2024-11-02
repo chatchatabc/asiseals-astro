@@ -26,5 +26,6 @@ jobs:
           accountId: db70269d12f45ba28806cc308506c460
           projectName: www-asiseal-com
           directory: dist
+          branch: main
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

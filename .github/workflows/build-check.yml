@@ -5,7 +5,7 @@ on:
 
 jobs:
   setup-build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     name: Check Build
     steps:
       - name: Checkout

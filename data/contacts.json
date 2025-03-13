@@ -13,15 +13,15 @@
   "contents": [
     {
       "type": "email",
-      "name": "river@asiseal.com",
-      "href": "mailto:river@asiseal.com",
+      "name": "sales@advantageseal.com",
+      "href": "mailto:sales@advantageseal.com",
       "message": "Send Email",
       "icon": "ic:round-mail-outline"
     },
     {
       "type": "phone",
-      "name": "+86 188-5808-0728",
-      "href": "tel:+8618858080728",
+      "name": "+1 (630) 226-0200",
+      "href": "tel:+16302260200",
       "message": "Call Us",
       "icon": "ic:baseline-local-phone"
     }

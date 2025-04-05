@@ -5,6 +5,7 @@ const featuredSchema = defineCollection({
     name: z.string(),
     isFeatured: z.boolean(),
     imageUrl: z.string(),
+    position: z.number(),
   }),
 });
 

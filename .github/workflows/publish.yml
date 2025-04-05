@@ -20,12 +20,10 @@ jobs:
       - run: npm install
       - run: npm run build
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: db70269d12f45ba28806cc308506c460
-          projectName: www-asiseal-com
-          directory: dist
-          branch: main
+          command: pages deploy dist --project-name=www-asiseal-com
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

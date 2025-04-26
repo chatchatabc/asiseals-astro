@@ -24,6 +24,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: db70269d12f45ba28806cc308506c460
-          command: pages deploy dist --project-name=www-asiseal-com
+          command: pages deploy dist --project-name=www-asiseal-com --branch main
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
